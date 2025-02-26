@@ -45,37 +45,104 @@
 </div>
 
 <!-- Footer Content -->
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div>
-            <h5 class="text-xl font-bold mb-4">Sam's Roofing</h5>
-            <p class="text-gray-300">Professional roofing, siding, and gutter services with quality workmanship and exceptional customer service.</p>
+<footer class="bg-gray-800 text-white py-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mx-auto max-w-6xl justify-items-center">
+      <!-- Column 1: Company Logo & Info -->
+      <div class="w-full lg:max-w-xs">
+        <div class="flex items-center mb-4">
+          <svg class="h-8 w-8 text-blue-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+          <span class="ml-2 text-xl font-bold">
+            <span class="text-blue-500">US Quality</span>
+            <span class="text-red-500">Construction</span>
+          </span>
         </div>
-        <div>
-            <h5 class="text-xl font-bold mb-4">Contact Us</h5>
-            <p class="flex items-center text-gray-300 mb-2"><i class="fas fa-phone mr-2"></i> (555) 123-4567</p>
-            <p class="flex items-center text-gray-300 mb-2"><i class="fas fa-envelope mr-2"></i> info@samsroofing.com</p>
-            <p class="flex items-center text-gray-300 mb-2"><i class="fas fa-map-marker-alt mr-2"></i> 123 Main St, Anytown, USA</p>
-        </div>
-        <div>
-            <h5 class="text-xl font-bold mb-4">Hours</h5>
-            <p class="text-gray-300 mb-2">Monday - Friday: 8am - 6pm</p>
-            <p class="text-gray-300 mb-2">Saturday: 9am - 3pm</p>
-            <p class="text-gray-300 mb-2">Sunday: Closed</p>
-        </div>
+        <p class="text-gray-300 mb-4">Licensed Contractor:<br>License #: MO-12345678</p>
+        <p class="flex items-center text-gray-300 mb-2"><i class="fas fa-phone mr-2"></i> (816) 208-9558</p>
+        <p class="flex items-center text-gray-300 mb-2"><i class="fas fa-envelope mr-2"></i> info@usqualityconstruction.com</p>
+        <p class="flex items-center text-gray-300 mb-2"><i class="fas fa-map-marker-alt mr-2"></i> Kansas City, MO</p>
+      </div>
+      
+      <!-- Column 2: Why Us -->
+      <div class="w-full lg:max-w-xs">
+        <h5 class="text-xl font-bold mb-4 text-white">Why Us</h5>
+        <ul class="space-y-2">
+          <li class="text-gray-300">✓ Licensed & Insured</li>
+          <li class="text-gray-300">✓ Free Estimates</li>
+          <li class="text-gray-300">✓ Quality Materials</li>
+          <li class="text-gray-300">✓ Expert Craftsmanship</li>
+          <li class="text-gray-300">✓ Satisfaction Guaranteed</li>
+          <li class="text-gray-300">✓ Competitive Pricing</li>
+        </ul>
+      </div>
+      
+      <!-- Column 3: Services -->
+      <div class="w-full lg:max-w-xs">
+        <h5 class="text-xl font-bold mb-4 text-white">Services</h5>
+        <ul class="space-y-2">
+          <li><a href="/roofing" class="text-gray-300 hover:text-white transition duration-150">→ Roofing</a></li>
+          <li><a href="/siding" class="text-gray-300 hover:text-white transition duration-150">→ Siding</a></li>
+          <li><a href="/windows" class="text-gray-300 hover:text-white transition duration-150">→ Windows</a></li>
+          <li><a href="/gutters" class="text-gray-300 hover:text-white transition duration-150">→ Gutters</a></li>
+          <li><a href="/decks" class="text-gray-300 hover:text-white transition duration-150">→ Decks</a></li>
+        </ul>
+      </div>
+      
+      <!-- Column 4: Areas Served -->
+      <div class="w-full lg:max-w-xs">
+        <h5 class="text-xl font-bold mb-4 text-white">Areas Served</h5>
+        <ul class="space-y-2">
+          <li class="text-gray-300">Minneapolis, MN</li>
+          <li class="text-gray-300">St. Paul, MN</li>
+          <li class="text-gray-300">Bloomington, MN</li>
+          <li class="text-gray-300">Eden Prairie, MN</li>
+          <li class="text-gray-300">Plymouth, MN</li>
+          <li class="text-gray-300">Maple Grove, MN</li>
+        </ul>
+      </div>
     </div>
-    <hr class="border-gray-700 my-6">
-    <div class="flex flex-col md:flex-row md:justify-between">
-        <div class="mb-4 md:mb-0">
-            <p class="text-gray-300">&copy; <%= new Date().getFullYear() %> Sam's Roofing. All rights reserved.</p>
-        </div>
-        <div class="flex space-x-4">
-            <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-instagram"></i></a>
-        </div>
+    
+    <hr class="border-gray-700 my-8">
+    
+    <!-- Centered Social Media Icons -->
+    <div class="flex justify-center mb-6">
+      <div class="flex space-x-6">
+        <a href="#" class="text-gray-300 hover:text-white transition duration-150">
+          <i class="fab fa-facebook-f text-2xl"></i>
+        </a>
+        <a href="#" class="text-gray-300 hover:text-white transition duration-150">
+          <i class="fab fa-twitter text-2xl"></i>
+        </a>
+        <a href="#" class="text-gray-300 hover:text-white transition duration-150">
+          <i class="fab fa-instagram text-2xl"></i>
+        </a>
+        <a href="#" class="text-gray-300 hover:text-white transition duration-150">
+          <i class="fab fa-linkedin-in text-2xl"></i>
+        </a>
+        <a href="#" class="text-gray-300 hover:text-white transition duration-150">
+          <i class="fab fa-youtube text-2xl"></i>
+        </a>
+      </div>
     </div>
-</div>
+    
+    <!-- Centered Company Info -->
+    <div class="text-center mb-6">
+      <p class="text-gray-300 font-semibold text-lg">@ US Quality Construction</p>
+      <p class="text-gray-400">Serving the Twin Cities and surrounding areas</p>
+    </div>
+    
+    <!-- Copyright and Policies -->
+    <div class="flex flex-col md:flex-row justify-center text-center space-y-2 md:space-y-0 md:space-x-4">
+      <p class="text-gray-400 text-sm">&copy; <%= new Date().getFullYear() %> US Quality Construction. All rights reserved.</p>
+      <a href="/privacy" class="text-gray-400 text-sm hover:text-white transition duration-150">Privacy Policy</a>
+      <a href="/terms" class="text-gray-400 text-sm hover:text-white transition duration-150">Terms of Service</a>
+      <a href="/sitemap" class="text-gray-400 text-sm hover:text-white transition duration-150">Sitemap</a>
+    </div>
+  </div>
+</footer>
 
 <!-- JavaScript -->
 <script src="/js/main.js"></script>
