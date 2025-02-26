@@ -14,12 +14,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Initialize smooth scrolling
   initializeSmoothScrolling();
-
-  // Run scroll animation on page load
-  animateOnScroll();
-
-  // Add scroll event listener
-  window.addEventListener("scroll", animateOnScroll);
 });
 
 /**
@@ -52,7 +46,7 @@ function initializeMobileMenu() {
  * Add scroll animations to elements
  */
 function addScrollAnimations() {
-  // Add fade-in class to elements when they come into view
+  // Add animation class to elements when they come into view
   const animatedElements = document.querySelectorAll(".animate-on-scroll");
 
   if (animatedElements.length > 0) {
@@ -61,6 +55,7 @@ function addScrollAnimations() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
+            entry.target.classList.add("animated");
             entry.target.classList.add("fade-in");
             observer.unobserve(entry.target);
           }
@@ -68,6 +63,7 @@ function addScrollAnimations() {
       },
       {
         threshold: 0.1,
+        rootMargin: "0px 0px -100px 0px", // Slightly before elements come into view
       }
     );
 
@@ -154,21 +150,5 @@ function initializeSmoothScrolling() {
         });
       }
     });
-  });
-}
-
-/**
- * Add animation to elements when they come into view while scrolling
- */
-function animateOnScroll() {
-  const elements = document.querySelectorAll(".animate-on-scroll");
-
-  elements.forEach((element) => {
-    const elementPosition = element.getBoundingClientRect().top;
-    const windowHeight = window.innerHeight;
-
-    if (elementPosition < windowHeight - 100) {
-      element.classList.add("animated");
-    }
   });
 }

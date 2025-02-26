@@ -1,103 +1,74 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%= title %></title>
-    <meta name="description" content="Sam's Roofing - Professional roofing, siding, and gutter services with quality workmanship and exceptional customer service." />
-
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
-    <link rel="manifest" href="/favicon/site.webmanifest" />
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="/css/output.css" />
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-  </head>
-  <body>
-    <!-- Header -->
-    <header>
-      <nav class="bg-gradient-to-r from-blue-900 to-blue-800 text-white shadow-lg">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="flex justify-between h-16">
-            <div class="flex items-center">
-              <a class="flex items-center" href="/">
-                <img src="/images/logo.png" alt="Sam's Roofing Logo" class="h-10 w-auto" />
-                <span class="ml-2 text-xl font-bold">Sam's Roofing</span>
-              </a>
-            </div>
-            <div class="hidden md:block">
-              <div class="ml-10 flex items-center space-x-4">
-                <a
-                  class="<%= active === 'home' ? 'bg-blue-700 text-white' : 'text-gray-100 hover:bg-blue-700 hover:text-white' %> px-3 py-2 rounded-md text-sm font-medium transition duration-150"
-                  href="/"
-                  >Home</a
-                >
-                <a
-                  class="<%= active === 'about' ? 'bg-blue-700 text-white' : 'text-gray-100 hover:bg-blue-700 hover:text-white' %> px-3 py-2 rounded-md text-sm font-medium transition duration-150"
-                  href="/about"
-                  >About Us</a
-                >
-                <a
-                  class="<%= active === 'services' ? 'bg-blue-700 text-white' : 'text-gray-100 hover:bg-blue-700 hover:text-white' %> px-3 py-2 rounded-md text-sm font-medium transition duration-150"
-                  href="/services"
-                  >Services</a
-                >
-                <a
-                  class="<%= active === 'contact' ? 'bg-blue-700 text-white' : 'text-gray-100 hover:bg-blue-700 hover:text-white' %> px-3 py-2 rounded-md text-sm font-medium transition duration-150"
-                  href="/contact"
-                  >Contact</a
-                >
-                <a
-                  href="tel:5551234567"
-                  class="ml-4 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-blue-800 bg-white hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white shadow transition duration-150"
-                >
-                  <i class="fas fa-phone mr-2"></i> (555) 123-4567
-                </a>
-              </div>
-            </div>
-            <div class="md:hidden flex items-center">
-              <button
-                type="button"
-                class="mobile-menu-button inline-flex items-center justify-center p-2 rounded-md text-gray-100 hover:text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white transition duration-150"
-                aria-controls="mobile-menu"
-                aria-expanded="false"
-              >
-                <span class="sr-only">Open main menu</span>
-                <!-- Icon when menu is closed -->
-                <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-                <!-- Icon when menu is open -->
-                <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-            </div>
-          </div>
+<!-- Navigation -->
+<nav class="bg-gradient-to-r from-blue-900 to-blue-800 text-white shadow-lg">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16">
+      <div class="flex items-center">
+        <a class="flex items-center" href="/">
+          <img src="/images/logo.png" alt="Sam's Roofing Logo" class="h-10 w-auto" />
+          <span class="ml-2 text-xl font-bold">Sam's Roofing</span>
+        </a>
+      </div>
+      <div class="hidden md:block">
+        <div class="ml-10 flex items-center space-x-4">
+          <a class="<%= active === 'home' ? 'bg-blue-700 text-white' : 'text-gray-100 hover:bg-blue-700 hover:text-white' %> px-3 py-2 rounded-md text-sm font-medium transition duration-150" href="/"
+            >Home</a
+          >
+          <a
+            class="<%= active === 'about' ? 'bg-blue-700 text-white' : 'text-gray-100 hover:bg-blue-700 hover:text-white' %> px-3 py-2 rounded-md text-sm font-medium transition duration-150"
+            href="/about"
+            >About Us</a
+          >
+          <a
+            class="<%= active === 'services' ? 'bg-blue-700 text-white' : 'text-gray-100 hover:bg-blue-700 hover:text-white' %> px-3 py-2 rounded-md text-sm font-medium transition duration-150"
+            href="/services"
+            >Services</a
+          >
+          <a
+            class="<%= active === 'contact' ? 'bg-blue-700 text-white' : 'text-gray-100 hover:bg-blue-700 hover:text-white' %> px-3 py-2 rounded-md text-sm font-medium transition duration-150"
+            href="/contact"
+            >Contact</a
+          >
+          <a
+            href="tel:5551234567"
+            class="ml-4 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-blue-800 bg-white hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white shadow transition duration-150"
+          >
+            <i class="fas fa-phone mr-2"></i> (555) 123-4567
+          </a>
         </div>
+      </div>
+      <div class="md:hidden flex items-center">
+        <button
+          type="button"
+          class="mobile-menu-button inline-flex items-center justify-center p-2 rounded-md text-gray-100 hover:text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white transition duration-150"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Open main menu</span>
+          <!-- Icon when menu is closed -->
+          <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <!-- Icon when menu is open -->
+          <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
 
-        <!-- Mobile menu, show/hide based on menu state -->
-        <div class="md:hidden hidden" id="mobile-menu">
-          <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <a class="<%= active === 'home' ? 'bg-blue-700 text-white' : 'text-gray-100 hover:bg-blue-700 hover:text-white' %> block px-3 py-2 rounded-md text-base font-medium" href="/">Home</a>
-            <a class="<%= active === 'about' ? 'bg-blue-700 text-white' : 'text-gray-100 hover:bg-blue-700 hover:text-white' %> block px-3 py-2 rounded-md text-base font-medium" href="/about"
-              >About Us</a
-            >
-            <a class="<%= active === 'services' ? 'bg-blue-700 text-white' : 'text-gray-100 hover:bg-blue-700 hover:text-white' %> block px-3 py-2 rounded-md text-base font-medium" href="/services"
-              >Services</a
-            >
-            <a class="<%= active === 'contact' ? 'bg-blue-700 text-white' : 'text-gray-100 hover:bg-blue-700 hover:text-white' %> block px-3 py-2 rounded-md text-base font-medium" href="/contact"
-              >Contact</a
-            >
-            <a href="tel:5551234567" class="block px-3 py-2 rounded-md text-base font-medium bg-white text-blue-800 mt-2"> <i class="fas fa-phone mr-2"></i> (555) 123-4567 </a>
-          </div>
-        </div>
-      </nav>
-    </header>
-  </body>
-</html>
+  <!-- Mobile menu, show/hide based on menu state -->
+  <div class="md:hidden hidden" id="mobile-menu">
+    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+      <a class="<%= active === 'home' ? 'bg-blue-700 text-white' : 'text-gray-100 hover:bg-blue-700 hover:text-white' %> block px-3 py-2 rounded-md text-base font-medium" href="/">Home</a>
+      <a class="<%= active === 'about' ? 'bg-blue-700 text-white' : 'text-gray-100 hover:bg-blue-700 hover:text-white' %> block px-3 py-2 rounded-md text-base font-medium" href="/about">About Us</a>
+      <a class="<%= active === 'services' ? 'bg-blue-700 text-white' : 'text-gray-100 hover:bg-blue-700 hover:text-white' %> block px-3 py-2 rounded-md text-base font-medium" href="/services"
+        >Services</a
+      >
+      <a class="<%= active === 'contact' ? 'bg-blue-700 text-white' : 'text-gray-100 hover:bg-blue-700 hover:text-white' %> block px-3 py-2 rounded-md text-base font-medium" href="/contact"
+        >Contact</a
+      >
+      <a href="tel:5551234567" class="block px-3 py-2 rounded-md text-base font-medium bg-white text-blue-800 mt-2"> <i class="fas fa-phone mr-2"></i> (555) 123-4567 </a>
+    </div>
+  </div>
+</nav>
