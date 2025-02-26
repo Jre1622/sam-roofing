@@ -1,8 +1,7 @@
 const express = require("express");
 const path = require("path");
 const rateLimit = require("express-rate-limit");
-const { trackPageView, getStats } = require("./lib/analytics");
-const { sendMessage, sendLeadNotification, sendStats } = require("./lib/telegram");
+const { sendMessage, sendLeadNotification } = require("./lib/telegram");
 require("dotenv").config();
 
 // Initialize Express app
@@ -28,14 +27,6 @@ const limiter = rateLimit({
   legacyHeaders: false,
 });
 app.use(limiter);
-
-// Middleware to track page views
-app.use((req, res, next) => {
-  if (req.method === "GET") {
-    trackPageView(req.path);
-  }
-  next();
-});
 
 // Basic routes
 app.get("/", (req, res) => {
@@ -82,30 +73,6 @@ app.post("/submit-contact", async (req, res) => {
   } catch (error) {
     console.error("Error processing form submission:", error);
     res.status(500).send("Something went wrong. Please try again later.");
-  }
-});
-
-// Admin route to send stats
-app.get("/admin/send-stats", async (req, res) => {
-  try {
-    // Simple API key authentication
-    const apiKey = req.query.key;
-    if (apiKey !== process.env.ADMIN_API_KEY) {
-      return res.status(401).json({ error: "Unauthorized" });
-    }
-
-    // Get stats and send to Telegram
-    const stats = getStats();
-    await sendStats(stats);
-
-    res.json({
-      success: true,
-      message: "Stats sent to Telegram",
-      stats,
-    });
-  } catch (error) {
-    console.error("Error sending stats:", error);
-    res.status(500).json({ error: "Failed to send stats" });
   }
 });
 

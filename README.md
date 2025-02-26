@@ -4,15 +4,14 @@ A professional website for Sam's Roofing company, featuring roofing, siding, and
 
 ## Features
 
-- Responsive design using Bootstrap 5
+- Responsive design using Tailwind CSS
 - Contact form with Telegram notifications
-- Simple analytics tracking
 - SEO optimized with sitemap and meta tags
 - Mobile-friendly layout
 
 ## Tech Stack
 
-- **Frontend**: HTML, CSS, JavaScript, Bootstrap 5
+- **Frontend**: HTML, CSS, JavaScript, Tailwind CSS
 - **Backend**: Express.js (Node.js)
 - **Templating**: EJS
 - **Notifications**: Telegram Bot API
@@ -50,7 +49,7 @@ A professional website for Sam's Roofing company, featuring roofing, siding, and
 5. Start the development server:
 
    ```
-   npm run dev
+   npm run dev:full
    ```
 
 6. Visit `http://localhost:3000` in your browser.
@@ -102,16 +101,6 @@ A professional website for Sam's Roofing company, featuring roofing, siding, and
    ```
    sudo certbot --nginx -d yourdomain.com -d www.yourdomain.com
    ```
-
-## Daily Stats
-
-To receive daily stats via Telegram, set up a cron job:
-
-```
-0 20 * * * curl "http://localhost:3000/admin/send-stats?key=YOUR_ADMIN_API_KEY" > /dev/null 2>&1
-```
-
-Replace `YOUR_ADMIN_API_KEY` with the value from your `.env` file.
 
 ## License
 
