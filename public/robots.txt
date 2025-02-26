@@ -1,0 +1,6 @@
+# robots.txt for Sam's Roofing website
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.samsroofing.com/sitemap.xml
