@@ -11,6 +11,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Handle form validation
   setupFormValidation();
+
+  // Initialize smooth scrolling
+  initializeSmoothScrolling();
+
+  // Run scroll animation on page load
+  animateOnScroll();
+
+  // Add scroll event listener
+  window.addEventListener("scroll", animateOnScroll);
 });
 
 /**
@@ -127,57 +136,9 @@ function setupFormValidation() {
 }
 
 /**
- * Scroll to element with smooth animation
- * @param {string} elementId - The ID of the element to scroll to
+ * Initialize smooth scrolling for anchor links
  */
-function scrollToElement(elementId) {
-  const element = document.getElementById(elementId);
-
-  if (element) {
-    element.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
-  }
-}
-
-// Add click event listeners to all anchor links for smooth scrolling
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener("click", function (e) {
-    const href = this.getAttribute("href");
-
-    if (href !== "#") {
-      e.preventDefault();
-      const targetId = href.substring(1);
-      scrollToElement(targetId);
-    }
-  });
-});
-
-// Mobile menu toggle
-document.addEventListener("DOMContentLoaded", function () {
-  const mobileMenuButton = document.querySelector(".mobile-menu-button");
-  const mobileMenu = document.getElementById("mobile-menu");
-
-  if (mobileMenuButton && mobileMenu) {
-    mobileMenuButton.addEventListener("click", function () {
-      // Toggle the 'hidden' class on the mobile menu
-      mobileMenu.classList.toggle("hidden");
-
-      // Toggle the icons
-      const iconClosed = mobileMenuButton.querySelector("svg.block");
-      const iconOpen = mobileMenuButton.querySelector("svg.hidden");
-
-      if (iconClosed && iconOpen) {
-        iconClosed.classList.toggle("block");
-        iconClosed.classList.toggle("hidden");
-        iconOpen.classList.toggle("block");
-        iconOpen.classList.toggle("hidden");
-      }
-    });
-  }
-
-  // Add smooth scrolling for anchor links
+function initializeSmoothScrolling() {
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
       e.preventDefault();
@@ -194,24 +155,20 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+}
 
-  // Add scroll animation for elements
-  const animateOnScroll = function () {
-    const elements = document.querySelectorAll(".animate-on-scroll");
+/**
+ * Add animation to elements when they come into view while scrolling
+ */
+function animateOnScroll() {
+  const elements = document.querySelectorAll(".animate-on-scroll");
 
-    elements.forEach((element) => {
-      const elementPosition = element.getBoundingClientRect().top;
-      const windowHeight = window.innerHeight;
+  elements.forEach((element) => {
+    const elementPosition = element.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
 
-      if (elementPosition < windowHeight - 100) {
-        element.classList.add("animated");
-      }
-    });
-  };
-
-  // Run once on page load
-  animateOnScroll();
-
-  // Run on scroll
-  window.addEventListener("scroll", animateOnScroll);
-});
+    if (elementPosition < windowHeight - 100) {
+      element.classList.add("animated");
+    }
+  });
+}
