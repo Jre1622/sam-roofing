@@ -1,11 +1,10 @@
-# Sam's Roofing Website
+# Maverick Contracting INC Website
 
-A professional website for Sam's Roofing company, featuring roofing, siding, and gutter services. The website includes Telegram integration for instant lead notifications.
+A professional website for Maverick Contracting INC, featuring roofing, siding, windows, and gutter services.
 
 ## Features
 
 - Responsive design using Tailwind CSS
-- Contact form with Telegram notifications
 - SEO optimized with sitemap and meta tags
 - Mobile-friendly layout
 
@@ -14,22 +13,20 @@ A professional website for Sam's Roofing company, featuring roofing, siding, and
 - **Frontend**: HTML, CSS, JavaScript, Tailwind CSS
 - **Backend**: Express.js (Node.js)
 - **Templating**: EJS
-- **Notifications**: Telegram Bot API
 - **Deployment**: PM2, NGINX, Certbot
 
 ## Prerequisites
 
 - Node.js (v14 or higher)
 - npm (v6 or higher)
-- Telegram Bot Token (for notifications)
 
 ## Installation
 
 1. Clone the repository:
 
    ```
-   git clone https://github.com/yourusername/sam-roofing.git
-   cd sam-roofing
+   git clone https://github.com/yourusername/maverick-contracting.git
+   cd maverick-contracting
    ```
 
 2. Install dependencies:
@@ -44,7 +41,7 @@ A professional website for Sam's Roofing company, featuring roofing, siding, and
    cp .env.example .env
    ```
 
-4. Edit the `.env` file with your Telegram Bot Token and Chat ID.
+4. Edit the `.env`
 
 5. Start the development server:
 
@@ -53,15 +50,6 @@ A professional website for Sam's Roofing company, featuring roofing, siding, and
    ```
 
 6. Visit `http://localhost:3000` in your browser.
-
-## Setting Up Telegram Bot
-
-1. Talk to [@BotFather](https://t.me/botfather) on Telegram
-2. Create a new bot with the `/newbot` command
-3. Copy the API token provided
-4. Add the token to your `.env` file as `TELEGRAM_BOT_TOKEN`
-5. Get your Chat ID by talking to [@userinfobot](https://t.me/userinfobot)
-6. Add your Chat ID to the `.env` file as `TELEGRAM_CHAT_ID`
 
 ## Deployment
 
@@ -76,7 +64,7 @@ A professional website for Sam's Roofing company, featuring roofing, siding, and
 2. Start the application with PM2:
 
    ```
-   pm2 start server.js --name "sams-roofing"
+   pm2 start server.js --name "maverick-contracting"
    ```
 
 3. Configure NGINX to proxy requests to your Node.js application:
@@ -101,11 +89,3 @@ A professional website for Sam's Roofing company, featuring roofing, siding, and
    ```
    sudo certbot --nginx -d yourdomain.com -d www.yourdomain.com
    ```
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Contact
-
-For any questions or support, please contact [your email].
