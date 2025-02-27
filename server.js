@@ -32,7 +32,7 @@ app.get("/", (req, res) => {
   res.render("index", {
     title: "Maverick Contracting INC | Full-Service Exterior Remodeler in Minnesota",
     description:
-      "Maverick Contracting provides professional roofing, siding, windows, decks and gutter services for residential and commercial properties in Minnesota. Serving Minneapolis, St. Paul, and surrounding areas.",
+      "Maverick Contracting provides professional roofing, siding, windows, and gutter services for residential and commercial properties in Minnesota. Serving Minneapolis, St. Paul, and surrounding areas.",
     active: "home",
   });
 });
@@ -50,7 +50,7 @@ app.get("/services", (req, res) => {
   res.render("services", {
     title: "Our Services | Maverick Contracting INC - Minnesota",
     description:
-      "Explore our comprehensive exterior remodeling services including roofing, siding, windows, decks, and gutters in Minnesota. Quality workmanship guaranteed throughout Minneapolis, St. Paul, and surrounding communities.",
+      "Explore our comprehensive exterior remodeling services including roofing, siding, windows, and gutters in Minnesota. Quality workmanship guaranteed throughout Minneapolis, St. Paul, and surrounding communities.",
     active: "services",
   });
 });
@@ -77,15 +77,6 @@ app.get("/windows", (req, res) => {
     title: "Energy-Efficient Window Installation in Minnesota | Maverick Contracting",
     description: "Upgrade to energy-efficient windows perfect for Minnesota's climate. Professional installation serving Minneapolis, St. Paul, and surrounding areas with quality window solutions.",
     active: "windows",
-  });
-});
-
-app.get("/decks", (req, res) => {
-  res.render("decks", {
-    title: "Custom Deck Building in Minnesota | Maverick Contracting",
-    description:
-      "Create the perfect outdoor living space with custom deck solutions designed for Minnesota's climate. Serving Minneapolis, St. Paul, and surrounding areas with quality deck building and repair.",
-    active: "decks",
   });
 });
 
