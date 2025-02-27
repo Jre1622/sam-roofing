@@ -1,6 +1,6 @@
-# robots.txt for Sam's Roofing website
+# robots.txt for Maverick Contracting website
 User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://www.samsroofing.com/sitemap.xml
+Sitemap: https://www.maverickcontracting.com/sitemap.xml
