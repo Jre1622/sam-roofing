@@ -25,13 +25,14 @@
     <!-- Main Content -->
     <main class="flex-grow">
       <!-- Page Header -->
-      <section class="relative py-16 bg-gradient-to-r from-blue-800 to-blue-600 text-white">
-        <div class="absolute inset-0 opacity-20">
+      <section class="relative py-16 text-white">
+        <div class="absolute inset-0">
           <img
             src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
             alt="Contact Background"
             class="w-full h-full object-cover"
           />
+          <div class="absolute inset-0 bg-black bg-opacity-50"></div>
         </div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div class="max-w-3xl">
@@ -134,7 +135,14 @@
                     </div>
                     <div class="ml-4">
                       <p class="text-gray-800 font-medium">Our Address</p>
-                      <p class="text-gray-600">123 Main Street<br />Anytown, USA 12345</p>
+                      <a
+                        href="https://www.google.com/maps/place/Maverick+Contracting+INC/@45.1965872,-93.3486053,189m/data=!3m3!1e3!4b1!5s0x52b33c3f765512bd:0x3d6e6870c47ba3a5!4m6!3m5!1s0x52b33d151273a22d:0x3d02ee3a99a98013!8m2!3d45.1965863!4d-93.3479616!16s%2Fg%2F11vwscvcmg?entry=ttu&g_ep=EgoyMDI1MDIyNC4wIKXMDSoASAFQAw%3D%3D"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-gray-600 hover:text-blue-600"
+                      >
+                        Maverick Contracting INC<br />3200 Main ST NW<br />Coon Rapids, MN 55433<br />STE 245
+                      </a>
                     </div>
                   </div>
                   <div class="flex items-start">
@@ -145,7 +153,7 @@
                     </div>
                     <div class="ml-4">
                       <p class="text-gray-800 font-medium">Phone Number</p>
-                      <p class="text-gray-600">(555) 123-4567</p>
+                      <a href="tel:612-472-2294" class="text-gray-600 hover:text-blue-600">(612) 472-2294</a>
                     </div>
                   </div>
                   <div class="flex items-start">
@@ -156,7 +164,7 @@
                     </div>
                     <div class="ml-4">
                       <p class="text-gray-800 font-medium">Email Address</p>
-                      <p class="text-gray-600">info@samsroofing.com</p>
+                      <p class="text-gray-600">Sam@maverickcontractingmn.com</p>
                     </div>
                   </div>
                   <div class="flex items-start">
@@ -174,8 +182,8 @@
               </div>
 
               <div class="bg-white rounded-lg shadow-xl p-8">
-                <h3 class="text-xl font-bold mb-4 text-gray-900">Follow Us</h3>
-                <div class="flex space-x-4">
+                <h3 class="text-xl font-bold mb-4 text-gray-900 text-center sm:text-left">Follow Us</h3>
+                <div class="flex space-x-4 justify-center sm:justify-start">
                   <a href="#" class="h-10 w-10 rounded-full bg-blue-600 flex items-center justify-center text-white hover:bg-blue-700 transition duration-150">
                     <i class="fab fa-facebook-f"></i>
                   </a>
@@ -200,11 +208,11 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="text-center mb-12">
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Find Us</h2>
-            <p class="text-xl text-gray-600 max-w-3xl mx-auto">We serve the entire Anytown area and surrounding communities.</p>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">We serve the entire local area and surrounding communities.</p>
           </div>
           <div class="rounded-lg overflow-hidden shadow-xl">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215573036728!2d-73.98784492426285!3d40.75798657138946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes%20Square!5e0!3m2!1sen!2sus!4v1708956427133!5m2!1sen!2sus"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2818.0252069369193!2d-93.35053651573223!3d45.19659007909868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52b33d151273a22d%3A0x3d02ee3a99a98013!2sMaverick%20Contracting%20INC!5e0!3m2!1sen!2sus!4v1708956427133!5m2!1sen!2sus"
               width="100%"
               height="450"
               style="border: 0"
