@@ -1,10 +1,9 @@
 /**
- * Main JavaScript file for Sam's Roofing website
+ * Main JavaScript file for Maverick Contracting website
  */
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Initialize mobile menu
-  initializeMobileMenu();
+  // Mobile menu is handled directly in header.ejs
 
   // Add scroll animations
   addScrollAnimations();
@@ -15,32 +14,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // Initialize smooth scrolling
   initializeSmoothScrolling();
 });
-
-/**
- * Initialize mobile menu toggle
- */
-function initializeMobileMenu() {
-  const mobileMenuButton = document.querySelector(".mobile-menu-button");
-  const mobileMenu = document.getElementById("mobile-menu");
-
-  if (mobileMenuButton && mobileMenu) {
-    mobileMenuButton.addEventListener("click", function () {
-      // Toggle the 'hidden' class on the mobile menu
-      mobileMenu.classList.toggle("hidden");
-
-      // Toggle the icons
-      const iconClosed = mobileMenuButton.querySelector("svg.block");
-      const iconOpen = mobileMenuButton.querySelector("svg.hidden");
-
-      if (iconClosed && iconOpen) {
-        iconClosed.classList.toggle("block");
-        iconClosed.classList.toggle("hidden");
-        iconOpen.classList.toggle("block");
-        iconOpen.classList.toggle("hidden");
-      }
-    });
-  }
-}
 
 /**
  * Add scroll animations to elements
