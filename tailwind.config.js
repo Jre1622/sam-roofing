@@ -5,7 +5,15 @@ module.exports = {
     "./public/**/*.{js,css,html}", // scan other relevant files
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        maverick: {
+          blue: "#004aad",
+          black: "#000000",
+          white: "#ffffff",
+        },
+      },
+    },
   },
   plugins: [],
 };
