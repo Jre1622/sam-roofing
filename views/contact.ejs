@@ -24,21 +24,10 @@
 
     <!-- Main Content -->
     <main class="flex-grow">
-      <!-- Page Header -->
-      <section class="relative py-16 text-white">
-        <div class="absolute inset-0">
-          <img
-            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-            alt="Contact Background"
-            class="w-full h-full object-cover"
-          />
-          <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-        </div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div class="max-w-3xl">
-            <h1 class="text-4xl font-bold mb-4">Contact Us</h1>
-            <p class="text-xl text-blue-100">Get in touch with our team for a free quote or to discuss your roofing project.</p>
-          </div>
+      <!-- Page Title Section -->
+      <section class="bg-gray-100 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h1 class="text-4xl font-bold text-gray-900 text-center">Contact Maverick Contracting</h1>
         </div>
       </section>
 
@@ -47,9 +36,18 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="flex flex-col lg:flex-row gap-8">
             <div class="lg:w-2/3">
+              <!-- Roofle RoofQuote PRO Embedded Widget -->
+              <div class="bg-white rounded-lg shadow-xl p-8 mb-6">
+                <h2 class="text-2xl font-bold mb-6 text-gray-900">Get an Instant Roof Quote</h2>
+                <script src="https://app.roofle.com/roof-quote-pro-embedded-widget.js?id=ZxB2K7X6ylCQKOXoTqCW5" async></script>
+              </div>
+
               <div class="bg-white rounded-lg shadow-xl p-8">
                 <h2 class="text-2xl font-bold mb-6 text-gray-900">Send Us a Message</h2>
-
+                <p class="text-gray-600 mb-6">
+                  Have questions about our services? Need more information about your instant quote? Or just can't find what you're looking for on our site? Fill out this form and our team will get
+                  back to you as soon as possible.
+                </p>
                 <form action="/submit-contact" method="POST" class="animate-on-scroll">
                   <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
@@ -181,9 +179,26 @@
                 </div>
               </div>
 
+              <!-- License Information -->
+              <div class="bg-white rounded-lg shadow-xl p-8 mb-6">
+                <h3 class="text-xl font-bold mb-4 text-gray-900">Licensed Contractor</h3>
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mt-1">
+                    <div class="h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                      <i class="fas fa-certificate"></i>
+                    </div>
+                  </div>
+                  <div class="ml-4">
+                    <p class="text-gray-800 font-medium">License Number</p>
+                    <p class="text-gray-600">MN License #BC767443</p>
+                    <p class="text-gray-600 mt-2">Fully licensed, bonded and insured for your protection and peace of mind.</p>
+                  </div>
+                </div>
+              </div>
+
               <div class="bg-white rounded-lg shadow-xl p-8">
-                <h3 class="text-xl font-bold mb-4 text-gray-900 text-center sm:text-left">Follow Us</h3>
-                <div class="flex space-x-4 justify-center sm:justify-start">
+                <h3 class="text-xl font-bold mb-4 text-gray-900 text-center">Follow Us</h3>
+                <div class="flex space-x-4 justify-center">
                   <a href="#" class="h-10 w-10 rounded-full bg-blue-600 flex items-center justify-center text-white hover:bg-blue-700 transition duration-150">
                     <i class="fab fa-facebook-f"></i>
                   </a>
