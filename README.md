@@ -1,3 +1,13 @@
+# TO DO
+
+- Rotating testimonials in the main CTA box
+- get the correct colors from hireMaverick
+- Remove the CDN from the head section
+- Add the LOGO
+- setting up financing
+- Add an steps section
+-
+
 # Maverick Contracting INC Website
 
 A professional website for Maverick Contracting INC, featuring roofing, siding, windows, and gutter services.
