@@ -28,32 +28,107 @@
     <!-- Main Content -->
     <main class="flex-grow">
       <!-- Hero Section -->
-      <section class="relative py-20 text-white overflow-hidden">
+      <section class="relative py-12 md:py-16 text-white overflow-hidden">
         <div class="absolute inset-0">
           <img src="/images/streetview-home.jpg" alt="Roofing Background" class="w-full h-full object-cover object-[center_60%] sm:object-[center_50%] md:object-[center_45%] lg:object-[center_50%]" />
           <div class="absolute inset-0 bg-black opacity-40"></div>
         </div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div class="flex flex-col md:flex-row items-center">
-            <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8 text-center md:text-left">
-              <h1 class="text-4xl md:text-5xl font-bold mb-4 leading-tight">Quality Roofing, Siding & Gutter Services</h1>
-              <p class="text-xl text-blue-100 mb-8">Protect your home with professional services from the experts you can trust. Serving the local community for over 15 years.</p>
-              <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start">
+            <div class="md:w-1/2 mb-6 md:mb-0 md:pr-8 text-center md:text-left">
+              <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 leading-tight">Quality Roofing, Siding & Gutter Services</h1>
+              <p class="text-lg md:text-xl text-blue-100 mb-5">Protect your home with professional services from the experts you can trust. Serving the local community for over 15 years.</p>
+
+              <!-- Desktop Services Link - Only visible on desktop -->
+              <div class="hidden md:block mb-0">
+                <a
+                  href="/services"
+                  class="inline-flex items-center justify-center px-5 py-2.5 border border-white text-base font-medium rounded-md text-white hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition duration-150"
+                >
+                  Explore Our Services
+                </a>
+              </div>
+
+              <!-- Mobile CTA Button - Shown on small screens -->
+              <div class="flex justify-center md:hidden mb-4">
                 <button
-                  class="inline-flex items-center justify-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg shadow-lg transition duration-300"
+                  class="w-full sm:w-auto inline-flex items-center justify-center px-5 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg shadow-lg transition duration-300 text-base"
                   onclick="RoofQuotePro.open()"
                 >
                   <i class="fas fa-calculator mr-2"></i> Get Your Free Roof Quote
                 </button>
-                <a
-                  href="/services"
-                  class="hidden md:inline-flex items-center justify-center px-6 py-3 border border-white text-base font-medium rounded-md text-white hover:bg-blue-600/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition duration-150"
-                  >Our Services</a
-                >
               </div>
             </div>
-            <div class="md:w-1/2 flex items-center justify-center">
-              <img src="/images/example-quote.png" alt="Example Quote" class="rounded-lg shadow-2xl w-full max-w-md h-auto" />
+
+            <!-- CTA Panel - Desktop version -->
+            <div class="md:w-1/2">
+              <div
+                class="bg-white/95 backdrop-blur-sm rounded-lg p-4 md:p-5 text-gray-800 relative shadow-[0_10px_50px_-12px_rgba(59,130,246,0.25),0_0_0_1px_rgba(255,255,255,0.1)] before:absolute before:inset-0 before:rounded-lg before:shadow-[inset_0_1px_2px_rgba(255,255,255,0.9)] before:z-0 after:absolute after:top-0 after:left-0 after:right-0 after:h-1 after:bg-gradient-to-r after:from-blue-500 after:to-blue-600 after:rounded-t-lg"
+              >
+                <div class="relative z-10">
+                  <div class="text-center mb-3">
+                    <h2 class="text-xl md:text-2xl font-bold text-gray-900">Get Your Free Roof Quote</h2>
+                    <p class="text-blue-600 font-medium text-sm md:text-base">In Just 60 Seconds</p>
+                  </div>
+
+                  <div class="flex flex-col space-y-2 mb-4">
+                    <div class="flex items-center">
+                      <div class="bg-green-100 rounded-full p-1 mr-2 flex-shrink-0">
+                        <i class="fas fa-check text-green-600 text-xs"></i>
+                      </div>
+                      <span class="text-sm">No phone call required</span>
+                    </div>
+                    <div class="flex items-center">
+                      <div class="bg-green-100 rounded-full p-1 mr-2 flex-shrink-0">
+                        <i class="fas fa-check text-green-600 text-xs"></i>
+                      </div>
+                      <span class="text-sm">Instant estimate based on satellite imagery</span>
+                    </div>
+                    <div class="flex items-center">
+                      <div class="bg-green-100 rounded-full p-1 mr-2 flex-shrink-0">
+                        <i class="fas fa-check text-green-600 text-xs"></i>
+                      </div>
+                      <span class="text-sm">No obligation or pushy sales tactics</span>
+                    </div>
+                  </div>
+
+                  <!-- Desktop CTA Button -->
+                  <div class="hidden md:block mb-4">
+                    <button
+                      class="w-full inline-flex items-center justify-center px-5 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg shadow-lg transition duration-300 text-base relative overflow-hidden group"
+                      onclick="RoofQuotePro.open()"
+                    >
+                      <span class="absolute inset-0 w-full h-full bg-gradient-to-br from-blue-600 to-blue-700"></span>
+                      <span
+                        class="absolute bottom-0 right-0 block w-64 h-64 mb-32 mr-4 transition duration-500 origin-bottom-left transform rotate-45 translate-x-24 bg-blue-500 opacity-30 group-hover:rotate-90 ease"
+                      ></span>
+                      <span class="relative flex items-center"> <i class="fas fa-calculator mr-2"></i> Get Your Free Roof Quote </span>
+                    </button>
+                  </div>
+
+                  <!-- Trust indicators -->
+                  <div class="pt-3 border-t border-gray-200">
+                    <div class="flex flex-wrap items-center justify-between">
+                      <div class="flex items-center space-x-1 text-yellow-400 mb-2 mr-3">
+                        <i class="fas fa-star text-sm"></i>
+                        <i class="fas fa-star text-sm"></i>
+                        <i class="fas fa-star text-sm"></i>
+                        <i class="fas fa-star text-sm"></i>
+                        <i class="fas fa-star text-sm"></i>
+                        <span class="text-gray-800 font-medium ml-1 text-sm">4.9/5</span>
+                      </div>
+
+                      <div class="flex space-x-2 mb-2">
+                        <img src="/images/google.png" alt="Google" class="h-6 w-auto" />
+                        <img src="/images/facebook.png" alt="Facebook" class="h-6 w-auto" />
+                        <img src="/images/angi.png" alt="Angi" class="h-6 w-auto" />
+                      </div>
+                    </div>
+
+                    <p class="text-xs text-gray-600 italic">"Received an accurate quote in under a minute. The entire process from quote to finished roof was seamless!" - John D.</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
