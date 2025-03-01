@@ -17,6 +17,9 @@
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+    <!-- Roofle RoofQuote PRO Widget -->
+    <script src="https://app.roofle.com/roof-quote-pro-widget.js?id=ZxB2K7X6ylCQKOXoTqCW5" async></script>
   </head>
   <body class="flex flex-col min-h-screen bg-gray-50">
     <!-- Header -->
@@ -24,16 +27,105 @@
 
     <!-- Main Content -->
     <main class="flex-grow">
-      <!-- Page Title Section -->
-      <section class="bg-gray-100 py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 class="text-4xl font-bold text-gray-900 text-center">Professional Roofing Services</h1>
+      <!-- Hero Section with Roofle Widget -->
+      <section class="relative py-12 md:py-16 text-white overflow-hidden">
+        <div class="absolute inset-0">
+          <img src="/images/roofing-hero.jpg" alt="Professional Roofing Services Background" class="w-full h-full object-cover object-center" />
+          <div class="absolute inset-0 bg-black opacity-50"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-6 md:mb-0 md:pr-8 text-center md:text-left">
+              <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 leading-tight">Professional Roofing Services</h1>
+              <p class="text-lg md:text-xl text-blue-100 mb-5">
+                Protect your home with quality roofing solutions. From repairs to complete replacements, our expert team delivers exceptional results.
+              </p>
+
+              <!-- Mobile CTA Button - Shown on small screens -->
+              <div class="flex justify-center md:hidden mb-4">
+                <button
+                  class="w-full sm:w-auto inline-flex items-center justify-center px-5 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg shadow-lg transition duration-300 text-base"
+                  onclick="RoofQuotePro.open()"
+                >
+                  <i class="fas fa-calculator mr-2"></i> Get Your Free Roof Quote
+                </button>
+              </div>
+            </div>
+
+            <!-- CTA Panel - Desktop version -->
+            <div class="md:w-1/2">
+              <div
+                class="bg-white/95 backdrop-blur-sm rounded-lg p-3 md:p-4 text-gray-800 relative shadow-[0_10px_50px_-12px_rgba(59,130,246,0.25),0_0_0_1px_rgba(255,255,255,0.1)] before:absolute before:inset-0 before:rounded-lg before:shadow-[inset_0_1px_2px_rgba(255,255,255,0.9)] before:z-0 after:absolute after:top-0 after:left-0 after:right-0 after:h-1 after:bg-gradient-to-r after:from-blue-500 after:to-blue-600 after:rounded-t-lg"
+              >
+                <div class="relative z-10">
+                  <div class="text-center mb-2">
+                    <h2 class="text-lg md:text-xl font-bold text-gray-900">Get Your Free Roof Quote</h2>
+                    <p class="text-blue-600 font-medium text-xs md:text-sm">In Just 60 Seconds</p>
+                  </div>
+
+                  <div class="flex flex-col space-y-2 mb-3">
+                    <div class="flex items-center">
+                      <div class="bg-green-100 rounded-full p-1 mr-2 flex-shrink-0">
+                        <i class="fas fa-check text-green-600 text-xs"></i>
+                      </div>
+                      <span class="text-sm">No phone call required</span>
+                    </div>
+                    <div class="flex items-center">
+                      <div class="bg-green-100 rounded-full p-1 mr-2 flex-shrink-0">
+                        <i class="fas fa-check text-green-600 text-xs"></i>
+                      </div>
+                      <span class="text-sm">Instant estimate based on satellite imagery</span>
+                    </div>
+                    <div class="flex items-center">
+                      <div class="bg-green-100 rounded-full p-1 mr-2 flex-shrink-0">
+                        <i class="fas fa-check text-green-600 text-xs"></i>
+                      </div>
+                      <span class="text-sm">No obligation or pushy sales tactics</span>
+                    </div>
+                  </div>
+
+                  <!-- Desktop CTA Button -->
+                  <div class="hidden md:block mb-3">
+                    <button
+                      class="w-full inline-flex items-center justify-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg shadow-lg transition duration-300 text-sm relative overflow-hidden group"
+                      onclick="RoofQuotePro.open()"
+                    >
+                      <span class="absolute inset-0 w-full h-full bg-gradient-to-br from-blue-600 to-blue-700"></span>
+                      <span
+                        class="absolute bottom-0 right-0 block w-64 h-64 mb-32 mr-4 transition duration-500 origin-bottom-left transform rotate-45 translate-x-24 bg-blue-500 opacity-30 group-hover:rotate-90 ease"
+                      ></span>
+                      <span class="relative flex items-center"> <i class="fas fa-calculator mr-2"></i> Get Your Free Roof Quote </span>
+                    </button>
+                  </div>
+
+                  <!-- Trust indicators -->
+                  <div class="pt-2 border-t border-gray-200">
+                    <div class="flex flex-wrap items-center justify-between">
+                      <div class="flex items-center space-x-1 text-yellow-400 mb-2 mr-3">
+                        <i class="fas fa-star text-sm"></i>
+                        <i class="fas fa-star text-sm"></i>
+                        <i class="fas fa-star text-sm"></i>
+                        <i class="fas fa-star text-sm"></i>
+                        <i class="fas fa-star text-sm"></i>
+                        <span class="text-gray-800 font-medium ml-1 text-xs">4.9/5</span>
+                      </div>
+                      <div class="flex items-center text-xs text-gray-600">
+                        <i class="fas fa-shield-alt text-green-600 mr-1"></i>
+                        <span>100% Secure & Confidential</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       <!-- Content Section -->
       <section class="py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">Our Roofing Services</h2>
           <p class="text-lg text-gray-700 mb-6">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh
             porttitor.
