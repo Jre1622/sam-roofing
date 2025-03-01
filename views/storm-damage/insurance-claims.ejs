@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <meta name="description" content="<%= description %>" />
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/output.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  </head>
+  <body class="flex flex-col min-h-screen bg-gray-50">
+    <!-- Header -->
+    <header><%- include('../partials/header') %></header>
+
+    <!-- Main Content -->
+    <main class="flex-grow">
+      <!-- Page Title Section -->
+      <section class="bg-gray-100 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h1 class="text-4xl font-bold text-gray-900 text-center">Storm Damage Insurance Claims Assistance</h1>
+          <p class="mt-4 text-xl text-gray-600 text-center">Expert guidance through the insurance claim process</p>
+        </div>
+      </section>
+
+      <!-- Hero Section -->
+      <section class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="lg:flex lg:items-center lg:space-x-8">
+            <div class="lg:w-1/2">
+              <h2 class="text-3xl font-bold text-gray-900 mb-4">Navigate Insurance Claims with Confidence</h2>
+              <p class="text-lg text-gray-700 mb-6">
+                Dealing with insurance claims after storm damage can be overwhelming and confusing. Maverick Contracting provides expert assistance to help you navigate the entire process, from
+                initial documentation to final settlement.
+              </p>
+              <p class="text-lg text-gray-700 mb-6">
+                Our experienced team works directly with insurance adjusters on your behalf, ensuring that all damage is properly documented and that you receive fair compensation for necessary
+                repairs. We understand insurance policies and procedures, and we'll advocate for your best interests every step of the way.
+              </p>
+              <div class="mt-8">
+                <a href="/contact" class="inline-block px-6 py-3 bg-red-600 text-white font-bold rounded-md hover:bg-red-700 transition duration-150">Get Insurance Claim Help</a>
+              </div>
+            </div>
+            <div class="lg:w-1/2 mt-8 lg:mt-0">
+              <div class="rounded-lg overflow-hidden shadow-xl">
+                <img src="https://via.placeholder.com/600x400" alt="Insurance claim assistance" class="w-full h-auto" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section class="py-12 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">Our Insurance Claim Services</h2>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Service 1 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <div class="p-6">
+                <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-4">
+                  <i class="fas fa-search text-red-600 text-xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Thorough Damage Assessment</h3>
+                <p class="text-gray-700">Comprehensive inspection and documentation of all storm damage to ensure nothing is overlooked in your insurance claim.</p>
+              </div>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <div class="p-6">
+                <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-4">
+                  <i class="fas fa-camera text-red-600 text-xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Detailed Documentation</h3>
+                <p class="text-gray-700">Professional photo and video documentation of all damage, with detailed reports that satisfy insurance requirements.</p>
+              </div>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <div class="p-6">
+                <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-4">
+                  <i class="fas fa-file-signature text-red-600 text-xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Claim Filing Assistance</h3>
+                <p class="text-gray-700">Expert help with completing and submitting all necessary insurance claim forms and documentation correctly and on time.</p>
+              </div>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <div class="p-6">
+                <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-4">
+                  <i class="fas fa-user-tie text-red-600 text-xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Adjuster Meeting Representation</h3>
+                <p class="text-gray-700">Professional representation during insurance adjuster inspections to ensure all damage is properly identified and documented.</p>
+              </div>
+            </div>
+
+            <!-- Service 5 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <div class="p-6">
+                <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-4">
+                  <i class="fas fa-comments-dollar text-red-600 text-xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Settlement Negotiation</h3>
+                <p class="text-gray-700">Expert negotiation with insurance companies to ensure you receive fair compensation for all necessary repairs and replacements.</p>
+              </div>
+            </div>
+
+            <!-- Service 6 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <div class="p-6">
+                <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-4">
+                  <i class="fas fa-tasks text-red-600 text-xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Claim Tracking & Management</h3>
+                <p class="text-gray-700">Ongoing management of your claim process, including follow-ups with insurance companies and documentation of all communications.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Process Section -->
+      <section class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">Our Insurance Claim Process</h2>
+
+          <div class="grid md:grid-cols-2 gap-x-8 gap-y-12">
+            <!-- Step 1 -->
+            <div class="flex">
+              <div class="flex-shrink-0">
+                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-red-600 text-white">
+                  <span class="text-lg font-bold">1</span>
+                </div>
+              </div>
+              <div class="ml-4">
+                <h3 class="text-xl font-bold text-gray-900">Free Damage Assessment</h3>
+                <p class="mt-2 text-base text-gray-700">We conduct a thorough inspection of your property to identify all storm damage that may be covered by your insurance policy.</p>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="flex">
+              <div class="flex-shrink-0">
+                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-red-600 text-white">
+                  <span class="text-lg font-bold">2</span>
+                </div>
+              </div>
+              <div class="ml-4">
+                <h3 class="text-xl font-bold text-gray-900">Documentation & Evidence Collection</h3>
+                <p class="mt-2 text-base text-gray-700">We gather comprehensive documentation, including photos, videos, and detailed notes of all damage to support your insurance claim.</p>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="flex">
+              <div class="flex-shrink-0">
+                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-red-600 text-white">
+                  <span class="text-lg font-bold">3</span>
+                </div>
+              </div>
+              <div class="ml-4">
+                <h3 class="text-xl font-bold text-gray-900">Claim Filing Assistance</h3>
+                <p class="mt-2 text-base text-gray-700">We help you file your insurance claim correctly, ensuring all necessary documentation is included and deadlines are met.</p>
+              </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="flex">
+              <div class="flex-shrink-0">
+                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-red-600 text-white">
+                  <span class="text-lg font-bold">4</span>
+                </div>
+              </div>
+              <div class="ml-4">
+                <h3 class="text-xl font-bold text-gray-900">Adjuster Meeting Coordination</h3>
+                <p class="mt-2 text-base text-gray-700">We schedule and attend the insurance adjuster inspection, ensuring all damage is properly identified and documented.</p>
+              </div>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="flex">
+              <div class="flex-shrink-0">
+                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-red-600 text-white">
+                  <span class="text-lg font-bold">5</span>
+                </div>
+              </div>
+              <div class="ml-4">
+                <h3 class="text-xl font-bold text-gray-900">Estimate Review & Negotiation</h3>
+                <p class="mt-2 text-base text-gray-700">We review the insurance company's estimate and negotiate on your behalf if it doesn't adequately cover all necessary repairs.</p>
+              </div>
+            </div>
+
+            <!-- Step 6 -->
+            <div class="flex">
+              <div class="flex-shrink-0">
+                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-red-600 text-white">
+                  <span class="text-lg font-bold">6</span>
+                </div>
+              </div>
+              <div class="ml-4">
+                <h3 class="text-xl font-bold text-gray-900">Quality Repairs & Restoration</h3>
+                <p class="mt-2 text-base text-gray-700">
+                  Once your claim is approved, we complete all repairs and restoration work to the highest standards, ensuring your property is fully restored.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="py-12 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">Frequently Asked Questions</h2>
+
+          <div class="space-y-6 max-w-3xl mx-auto">
+            <!-- Question 1 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Will filing a claim increase my insurance premiums?</h3>
+                <p class="text-gray-700">
+                  Insurance premiums may increase after filing a claim, but this depends on many factors including your policy, claim history, and the nature of the damage. Storm damage is typically
+                  considered an "Act of God" and may not impact your rates as significantly as other types of claims. We can discuss your specific situation during your consultation.
+                </p>
+              </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-gray-900 mb-2">How long do I have to file a storm damage claim?</h3>
+                <p class="text-gray-700">
+                  Most insurance policies have a time limit for filing claims after damage occurs, typically ranging from one to two years. However, it's best to file as soon as possible after the
+                  damage is discovered. Waiting too long can make it more difficult to prove the damage was caused by a specific storm event.
+                </p>
+              </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-gray-900 mb-2">What if my insurance claim is denied?</h3>
+                <p class="text-gray-700">
+                  If your claim is denied, we can help you understand the reason for the denial and explore options for appealing the decision. This may include gathering additional documentation,
+                  requesting a re-inspection, or filing a formal appeal. Our experienced team has successfully helped many homeowners overturn initial claim denials.
+                </p>
+              </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Do I have to pay a deductible?</h3>
+                <p class="text-gray-700">
+                  Yes, most insurance policies require you to pay a deductible before coverage begins. The amount varies depending on your policy. We can help you understand your deductible and how it
+                  affects your out-of-pocket costs for repairs.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="py-12 bg-red-600">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 class="text-3xl font-bold text-white mb-4">Get Expert Insurance Claim Assistance</h2>
+          <p class="text-xl text-white mb-8">Don't navigate the complex insurance claim process alone. Let our experienced team help you get the compensation you deserve.</p>
+          <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+            <a href="tel:612-472-2294" class="inline-block px-6 py-3 bg-white text-red-600 font-bold rounded-md hover:bg-gray-100 transition duration-150">
+              <i class="fas fa-phone mr-2"></i> Call (612) 472-2294
+            </a>
+            <a href="/contact" class="inline-block px-6 py-3 bg-blue-600 text-white font-bold rounded-md hover:bg-blue-700 transition duration-150">
+              <i class="fas fa-envelope mr-2"></i> Schedule a Consultation
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-10"><%- include('../partials/footer') %></footer>
+
+    <!-- JavaScript -->
+    <script src="/js/main.js"></script>
+  </body>
+</html>

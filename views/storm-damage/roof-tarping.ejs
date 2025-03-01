@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <meta name="description" content="<%= description %>" />
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/output.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  </head>
+  <body class="flex flex-col min-h-screen bg-gray-50">
+    <!-- Header -->
+    <header><%- include('../partials/header') %></header>
+
+    <!-- Main Content -->
+    <main class="flex-grow">
+      <!-- Page Title Section -->
+      <section class="bg-gray-100 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h1 class="text-4xl font-bold text-gray-900 text-center">Emergency Roof Tarping Services</h1>
+          <p class="mt-4 text-xl text-gray-600 text-center">Immediate protection for your storm-damaged roof</p>
+        </div>
+      </section>
+
+      <!-- Emergency Call Section -->
+      <section class="py-8 bg-red-600">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex flex-col md:flex-row items-center justify-between">
+            <div class="text-white text-center md:text-left mb-4 md:mb-0">
+              <h2 class="text-2xl font-bold">Need Emergency Roof Tarping?</h2>
+              <p class="text-lg">Our emergency response team is available 24/7</p>
+            </div>
+            <a href="tel:612-472-2294" class="inline-flex items-center px-6 py-3 bg-white text-red-600 text-xl font-bold rounded-md hover:bg-gray-100 transition duration-150">
+              <i class="fas fa-phone mr-2"></i> Call (612) 472-2294
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Hero Section -->
+      <section class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="lg:flex lg:items-center lg:space-x-8">
+            <div class="lg:w-1/2">
+              <h2 class="text-3xl font-bold text-gray-900 mb-4">Protect Your Property from Further Damage</h2>
+              <p class="text-lg text-gray-700 mb-6">
+                When your roof is damaged by a storm, every minute counts. Water infiltration can quickly lead to extensive interior damage, mold growth, and structural issues. Maverick Contracting
+                provides rapid emergency roof tarping services to protect your property until permanent repairs can be made.
+              </p>
+              <p class="text-lg text-gray-700 mb-6">
+                Our experienced team uses professional-grade materials and techniques to securely cover damaged areas, preventing water from entering your home or business. We respond quickly to
+                emergency calls throughout Minnesota, providing peace of mind when you need it most.
+              </p>
+              <div class="mt-8">
+                <a href="/contact" class="inline-block px-6 py-3 bg-red-600 text-white font-bold rounded-md hover:bg-red-700 transition duration-150">Request Emergency Tarping</a>
+              </div>
+            </div>
+            <div class="lg:w-1/2 mt-8 lg:mt-0">
+              <div class="rounded-lg overflow-hidden shadow-xl">
+                <img src="https://via.placeholder.com/600x400" alt="Emergency roof tarping" class="w-full h-auto" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Choose Us Section -->
+      <section class="py-12 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">Why Choose Maverick Contracting for Emergency Roof Tarping</h2>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Reason 1 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <div class="p-6">
+                <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-4">
+                  <i class="fas fa-bolt text-red-600 text-xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Rapid Response</h3>
+                <p class="text-gray-700">Our emergency team responds quickly to your call, arriving promptly to assess the damage and install protective tarping before more damage occurs.</p>
+              </div>
+            </div>
+
+            <!-- Reason 2 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <div class="p-6">
+                <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-4">
+                  <i class="fas fa-tools text-red-600 text-xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Professional Installation</h3>
+                <p class="text-gray-700">We use professional-grade tarps and secure installation methods that can withstand additional wind and rain until permanent repairs can be made.</p>
+              </div>
+            </div>
+
+            <!-- Reason 3 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <div class="p-6">
+                <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-4">
+                  <i class="fas fa-clock text-red-600 text-xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">24/7 Availability</h3>
+                <p class="text-gray-700">Storm damage doesn't wait for business hours. Our emergency roof tarping team is available 24 hours a day, 7 days a week, including holidays.</p>
+              </div>
+            </div>
+
+            <!-- Reason 4 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <div class="p-6">
+                <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-4">
+                  <i class="fas fa-clipboard-check text-red-600 text-xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Thorough Documentation</h3>
+                <p class="text-gray-700">We document all damage for insurance purposes, taking detailed photos and notes to support your insurance claim for permanent repairs.</p>
+              </div>
+            </div>
+
+            <!-- Reason 5 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <div class="p-6">
+                <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-4">
+                  <i class="fas fa-hard-hat text-red-600 text-xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Experienced Technicians</h3>
+                <p class="text-gray-700">Our roof tarping specialists are experienced in working with all types of roofing systems and can safely secure tarps on steep or complex roofs.</p>
+              </div>
+            </div>
+
+            <!-- Reason 6 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <div class="p-6">
+                <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-4">
+                  <i class="fas fa-home text-red-600 text-xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Comprehensive Solutions</h3>
+                <p class="text-gray-700">Beyond emergency tarping, we offer complete roof repair and replacement services to restore your property to pre-storm condition.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Process Section -->
+      <section class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">Our Roof Tarping Process</h2>
+
+          <div class="space-y-12">
+            <!-- Step 1 -->
+            <div class="flex flex-col md:flex-row items-center">
+              <div class="md:w-1/3">
+                <div class="w-24 h-24 rounded-full bg-red-600 text-white flex items-center justify-center mx-auto mb-4 md:mb-0">
+                  <span class="text-3xl font-bold">1</span>
+                </div>
+              </div>
+              <div class="md:w-2/3 text-center md:text-left">
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Emergency Response</h3>
+                <p class="text-gray-700">When you call our emergency line, we gather essential information about your situation and dispatch a team to your location as quickly as possible.</p>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="flex flex-col md:flex-row items-center">
+              <div class="md:w-1/3 md:order-2">
+                <div class="w-24 h-24 rounded-full bg-red-600 text-white flex items-center justify-center mx-auto mb-4 md:mb-0">
+                  <span class="text-3xl font-bold">2</span>
+                </div>
+              </div>
+              <div class="md:w-2/3 md:order-1 text-center md:text-right">
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Damage Assessment</h3>
+                <p class="text-gray-700">
+                  Our technicians carefully assess the extent of the roof damage, identifying all areas that require tarping and documenting the damage for insurance purposes.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="flex flex-col md:flex-row items-center">
+              <div class="md:w-1/3">
+                <div class="w-24 h-24 rounded-full bg-red-600 text-white flex items-center justify-center mx-auto mb-4 md:mb-0">
+                  <span class="text-3xl font-bold">3</span>
+                </div>
+              </div>
+              <div class="md:w-2/3 text-center md:text-left">
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Debris Removal</h3>
+                <p class="text-gray-700">
+                  Before installing tarps, we remove any debris from the damaged area, such as broken shingles, branches, or other materials that could puncture the tarp or cause further damage.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="flex flex-col md:flex-row items-center">
+              <div class="md:w-1/3 md:order-2">
+                <div class="w-24 h-24 rounded-full bg-red-600 text-white flex items-center justify-center mx-auto mb-4 md:mb-0">
+                  <span class="text-3xl font-bold">4</span>
+                </div>
+              </div>
+              <div class="md:w-2/3 md:order-1 text-center md:text-right">
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Tarp Installation</h3>
+                <p class="text-gray-700">
+                  We install heavy-duty, weather-resistant tarps over the damaged areas, securing them properly to prevent water infiltration and ensure they stay in place during additional wind or
+                  rain.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="flex flex-col md:flex-row items-center">
+              <div class="md:w-1/3">
+                <div class="w-24 h-24 rounded-full bg-red-600 text-white flex items-center justify-center mx-auto mb-4 md:mb-0">
+                  <span class="text-3xl font-bold">5</span>
+                </div>
+              </div>
+              <div class="md:w-2/3 text-center md:text-left">
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Documentation & Next Steps</h3>
+                <p class="text-gray-700">
+                  After the tarping is complete, we provide detailed documentation of the damage and temporary repairs for your insurance claim, and discuss options for permanent roof repairs or
+                  replacement.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="py-12 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">Frequently Asked Questions</h2>
+
+          <div class="space-y-6 max-w-3xl mx-auto">
+            <!-- Question 1 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-gray-900 mb-2">How quickly can you respond to an emergency roof tarping request?</h3>
+                <p class="text-gray-700">
+                  We prioritize emergency calls and typically respond within 1-3 hours, depending on your location and current weather conditions. During major storm events, response times may be
+                  longer due to high demand, but we always prioritize based on the severity of the damage.
+                </p>
+              </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-gray-900 mb-2">How long will the emergency tarp last?</h3>
+                <p class="text-gray-700">
+                  Our professional-grade tarps, when properly installed, can typically protect your roof for 30-90 days, depending on weather conditions. However, they are intended as a temporary
+                  solution until permanent repairs can be made. We recommend scheduling permanent repairs as soon as possible.
+                </p>
+              </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Will my insurance cover emergency roof tarping?</h3>
+                <p class="text-gray-700">
+                  Most insurance policies cover emergency tarping as part of the mitigation process to prevent further damage. We document all work performed and provide detailed information for your
+                  insurance claim. We can also work directly with your insurance company to ensure the service is covered.
+                </p>
+              </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Can you tarp my roof during a storm?</h3>
+                <p class="text-gray-700">
+                  For safety reasons, we typically cannot install roof tarps during active severe weather such as thunderstorms, high winds, or heavy rain. We will respond as quickly as possible once
+                  conditions are safe for our technicians to work on your roof.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="py-12 bg-red-600">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 class="text-3xl font-bold text-white mb-4">Need Emergency Roof Tarping?</h2>
+          <p class="text-xl text-white mb-8">Don't wait for water damage to worsen. Contact our emergency response team immediately for professional roof tarping services.</p>
+          <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+            <a href="tel:612-472-2294" class="inline-block px-6 py-3 bg-white text-red-600 font-bold rounded-md hover:bg-gray-100 transition duration-150">
+              <i class="fas fa-phone mr-2"></i> Call (612) 472-2294
+            </a>
+            <a href="/contact" class="inline-block px-6 py-3 bg-blue-600 text-white font-bold rounded-md hover:bg-blue-700 transition duration-150">
+              <i class="fas fa-envelope mr-2"></i> Request Emergency Service
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-10"><%- include('../partials/footer') %></footer>
+
+    <!-- JavaScript -->
+    <script src="/js/main.js"></script>
+  </body>
+</html>

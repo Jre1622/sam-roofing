@@ -37,12 +37,45 @@ app.get("/", (req, res) => {
   });
 });
 
-app.get("/about", (req, res) => {
-  res.render("about", {
-    title: "About Maverick Contracting | Trusted Minnesota Exterior Remodeling Experts",
+// Storm Damage Routes
+app.get("/storm-damage/residential", (req, res) => {
+  res.render("storm-damage/residential", {
+    title: "Residential Storm Damage Services | Maverick Contracting",
     description:
-      "Learn about Maverick Contracting's commitment to quality craftsmanship and exceptional customer service. Proudly serving Minnesota homeowners in Minneapolis, St. Paul, and the Twin Cities metro area since 2005.",
-    active: "about",
+      "Expert residential storm damage repair and restoration services in Minnesota. We help homeowners recover from hail, wind, and storm damage with quality repairs and insurance claim assistance.",
+    active: "storm-damage-residential",
+  });
+});
+
+app.get("/storm-damage/multi-family", (req, res) => {
+  res.render("storm-damage/multi-family", {
+    title: "Multi-Family Storm Damage Repair | Maverick Contracting",
+    description: "Comprehensive storm damage repair services for multi-family properties in Minnesota. We handle everything from assessment to restoration for apartments, condos, and townhomes.",
+    active: "storm-damage-multi-family",
+  });
+});
+
+app.get("/storm-damage/emergency-services", (req, res) => {
+  res.render("storm-damage/emergency-services", {
+    title: "Emergency Storm Damage Services | Maverick Contracting",
+    description: "24/7 emergency storm damage services in Minnesota. Fast response to protect your property from further damage after severe weather events.",
+    active: "storm-damage-emergency-services",
+  });
+});
+
+app.get("/storm-damage/insurance-claims", (req, res) => {
+  res.render("storm-damage/insurance-claims", {
+    title: "Storm Damage Insurance Claims Assistance | Maverick Contracting",
+    description: "Expert guidance through the storm damage insurance claim process in Minnesota. We work with your insurance company to ensure you receive fair compensation for repairs.",
+    active: "storm-damage-insurance-claims",
+  });
+});
+
+app.get("/storm-damage/roof-tarping", (req, res) => {
+  res.render("storm-damage/roof-tarping", {
+    title: "Emergency Roof Tarping Services | Maverick Contracting",
+    description: "Professional roof tarping services in Minnesota to prevent further damage after storms. Quick response to protect your home or business from water damage.",
+    active: "storm-damage-roof-tarping",
   });
 });
 

@@ -75,11 +75,28 @@
             href="/"
             >Home</a
           >
-          <a
-            class="<%= active === 'about' ? 'bg-red-700 text-white' : 'text-white hover:bg-red-700 hover:text-white' %> px-2 md:px-3 lg:px-5 py-4 rounded-md text-xs md:text-sm lg:text-base font-bold transition duration-150"
-            href="/about"
-            >About</a
-          >
+          <!-- Storm Damage Dropdown -->
+          <div class="relative group">
+            <button
+              class="<%= active && active.startsWith('storm-damage') ? 'bg-red-700 text-white' : 'text-white hover:bg-red-700 hover:text-white' %> px-2 md:px-3 lg:px-5 py-4 rounded-md text-xs md:text-sm lg:text-base font-bold transition duration-150 flex items-center"
+            >
+              Storm Damage
+              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div
+              class="absolute left-0 mt-0 w-56 origin-top-left bg-white text-gray-800 shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-150 z-50"
+            >
+              <div class="py-1">
+                <a href="/storm-damage/residential" class="block px-4 py-2 text-sm hover:bg-red-600 hover:text-white">Residential Storm Damage</a>
+                <a href="/storm-damage/multi-family" class="block px-4 py-2 text-sm hover:bg-red-600 hover:text-white">Multi-Family Storm Damage</a>
+                <a href="/storm-damage/emergency-services" class="block px-4 py-2 text-sm hover:bg-red-600 hover:text-white">Emergency Services</a>
+                <a href="/storm-damage/insurance-claims" class="block px-4 py-2 text-sm hover:bg-red-600 hover:text-white">Insurance Claims</a>
+                <a href="/storm-damage/roof-tarping" class="block px-4 py-2 text-sm hover:bg-red-600 hover:text-white">Roof Tarping</a>
+              </div>
+            </div>
+          </div>
           <a
             class="<%= active === 'siding' ? 'bg-red-700 text-white' : 'text-white hover:bg-red-700 hover:text-white' %> px-2 md:px-3 lg:px-5 py-4 rounded-md text-xs md:text-sm lg:text-base font-bold transition duration-150"
             href="/siding"
@@ -142,9 +159,27 @@
   <div class="md:hidden hidden" id="mobile-menu">
     <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col items-center">
       <a class="<%= active === 'home' ? 'bg-red-700 text-white' : 'text-white hover:bg-red-700 hover:text-white' %> block px-4 py-3 rounded-md text-lg font-bold w-full text-center" href="/">Home</a>
-      <a class="<%= active === 'about' ? 'bg-red-700 text-white' : 'text-white hover:bg-red-700 hover:text-white' %> block px-4 py-3 rounded-md text-lg font-bold w-full text-center" href="/about"
-        >About</a
-      >
+
+      <!-- Mobile Storm Damage Dropdown -->
+      <div class="w-full">
+        <button
+          class="<%= active && active.startsWith('storm-damage') ? 'bg-red-700 text-white' : 'text-white hover:bg-red-700 hover:text-white' %> mobile-dropdown-toggle flex items-center justify-center px-4 py-3 rounded-md text-lg font-bold w-full"
+          aria-expanded="false"
+        >
+          Storm Damage
+          <svg class="w-4 h-4 ml-2 mobile-dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div class="mobile-dropdown-menu hidden bg-red-800 rounded-md mt-1 overflow-hidden">
+          <a href="/storm-damage/residential" class="block px-4 py-3 text-white hover:bg-red-900 text-base font-medium w-full text-center">Residential Storm Damage</a>
+          <a href="/storm-damage/multi-family" class="block px-4 py-3 text-white hover:bg-red-900 text-base font-medium w-full text-center">Multi-Family Storm Damage</a>
+          <a href="/storm-damage/emergency-services" class="block px-4 py-3 text-white hover:bg-red-900 text-base font-medium w-full text-center">Emergency Services</a>
+          <a href="/storm-damage/insurance-claims" class="block px-4 py-3 text-white hover:bg-red-900 text-base font-medium w-full text-center">Insurance Claims</a>
+          <a href="/storm-damage/roof-tarping" class="block px-4 py-3 text-white hover:bg-red-900 text-base font-medium w-full text-center">Roof Tarping</a>
+        </div>
+      </div>
+
       <a class="<%= active === 'siding' ? 'bg-red-700 text-white' : 'text-white hover:bg-red-700 hover:text-white' %> block px-4 py-3 rounded-md text-lg font-bold w-full text-center" href="/siding"
         >Siding</a
       >
@@ -196,6 +231,28 @@
       // Update aria-expanded attribute
       const expanded = mobileMenuButton.getAttribute("aria-expanded") === "true" || false;
       mobileMenuButton.setAttribute("aria-expanded", !expanded);
+    });
+
+    // Mobile dropdown functionality
+    const mobileDropdownToggles = document.querySelectorAll(".mobile-dropdown-toggle");
+
+    mobileDropdownToggles.forEach((toggle) => {
+      toggle.addEventListener("click", function () {
+        const dropdownMenu = this.nextElementSibling;
+        dropdownMenu.classList.toggle("hidden");
+
+        // Toggle arrow direction
+        const arrow = this.querySelector(".mobile-dropdown-arrow");
+        if (dropdownMenu.classList.contains("hidden")) {
+          arrow.style.transform = "rotate(0deg)";
+        } else {
+          arrow.style.transform = "rotate(180deg)";
+        }
+
+        // Update aria-expanded
+        const expanded = this.getAttribute("aria-expanded") === "true" || false;
+        this.setAttribute("aria-expanded", !expanded);
+      });
     });
   });
 </script>
