@@ -1801,6 +1801,11 @@ video {
      object-position: center 60%;
 }
 
+.object-center {
+  -o-object-position: center;
+     object-position: center;
+}
+
 .p-0 {
   padding: 0px;
 }
@@ -2836,6 +2841,10 @@ video {
   .md\:object-\[center_45\%\] {
     -o-object-position: center 45%;
        object-position: center 45%;
+  }
+
+  .md\:p-4 {
+    padding: 1rem;
   }
 
   .md\:p-5 {

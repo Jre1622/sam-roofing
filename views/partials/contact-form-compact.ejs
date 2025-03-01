@@ -1,0 +1,107 @@
+<!-- Compact Contact Form Partial -->
+<div class="relative z-10">
+  <div class="text-center mb-2">
+    <h2 class="text-lg md:text-xl font-bold text-gray-900">Get a Free Quote</h2>
+    <p class="text-blue-600 font-medium text-xs md:text-sm">Quick Response Guaranteed</p>
+  </div>
+
+  <div class="bg-blue-50 border-l-4 border-blue-500 p-2 mb-3">
+    <div class="flex">
+      <div class="flex-shrink-0">
+        <i class="fas fa-bolt text-blue-600 text-sm"></i>
+      </div>
+      <div class="ml-2">
+        <p class="text-xs text-blue-700 font-medium">Fast Response Guaranteed</p>
+        <p class="text-xs text-blue-600">We typically respond within 1 hour during business hours!</p>
+      </div>
+    </div>
+  </div>
+
+  <form action="/submit-contact" method="POST" class="animate-on-scroll">
+    <div class="grid grid-cols-1 gap-2">
+      <div>
+        <input
+          type="text"
+          class="w-full px-3 py-1.5 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 transition duration-150 text-sm"
+          id="name"
+          name="name"
+          placeholder="Your Name *"
+          required
+        />
+      </div>
+      <div>
+        <input
+          type="tel"
+          class="w-full px-3 py-1.5 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 transition duration-150 text-sm"
+          id="phone"
+          name="phone"
+          placeholder="Phone Number *"
+          required
+        />
+      </div>
+      <div>
+        <input
+          type="email"
+          class="w-full px-3 py-1.5 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 transition duration-150 text-sm"
+          id="email"
+          name="email"
+          placeholder="Email Address *"
+          required
+        />
+      </div>
+      <div>
+        <select
+          class="w-full px-3 py-1.5 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 transition duration-150 text-sm"
+          id="service"
+          name="service"
+          required
+        >
+          <option value="" disabled <%= typeof preSelectedService === 'undefined' ? 'selected' : '' %>>Select a service...</option>
+          <option value="Roofing" <%= typeof preSelectedService !== 'undefined' && preSelectedService === 'Roofing' ? 'selected' : '' %>>Roofing</option>
+          <option value="Siding" <%= typeof preSelectedService !== 'undefined' && preSelectedService === 'Siding' ? 'selected' : '' %>>Siding</option>
+          <option value="Gutters" <%= typeof preSelectedService !== 'undefined' && preSelectedService === 'Gutters' ? 'selected' : '' %>>Gutters</option>
+          <option value="Windows" <%= typeof preSelectedService !== 'undefined' && preSelectedService === 'Windows' ? 'selected' : '' %>>Windows</option>
+          <option value="Storm-Residential" <%= typeof preSelectedService !== 'undefined' && preSelectedService === 'Storm-Residential' ? 'selected' : '' %>>Storm Damage - Residential</option>
+          <option value="Storm-Multi-Family" <%= typeof preSelectedService !== 'undefined' && preSelectedService === 'Storm-Multi-Family' ? 'selected' : '' %>>Storm Damage - Multi-Family</option>
+          <option value="Storm-Emergency" <%= typeof preSelectedService !== 'undefined' && preSelectedService === 'Storm-Emergency' ? 'selected' : '' %>>Storm Damage - Emergency Services</option>
+          <option value="Storm-Insurance" <%= typeof preSelectedService !== 'undefined' && preSelectedService === 'Storm-Insurance' ? 'selected' : '' %>>Storm Damage - Insurance Claims</option>
+          <option value="Storm-Roof-Tarping" <%= typeof preSelectedService !== 'undefined' && preSelectedService === 'Storm-Roof-Tarping' ? 'selected' : '' %>>Storm Damage - Roof Tarping</option>
+          <option value="Inspection" <%= typeof preSelectedService !== 'undefined' && preSelectedService === 'Inspection' ? 'selected' : '' %>>Roof Inspection</option>
+          <option value="Repair" <%= typeof preSelectedService !== 'undefined' && preSelectedService === 'Repair' ? 'selected' : '' %>>Roof Repair</option>
+          <option value="Other" <%= typeof preSelectedService !== 'undefined' && preSelectedService === 'Other' ? 'selected' : '' %>>Other</option>
+        </select>
+      </div>
+      <div>
+        <textarea
+          class="w-full px-3 py-1.5 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 transition duration-150 text-sm"
+          id="message"
+          name="message"
+          rows="2"
+          placeholder="Tell us about your project *"
+          required
+        ></textarea>
+      </div>
+      <div>
+        <div class="bg-gray-50 p-1.5 rounded-md mb-2">
+          <div class="flex items-start">
+            <div class="flex-shrink-0 pt-0.5">
+              <i class="fas fa-shield-alt text-green-600 text-xs"></i>
+            </div>
+            <div class="ml-2">
+              <p class="text-xs text-gray-700">Your information is secure and will never be shared with third parties.</p>
+            </div>
+          </div>
+        </div>
+        <button
+          type="submit"
+          class="inline-flex items-center px-4 py-1.5 border border-transparent text-sm font-medium rounded-md shadow-lg text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150 w-full justify-center"
+        >
+          Send Message & Get Quick Response
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1.5" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </form>
+</div> 
