@@ -36,81 +36,119 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="flex flex-col lg:flex-row gap-8">
             <div class="lg:w-2/3">
-              <!-- Roofle RoofQuote PRO Embedded Widget -->
-              <div class="bg-white rounded-lg shadow-xl p-8 mb-6">
+              <!-- Roofle RoofQuote PRO Embedded Widget - Only visible on md screens and up -->
+              <div class="hidden md:block bg-white rounded-lg shadow-xl p-8 mb-6">
                 <h2 class="text-2xl font-bold mb-6 text-gray-900">Get an Instant Roof Quote</h2>
                 <script src="https://app.roofle.com/roof-quote-pro-embedded-widget.js?id=ZxB2K7X6ylCQKOXoTqCW5" async></script>
               </div>
 
               <div class="bg-white rounded-lg shadow-xl p-8">
-                <h2 class="text-2xl font-bold mb-6 text-gray-900">Send Us a Message</h2>
-                <p class="text-gray-600 mb-6">
-                  Have questions about our services? Need more information about your instant quote? Or just can't find what you're looking for on our site? Fill out this form and our team will get
-                  back to you as soon as possible.
+                <h2 class="text-2xl font-bold mb-4 text-gray-900">Get in Touch Today</h2>
+                <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6">
+                  <div class="flex">
+                    <div class="flex-shrink-0">
+                      <i class="fas fa-bolt text-blue-600"></i>
+                    </div>
+                    <div class="ml-3">
+                      <p class="text-sm text-blue-700 font-medium">Fast Response Guaranteed</p>
+                      <p class="text-sm text-blue-600">We typically respond to all inquiries within 1 hour during business hours!</p>
+                    </div>
+                  </div>
+                </div>
+                <p class="text-gray-700 mb-6">
+                  Whether you need a quote, have questions about our services, or want to schedule a consultation, we're here to help. Fill out this simple form and a member of our team will get back
+                  to you right away.
                 </p>
                 <form action="/submit-contact" method="POST" class="animate-on-scroll">
                   <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+                      <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Your Name <span class="text-red-600">*</span></label>
                       <input
                         type="text"
                         class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 transition duration-150"
                         id="name"
                         name="name"
+                        placeholder="John Smith"
                         required
                       />
+                      <p class="mt-1 text-xs text-gray-500">How should we address you?</p>
                     </div>
                     <div>
-                      <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                      <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number <span class="text-red-600">*</span></label>
                       <input
                         type="tel"
                         class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 transition duration-150"
                         id="phone"
                         name="phone"
+                        placeholder="(612) 555-1234"
                         required
                       />
+                      <p class="mt-1 text-xs text-gray-500">Best number to reach you for quick follow-up</p>
                     </div>
                     <div>
-                      <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                      <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address <span class="text-red-600">*</span></label>
                       <input
                         type="email"
                         class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 transition duration-150"
                         id="email"
                         name="email"
+                        placeholder="you@example.com"
                         required
                       />
+                      <p class="mt-1 text-xs text-gray-500">We'll send a confirmation and quote details here</p>
                     </div>
                     <div>
-                      <label for="service" class="block text-sm font-medium text-gray-700 mb-1">Service Needed</label>
+                      <label for="service" class="block text-sm font-medium text-gray-700 mb-1">Service Needed <span class="text-red-600">*</span></label>
                       <select
                         class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 transition duration-150"
                         id="service"
                         name="service"
+                        required
                       >
+                        <option value="" disabled selected>Select a service...</option>
                         <option value="Roofing">Roofing</option>
                         <option value="Siding">Siding</option>
                         <option value="Gutters">Gutters</option>
+                        <option value="Windows">Windows</option>
+                        <option value="Storm-Residential">Storm Damage - Residential</option>
+                        <option value="Storm-Multi-Family">Storm Damage - Multi-Family</option>
+                        <option value="Storm-Emergency">Storm Damage - Emergency Services</option>
+                        <option value="Storm-Insurance">Storm Damage - Insurance Claims</option>
+                        <option value="Storm-Roof-Tarping">Storm Damage - Roof Tarping</option>
                         <option value="Inspection">Roof Inspection</option>
                         <option value="Repair">Roof Repair</option>
                         <option value="Other">Other</option>
                       </select>
+                      <p class="mt-1 text-xs text-gray-500">Helps us direct your inquiry to the right specialist</p>
                     </div>
                     <div class="md:col-span-2">
-                      <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                      <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message <span class="text-red-600">*</span></label>
                       <textarea
                         class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 transition duration-150"
                         id="message"
                         name="message"
                         rows="5"
+                        placeholder="Please provide any details about your project, questions, or specific needs. The more information you share, the better we can help you!"
                         required
                       ></textarea>
+                      <p class="mt-1 text-xs text-gray-500">Include any specific details about your project or questions</p>
                     </div>
                     <div class="md:col-span-2">
+                      <div class="bg-gray-50 p-4 rounded-md mb-4">
+                        <div class="flex items-start">
+                          <div class="flex-shrink-0 pt-0.5">
+                            <i class="fas fa-shield-alt text-green-600"></i>
+                          </div>
+                          <div class="ml-3">
+                            <p class="text-sm text-gray-700">Your information is secure and will never be shared with third parties. We respect your privacy.</p>
+                          </div>
+                        </div>
+                      </div>
                       <button
                         type="submit"
-                        class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-lg text-white bg-blue-600 hover:bg-blue-600/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150"
+                        class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-lg text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150 w-full justify-center"
                       >
-                        Send Message
+                        Send Message & Get Quick Response
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
                           <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z" />
                         </svg>
