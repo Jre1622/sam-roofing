@@ -129,25 +129,404 @@
       <!-- Brand Ratings -->
       <%- include('partials/brand-ratings') %>
 
-      <!-- Content Section -->
-      <section class="py-12">
+      <!-- Roofing Benefits Section -->
+      <section class="py-12 md:py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">Our Roofing Services</h2>
-          <p class="text-lg text-gray-700 mb-6">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh
-            porttitor.
-          </p>
-          <p class="text-lg text-gray-700 mb-6">
-            Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere.
-          </p>
+          <div class="text-center mb-8 md:mb-10">
+            <span class="inline-block text-blue-600 font-semibold tracking-wider uppercase text-sm mb-1">Home Protection</span>
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">The Value of a Quality Roof</h2>
+            <div class="w-16 h-1 bg-blue-500 mx-auto"></div>
+          </div>
+
+          <div class="bg-gray-50 rounded-xl shadow-lg overflow-hidden">
+            <div class="flex flex-col lg:flex-row">
+              <!-- Left side: Roof Image and CTA -->
+              <div class="lg:w-2/3 p-6 lg:p-6">
+                <div class="bg-white rounded-lg shadow-sm p-4 mb-6">
+                  <h3 class="text-xl font-semibold text-gray-900 mb-3">Protect Your Home with a New Roof</h3>
+
+                  <!-- Roof Image -->
+                  <div class="aspect-video lg:aspect-[16/9] bg-gray-100 rounded-lg mb-4 overflow-hidden">
+                    <img src="/images/roof-example.jpg" alt="Professional Roof Installation" class="w-full h-full object-cover" />
+                  </div>
+
+                  <div class="text-center">
+                    <p class="text-gray-600 text-sm italic mb-3">Durable roofing systems installed by certified professionals</p>
+                  </div>
+                </div>
+
+                <div class="text-center">
+                  <button
+                    onclick="RoofQuotePro.open()"
+                    class="inline-flex items-center px-5 py-2.5 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150"
+                  >
+                    Get Your Free Quote
+                    <i class="fas fa-calculator ml-2"></i>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Right side: Benefits -->
+              <div class="lg:w-1/3 bg-blue-50 p-6 lg:p-6 flex flex-col justify-between">
+                <div>
+                  <h3 class="text-xl font-semibold text-gray-900 mb-4">Benefits of a New Roof</h3>
+
+                  <div class="space-y-3 lg:space-y-3.5">
+                    <div class="flex items-start">
+                      <div class="flex-shrink-0 mt-1">
+                        <div class="h-8 w-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                          <i class="fas fa-shield-alt text-sm"></i>
+                        </div>
+                      </div>
+                      <div class="ml-4">
+                        <h4 class="text-md font-semibold text-gray-900">Weather Protection</h4>
+                        <p class="text-sm text-gray-600">Advanced roofing systems defend against harsh Minnesota weather</p>
+                      </div>
+                    </div>
+
+                    <div class="flex items-start">
+                      <div class="flex-shrink-0 mt-1">
+                        <div class="h-8 w-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                          <i class="fas fa-bolt text-sm"></i>
+                        </div>
+                      </div>
+                      <div class="ml-4">
+                        <h4 class="text-md font-semibold text-gray-900">Energy Efficiency</h4>
+                        <p class="text-sm text-gray-600">Cool roof technology reduces cooling costs by up to 25%</p>
+                      </div>
+                    </div>
+
+                    <div class="flex items-start">
+                      <div class="flex-shrink-0 mt-1">
+                        <div class="h-8 w-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                          <i class="fas fa-home text-sm"></i>
+                        </div>
+                      </div>
+                      <div class="ml-4">
+                        <h4 class="text-md font-semibold text-gray-900">Curb Appeal</h4>
+                        <p class="text-sm text-gray-600">Modern roofing materials enhance your home's appearance</p>
+                      </div>
+                    </div>
+
+                    <div class="flex items-start">
+                      <div class="flex-shrink-0 mt-1">
+                        <div class="h-8 w-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                          <i class="fas fa-file-invoice-dollar text-sm"></i>
+                        </div>
+                      </div>
+                      <div class="ml-4">
+                        <h4 class="text-md font-semibold text-gray-900">Insurance Benefits</h4>
+                        <p class="text-sm text-gray-600">Many policies offer discounts for impact-resistant roofs</p>
+                      </div>
+                    </div>
+
+                    <div class="flex items-start">
+                      <div class="flex-shrink-0 mt-1">
+                        <div class="h-8 w-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                          <i class="fas fa-award text-sm"></i>
+                        </div>
+                      </div>
+                      <div class="ml-4">
+                        <h4 class="text-md font-semibold text-gray-900">Long Warranties</h4>
+                        <p class="text-sm text-gray-600">50+ year warranties available on premium roofing systems</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <!-- FAQ Section -->
-      <section class="py-12">
+      <!-- SEO-Optimized Roofing Information Section -->
+      <section class="py-12 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">Frequently Asked Questions</h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="flex flex-col lg:flex-row gap-6">
+            <!-- Left side - SEO targeted content -->
+            <div class="lg:w-2/3 relative">
+              <!-- Subtle background pattern -->
+              <div
+                class="absolute inset-0 opacity-5 pointer-events-none"
+                style="
+                  background-image: url('data:image/svg+xml,%3Csvg width=\'20\' height=\'20\' viewBox=\'0 0 20 20\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'%23000000\' fill-opacity=\'1\' fill-rule=\'evenodd\'%3E%3Ccircle cx=\'3\' cy=\'3\' r=\'1\'/%3E%3C/g%3E%3C/svg%3E');
+                "
+              ></div>
+
+              <!-- Twin Cities Roofing Experts section -->
+              <div class="mb-4 p-3 rounded-lg hover:bg-gray-50 transition-colors duration-300">
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mr-3">
+                    <div class="h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                      <i class="fas fa-map-marker-alt text-lg"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Twin Cities Roofing Experts</h3>
+                    <p class="text-gray-600 text-sm">
+                      As a leading roofing contractor in the Twin Cities, we specialize in weather-resistant roofing solutions designed for Minnesota's extreme climate. Our local expertise ensures
+                      your new roof provides optimal protection against heavy snow, ice dams, and severe storms.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent my-3"></div>
+
+              <!-- Owens Corning Certification section -->
+              <div class="mb-4 p-3 rounded-lg hover:bg-gray-50 transition-colors duration-300">
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mr-3">
+                    <div class="h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                      <i class="fas fa-certificate text-lg"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Owens Corning Preferred Contractor</h3>
+                    <p class="text-gray-600 text-sm">
+                      As an Owens Corning Preferred Contractor, we offer exclusive warranties and premium roofing systems. Our certification means we meet rigorous standards for installation quality,
+                      customer service, and ongoing training. We use OC's Duration® Series shingles with SureNail® Technology for superior wind resistance and TruDefinition® color blends for lasting
+                      curb appeal.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent my-3"></div>
+
+              <!-- Impact-Resistant Shingles section -->
+              <div class="mb-4 p-3 rounded-lg hover:bg-gray-50 transition-colors duration-300">
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mr-3">
+                    <div class="h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                      <i class="fas fa-shield-alt text-lg"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Impact-Resistant Roofing Systems</h3>
+                    <p class="text-gray-600 text-sm">
+                      Our Class 4 impact-resistant shingles are rated to withstand hail strikes up to 2" in diameter. These premium asphalt shingles feature reinforced fiberglass mat bases and
+                      polymer-modified asphalt for superior durability. Many insurance companies offer discounts for homes with impact-resistant roofing - we'll help you navigate potential savings.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent my-3"></div>
+
+              <!-- Roofing Materials section -->
+              <div class="mb-4 p-3 rounded-lg hover:bg-gray-50 transition-colors duration-300">
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mr-3">
+                    <div class="h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                      <i class="fas fa-layer-group text-lg"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Premium Roofing Materials</h3>
+                    <p class="text-gray-600 text-sm">
+                      Choose from high-quality asphalt shingles, durable metal roofing, or classic cedar shake alternatives. Our asphalt shingles feature advanced algae-resistant granules and
+                      IR-reflective coatings to reduce heat absorption. Metal roofs offer 50+ year lifespans with minimal maintenance, while synthetic slate provides the elegance of natural slate
+                      without the weight or cost.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent my-3"></div>
+
+              <!-- Installation Process section -->
+              <div class="mb-4 p-3 rounded-lg hover:bg-gray-50 transition-colors duration-300">
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mr-3">
+                    <div class="h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                      <i class="fas fa-tools text-lg"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Professional Roof Installation</h3>
+                    <p class="text-gray-600 text-sm">
+                      Our certified installers follow strict quality control protocols including ice-and-water shield installation in valleys and eaves, proper ventilation spacing, and precision nail
+                      placement. We use infrared moisture detection to identify hidden issues and drone inspections to ensure complete coverage. Most roofs are installed in 1-2 days with thorough
+                      cleanup and debris removal.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent my-3"></div>
+
+              <!-- Contact section -->
+              <div class="mb-4 p-3 rounded-lg hover:bg-gray-50 transition-colors duration-300">
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mr-3">
+                    <div class="h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                      <i class="fas fa-calendar-check text-lg"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Schedule Your Roof Inspection</h3>
+                    <p class="text-gray-600 text-sm mb-3">
+                      Get a free comprehensive roof evaluation from our certified professionals. We'll assess your roof's condition, identify potential issues, and provide recommendations for repair
+                      or replacement. Serving the entire Twin Cities metro area with same-week appointments available.
+                    </p>
+                    <div>
+                      <button
+                        onclick="RoofQuotePro.open()"
+                        class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150"
+                      >
+                        Get Free Roof Evaluation
+                        <i class="fas fa-arrow-right ml-2"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right side - Why Choose Our Roofing Services -->
+            <div class="lg:w-1/3">
+              <!-- Why Us Box -->
+              <div class="bg-white rounded-lg shadow-xl p-5 mb-4">
+                <h3 class="text-lg font-bold mb-4 text-gray-900 text-center">Why Choose Us</h3>
+                <div class="space-y-2.5">
+                  <div class="flex items-center">
+                    <div class="bg-green-100 rounded-full p-1 mr-2 flex-shrink-0 w-5 h-5 flex items-center justify-center">
+                      <i class="fas fa-check text-green-600 text-xs"></i>
+                    </div>
+                    <span class="font-medium text-gray-800 text-sm">Certified Owens Corning Installers</span>
+                  </div>
+                  <div class="flex items-center">
+                    <div class="bg-green-100 rounded-full p-1 mr-2 flex-shrink-0 w-5 h-5 flex items-center justify-center">
+                      <i class="fas fa-check text-green-600 text-xs"></i>
+                    </div>
+                    <span class="font-medium text-gray-800 text-sm">Storm Damage Specialists</span>
+                  </div>
+                  <div class="flex items-center">
+                    <div class="bg-green-100 rounded-full p-1 mr-2 flex-shrink-0 w-5 h-5 flex items-center justify-center">
+                      <i class="fas fa-check text-green-600 text-xs"></i>
+                    </div>
+                    <span class="font-medium text-gray-800 text-sm">50+ Year Material Warranties</span>
+                  </div>
+                  <div class="flex items-center">
+                    <div class="bg-green-100 rounded-full p-1 mr-2 flex-shrink-0 w-5 h-5 flex items-center justify-center">
+                      <i class="fas fa-check text-green-600 text-xs"></i>
+                    </div>
+                    <span class="font-medium text-gray-800 text-sm">Insurance Claim Assistance</span>
+                  </div>
+                  <div class="flex items-center">
+                    <div class="bg-green-100 rounded-full p-1 mr-2 flex-shrink-0 w-5 h-5 flex items-center justify-center">
+                      <i class="fas fa-check text-green-600 text-xs"></i>
+                    </div>
+                    <span class="font-medium text-gray-800 text-sm">Free Satellite Measurements</span>
+                  </div>
+                  <div class="flex items-center">
+                    <div class="bg-green-100 rounded-full p-1 mr-2 flex-shrink-0 w-5 h-5 flex items-center justify-center">
+                      <i class="fas fa-check text-green-600 text-xs"></i>
+                    </div>
+                    <span class="font-medium text-gray-800 text-sm">10-Year Workmanship Warranty</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Roofing Options section -->
+              <div class="bg-white rounded-lg shadow-xl p-5 mb-4">
+                <h3 class="text-lg font-bold mb-3 text-gray-900">Roofing Material Options</h3>
+                <div class="grid grid-cols-1 gap-4">
+                  <div class="p-3 border border-gray-100 rounded-lg hover:bg-blue-50 transition-colors duration-200">
+                    <h4 class="font-semibold text-gray-800 mb-1 flex items-center">
+                      <i class="fas fa-house-damage text-blue-600 mr-2"></i>
+                      Asphalt Shingles
+                    </h4>
+                    <p class="text-gray-600 text-sm">Durable and cost-effective with Class 4 impact resistance. Available in architectural and designer styles.</p>
+                  </div>
+
+                  <div class="p-3 border border-gray-100 rounded-lg hover:bg-blue-50 transition-colors duration-200">
+                    <h4 class="font-semibold text-gray-800 mb-1 flex items-center">
+                      <i class="fas fa-shield-alt text-blue-600 mr-2"></i>
+                      Metal Roofing
+                    </h4>
+                    <p class="text-gray-600 text-sm">50+ year lifespan with superior weather resistance. Available in standing seam and stone-coated steel.</p>
+                  </div>
+
+                  <div class="p-3 border border-gray-100 rounded-lg hover:bg-blue-50 transition-colors duration-200">
+                    <h4 class="font-semibold text-gray-800 mb-1 flex items-center">
+                      <i class="fas fa-mountain text-blue-600 mr-2"></i>
+                      Synthetic Slate
+                    </h4>
+                    <p class="text-gray-600 text-sm">Lightweight alternative to natural slate with authentic appearance and impact resistance.</p>
+                  </div>
+
+                  <div class="p-3 border border-gray-100 rounded-lg hover:bg-blue-50 transition-colors duration-200">
+                    <h4 class="font-semibold text-gray-800 mb-1 flex items-center">
+                      <i class="fas fa-tree text-blue-600 mr-2"></i>
+                      Cedar Shake Alternatives
+                    </h4>
+                    <p class="text-gray-600 text-sm">Composite materials offering classic wood appearance with fire resistance and low maintenance.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Customer Testimonial Box -->
+              <div class="bg-white rounded-lg shadow-xl p-5">
+                <h3 class="text-lg font-bold mb-3 text-gray-900">What Our Customers Say</h3>
+                <div class="flex text-yellow-400 mb-3">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p class="text-gray-600 text-sm italic mb-3">
+                  "From the initial satellite quote to the final inspection, the entire process was seamless. The crew worked efficiently and left our property spotless. Our new roof looks amazing and
+                  gives us peace of mind through Minnesota storms!"
+                </p>
+                <p class="font-semibold text-gray-800 text-sm">- Sarah K., Edina</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Energy Protection Section -->
+      <section class="py-12 bg-blue-50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="p-6 md:p-8 flex flex-col md:flex-row items-center gap-6">
+              <div class="flex-shrink-0 bg-blue-100 p-4 rounded-full">
+                <i class="fas fa-umbrella text-blue-600 text-3xl"></i>
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-3">Comprehensive Weather Protection</h3>
+                <p class="text-gray-700 mb-4">
+                  Our roofing systems are engineered to withstand 130+ MPH winds, heavy snow loads, and impact from hail. Featuring advanced waterproofing layers and ice dam protection, we ensure your
+                  home stays dry and secure through Minnesota's toughest weather.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-3">
+                  <button onclick="RoofQuotePro.open()" class="inline-flex items-center justify-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded transition duration-300">
+                    <i class="fas fa-calculator mr-2"></i> Get Your Free Roof Assessment
+                  </button>
+                  <a href="tel:+16124742294" class="inline-flex items-center justify-center px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-800 font-medium rounded transition duration-300">
+                    <i class="fas fa-phone mr-2"></i> Call Now: (612) 474-2294
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Keep existing FAQ section but update structure to match windows.ejs -->
+      <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-12">
+            <span class="inline-block text-blue-600 font-semibold tracking-wider uppercase text-sm mb-1">FAQ</span>
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Common Roofing Questions</h2>
+            <div class="w-16 h-1 bg-blue-500 mx-auto"></div>
+          </div>
+
+          <div class="space-y-4" id="faq-accordion">
+            <!-- Keep existing FAQ content but use windows.ejs structure -->
             <div class="bg-gray-50 rounded-lg shadow-sm overflow-hidden">
               <button class="w-full px-6 py-4 text-left font-semibold text-gray-900 focus:outline-none flex justify-between items-center faq-toggle">
                 <span>What makes Owens Corning Duration shingles unique?</span>
@@ -156,7 +535,10 @@
               <div class="faq-content overflow-hidden transition-all duration-300 ease-in-out" style="max-height: 0">
                 <div class="px-6 pb-4 pt-2">
                   <p class="text-gray-700">
-                    Owens Corning Duration shingles stand out due to their patented SureNail® Technology, which provides a 130-MPH wind resistance warranty. The triple layer of reinforcement and unique fabric strip in the nailing zone creates a strong grip that ordinary shingles can't match. They also feature TruDefinition® color technology for vibrant, fade-resistant colors and StreakGuard™ algae protection. These premium architectural shingles combine exceptional durability with designer aesthetics, and they're backed by one of the best warranties in the industry when installed by a certified contractor like us.
+                    Owens Corning Duration shingles stand out due to their patented SureNail® Technology, which provides a 130-MPH wind resistance warranty. The triple layer of reinforcement and
+                    unique fabric strip in the nailing zone creates a strong grip that ordinary shingles can't match. They also feature TruDefinition® color technology for vibrant, fade-resistant
+                    colors and StreakGuard™ algae protection. These premium architectural shingles combine exceptional durability with designer aesthetics, and they're backed by one of the best
+                    warranties in the industry when installed by a certified contractor like us.
                   </p>
                 </div>
               </div>
@@ -170,7 +552,9 @@
               <div class="faq-content overflow-hidden transition-all duration-300 ease-in-out" style="max-height: 0">
                 <div class="px-6 pb-4 pt-2">
                   <p class="text-gray-700">
-                    Most residential roof replacements are completed in 1-2 days, depending on the size and complexity of your roof. Larger homes or roofs with complex features like multiple dormers or steep slopes may take 3-4 days. Weather can also impact scheduling. Our crews work efficiently while maintaining attention to detail and thorough cleanup. We'll provide you with a specific timeline during your consultation and keep you informed throughout the process, minimizing disruption to your daily life.
+                    Most residential roof replacements are completed in 1-2 days, depending on the size and complexity of your roof. Larger homes or roofs with complex features like multiple dormers
+                    or steep slopes may take 3-4 days. Weather can also impact scheduling. Our crews work efficiently while maintaining attention to detail and thorough cleanup. We'll provide you with
+                    a specific timeline during your consultation and keep you informed throughout the process, minimizing disruption to your daily life.
                   </p>
                 </div>
               </div>
@@ -184,7 +568,10 @@
               <div class="faq-content overflow-hidden transition-all duration-300 ease-in-out" style="max-height: 0">
                 <div class="px-6 pb-4 pt-2">
                   <p class="text-gray-700">
-                    If your roof was damaged by a covered peril such as hail, wind, or falling objects, your homeowner's insurance will typically cover the cost of repair or replacement, minus your deductible. Insurance generally doesn't cover damage due to age or poor maintenance. Our team includes insurance claim specialists who can assess storm damage, document findings, and work directly with your insurance company to maximize your coverage. We can help you navigate the entire claims process from inspection to completion, ensuring you receive the full benefits you're entitled to.
+                    If your roof was damaged by a covered peril such as hail, wind, or falling objects, your homeowner's insurance will typically cover the cost of repair or replacement, minus your
+                    deductible. Insurance generally doesn't cover damage due to age or poor maintenance. Our team includes insurance claim specialists who can assess storm damage, document findings,
+                    and work directly with your insurance company to maximize your coverage. We can help you navigate the entire claims process from inspection to completion, ensuring you receive the
+                    full benefits you're entitled to.
                   </p>
                 </div>
               </div>
@@ -198,7 +585,10 @@
               <div class="faq-content overflow-hidden transition-all duration-300 ease-in-out" style="max-height: 0">
                 <div class="px-6 pb-4 pt-2">
                   <p class="text-gray-700">
-                    As an Owens Corning Preferred Contractor, we offer enhanced warranty options that go beyond standard coverage. Our roofing systems come with a lifetime limited warranty on shingles and a 50-year non-prorated protection period, plus 10-year coverage against algae growth and 15-year wind resistance up to 130 MPH. We also provide our own workmanship warranty to cover installation quality. During your consultation, we'll explain all warranty options and help you select the protection plan that gives you the most value and peace of mind for your investment.
+                    As an Owens Corning Preferred Contractor, we offer enhanced warranty options that go beyond standard coverage. Our roofing systems come with a lifetime limited warranty on shingles
+                    and a 50-year non-prorated protection period, plus 10-year coverage against algae growth and 15-year wind resistance up to 130 MPH. We also provide our own workmanship warranty to
+                    cover installation quality. During your consultation, we'll explain all warranty options and help you select the protection plan that gives you the most value and peace of mind for
+                    your investment.
                   </p>
                 </div>
               </div>
@@ -259,17 +649,6 @@
               icon.style.transform = "rotate(180deg)";
             } else {
               content.style.maxHeight = "0px";
-              icon.classList.remove("fa-minus");
-              icon.classList.add("fa-plus");
-              icon.style.transform = "rotate(0deg)";
-            }
-          });
-        });
-      });
-    </script>
-  </body>
-</html>
-
               icon.classList.remove("fa-minus");
               icon.classList.add("fa-plus");
               icon.style.transform = "rotate(0deg)";
