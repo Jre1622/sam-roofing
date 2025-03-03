@@ -35,7 +35,7 @@
             <div class="md:w-1/2 mb-6 md:mb-0 md:pr-8 text-center md:text-left">
               <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 leading-tight">Twin Cities Siding Replacement Experts</h1>
               <p class="text-lg md:text-xl text-blue-100 mb-5">
-                Transform your Minnesota home with premium siding that withstands our harsh winters and hot summers. Enhance curb appeal, improve energy efficiency, and protect your investment with
+                Transform your Minnesota home with premium siding that withstands challenging climate conditions. Boost property value, improve energy efficiency, and protect your investment with
                 Maverick Contracting.
               </p>
             </div>
@@ -56,9 +56,9 @@
       <%- include('partials/brand-ratings') %>
 
       <!-- Siding Benefits Section -->
-      <section class="py-16 bg-white">
+      <section class="py-12 md:py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="text-center mb-12">
+          <div class="text-center mb-8 md:mb-10">
             <span class="inline-block text-blue-600 font-semibold tracking-wider uppercase text-sm mb-1">Real Transformations</span>
             <h2 class="text-3xl font-bold text-gray-900 mb-4">See the Difference Our Siding Makes</h2>
             <div class="w-16 h-1 bg-blue-500 mx-auto"></div>
@@ -66,13 +66,13 @@
 
           <div class="bg-gray-50 rounded-xl shadow-lg overflow-hidden">
             <div class="flex flex-col lg:flex-row">
-              <!-- Left side: Before/After Slider -->
-              <div class="lg:w-2/3 p-6 lg:p-8">
+              <!-- Left side: Before/After Slider - Reduced height on larger screens -->
+              <div class="lg:w-2/3 p-6 lg:p-6">
                 <div class="bg-white rounded-lg shadow-sm p-4 mb-6">
-                  <h3 class="text-xl font-semibold text-gray-900 mb-4">Siding Transformation</h3>
+                  <h3 class="text-xl font-semibold text-gray-900 mb-3">Siding Transformation</h3>
 
-                  <!-- Before/After Slider -->
-                  <div class="relative aspect-video bg-gray-100 rounded-lg mb-4 overflow-hidden" id="before-after-container">
+                  <!-- Before/After Slider - Adjusted aspect ratio for larger screens -->
+                  <div class="relative aspect-video lg:aspect-[16/9] bg-gray-100 rounded-lg mb-4 overflow-hidden" id="before-after-container">
                     <!-- Before Image (Base Layer) -->
                     <img id="before-image" src="/images/before-placeholder.jpg" alt="Before Siding Replacement" class="w-full h-full object-cover absolute inset-0 transition-opacity duration-1500" />
 
@@ -91,7 +91,7 @@
                   </div>
 
                   <div class="text-center">
-                    <p class="text-gray-600 text-sm italic mb-4">Watch the automatic transformation of this home with our quality siding</p>
+                    <p class="text-gray-600 text-sm italic mb-3">Watch the automatic transformation of this home with our quality siding</p>
                   </div>
                 </div>
 
@@ -99,76 +99,78 @@
                   <a
                     href="#"
                     onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;"
-                    class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150"
+                    class="inline-flex items-center px-5 py-2.5 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150"
                   >
-                    Get a Free Consultation
+                    Get Your Free Estimate
                     <i class="fas fa-arrow-right ml-2"></i>
                   </a>
                 </div>
               </div>
 
-              <!-- Right side: Benefits -->
-              <div class="lg:w-1/3 bg-blue-50 p-6 lg:p-8">
-                <h3 class="text-xl font-semibold text-gray-900 mb-4">Benefits of New Siding</h3>
+              <!-- Right side: Benefits - Adjusted to fill vertical space better -->
+              <div class="lg:w-1/3 bg-blue-50 p-6 lg:p-6 flex flex-col justify-between">
+                <div>
+                  <h3 class="text-xl font-semibold text-gray-900 mb-4">Benefits of New Siding</h3>
 
-                <div class="space-y-4">
-                  <div class="flex items-start">
-                    <div class="flex-shrink-0 mt-1">
-                      <div class="h-8 w-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
-                        <i class="fas fa-shield-alt text-sm"></i>
+                  <div class="space-y-3 lg:space-y-3.5">
+                    <div class="flex items-start">
+                      <div class="flex-shrink-0 mt-1">
+                        <div class="h-8 w-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                          <i class="fas fa-shield-alt text-sm"></i>
+                        </div>
+                      </div>
+                      <div class="ml-4">
+                        <h4 class="text-md font-semibold text-gray-900">Superior Protection</h4>
+                        <p class="text-sm text-gray-600">Shields your home from Minnesota's extreme weather conditions.</p>
                       </div>
                     </div>
-                    <div class="ml-4">
-                      <h4 class="text-md font-semibold text-gray-900">Superior Protection</h4>
-                      <p class="text-sm text-gray-600">Shields your home from Minnesota's extreme weather conditions.</p>
-                    </div>
-                  </div>
 
-                  <div class="flex items-start">
-                    <div class="flex-shrink-0 mt-1">
-                      <div class="h-8 w-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
-                        <i class="fas fa-temperature-low text-sm"></i>
+                    <div class="flex items-start">
+                      <div class="flex-shrink-0 mt-1">
+                        <div class="h-8 w-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                          <i class="fas fa-temperature-low text-sm"></i>
+                        </div>
+                      </div>
+                      <div class="ml-4">
+                        <h4 class="text-md font-semibold text-gray-900">Energy Efficiency</h4>
+                        <p class="text-sm text-gray-600">Reduce energy costs by up to 20% with proper insulation.</p>
                       </div>
                     </div>
-                    <div class="ml-4">
-                      <h4 class="text-md font-semibold text-gray-900">Energy Efficiency</h4>
-                      <p class="text-sm text-gray-600">Reduce energy costs by up to 20% with proper insulation.</p>
-                    </div>
-                  </div>
 
-                  <div class="flex items-start">
-                    <div class="flex-shrink-0 mt-1">
-                      <div class="h-8 w-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
-                        <i class="fas fa-home text-sm"></i>
+                    <div class="flex items-start">
+                      <div class="flex-shrink-0 mt-1">
+                        <div class="h-8 w-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                          <i class="fas fa-home text-sm"></i>
+                        </div>
+                      </div>
+                      <div class="ml-4">
+                        <h4 class="text-md font-semibold text-gray-900">Enhanced Curb Appeal</h4>
+                        <p class="text-sm text-gray-600">Transform your home's appearance with modern, attractive siding options.</p>
                       </div>
                     </div>
-                    <div class="ml-4">
-                      <h4 class="text-md font-semibold text-gray-900">Enhanced Curb Appeal</h4>
-                      <p class="text-sm text-gray-600">Boost property value with up to 80% ROI on quality siding.</p>
-                    </div>
-                  </div>
 
-                  <div class="flex items-start">
-                    <div class="flex-shrink-0 mt-1">
-                      <div class="h-8 w-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
-                        <i class="fas fa-dollar-sign text-sm"></i>
+                    <div class="flex items-start">
+                      <div class="flex-shrink-0 mt-1">
+                        <div class="h-8 w-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                          <i class="fas fa-dollar-sign text-sm"></i>
+                        </div>
+                      </div>
+                      <div class="ml-4">
+                        <h4 class="text-md font-semibold text-gray-900">Increased Home Value</h4>
+                        <p class="text-sm text-gray-600">New siding typically returns 70-80% of its cost in added home value.</p>
                       </div>
                     </div>
-                    <div class="ml-4">
-                      <h4 class="text-md font-semibold text-gray-900">Increased Home Value</h4>
-                      <p class="text-sm text-gray-600">New siding typically returns 70-80% of its cost in added home value.</p>
-                    </div>
-                  </div>
 
-                  <div class="flex items-start">
-                    <div class="flex-shrink-0 mt-1">
-                      <div class="h-8 w-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
-                        <i class="fas fa-tools text-sm"></i>
+                    <div class="flex items-start">
+                      <div class="flex-shrink-0 mt-1">
+                        <div class="h-8 w-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                          <i class="fas fa-tools text-sm"></i>
+                        </div>
                       </div>
-                    </div>
-                    <div class="ml-4">
-                      <h4 class="text-md font-semibold text-gray-900">Low Maintenance</h4>
-                      <p class="text-sm text-gray-600">Modern siding requires minimal upkeep compared to traditional materials.</p>
+                      <div class="ml-4">
+                        <h4 class="text-md font-semibold text-gray-900">Low Maintenance</h4>
+                        <p class="text-sm text-gray-600">Modern siding requires minimal upkeep compared to traditional materials.</p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -203,8 +205,8 @@
                   <div>
                     <h3 class="text-xl font-bold text-gray-900 mb-2">Twin Cities Premier Siding Installation Company</h3>
                     <p class="text-gray-600 text-sm">
-                      As the leading siding contractor in the Twin Cities area, we provide exceptional siding installation services designed specifically for Minnesota's unique climate. Our local
-                      expertise ensures your home is protected against harsh winters and hot summers while enhancing its curb appeal.
+                      As the leading siding contractor in the Twin Cities area, we provide exceptional siding installation services designed specifically for Minnesota's varying seasonal conditions.
+                      Our local expertise ensures your home is protected against temperature extremes while enhancing its exterior appearance.
                     </p>
                   </div>
                 </div>
@@ -264,7 +266,7 @@
                     <h3 class="text-xl font-bold text-gray-900 mb-2">Professional Siding Replacement Services in Minneapolis-St. Paul</h3>
                     <p class="text-gray-600 text-sm">
                       Our expert siding replacement team specializes in transforming outdated or damaged exteriors into beautiful, weather-resistant home facades. We handle every aspect of your siding
-                      project, from removal of old materials to precise installation of your new siding system, ensuring superior protection and enhanced curb appeal.
+                      project, from removal of old materials to precise installation of your new siding system, ensuring superior protection and increased property value.
                     </p>
                   </div>
                 </div>
@@ -284,7 +286,7 @@
                     <h3 class="text-xl font-bold text-gray-900 mb-2">Energy-Efficient Siding Solutions for Minnesota Weather</h3>
                     <p class="text-gray-600 text-sm">
                       Our insulated siding options provide exceptional thermal performance, helping Minnesota homeowners reduce energy costs year-round. With proper installation by our certified
-                      technicians, our siding systems create a continuous insulation barrier that minimizes heat loss in winter and keeps your home cooler in summer.
+                      technicians, our siding systems create a continuous insulation barrier that minimizes heat transfer in winter and maintains cooler indoor temperatures during summer months.
                     </p>
                   </div>
                 </div>
@@ -314,7 +316,7 @@
                         onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;"
                         class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150"
                       >
-                        Get Your Free Siding Estimate
+                        Get Your Free Estimate
                         <i class="fas fa-arrow-right ml-2"></i>
                       </a>
                     </div>
@@ -437,7 +439,7 @@
                 </div>
                 <p class="text-gray-600 text-sm italic mb-3">
                   "Our old siding was looking rough, and we felt drafts. Maverick Contracting put up new Wolverine Prestige siding, and it was surprisingly easy. The crew was punctual, polite, and
-                  cleaned up everything. Our house looks amazing – like new! We can already tell it's holding heat better."
+                  cleaned up everything. Our house looks amazing – like new! We can already tell it's holding heat better."
                 </p>
                 <p class="font-semibold text-gray-800 text-sm">- Jennifer R., Maple Grove</p>
               </div>
