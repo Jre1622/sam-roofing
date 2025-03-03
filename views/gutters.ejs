@@ -49,16 +49,496 @@
         </div>
       </section>
 
-      <!-- Content Section -->
-      <section class="py-12">
+      <!-- Brand Ratings -->
+      <%- include('partials/brand-ratings') %>
+
+      <!-- Gutter Benefits Section -->
+      <section class="py-12 md:py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p class="text-lg text-gray-700 mb-6">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh
-            porttitor.
-          </p>
-          <p class="text-lg text-gray-700 mb-6">
-            Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere.
-          </p>
+          <div class="text-center mb-8 md:mb-10">
+            <span class="inline-block text-blue-600 font-semibold tracking-wider uppercase text-sm mb-1">Home Protection</span>
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Why Quality Gutters Matter</h2>
+            <div class="w-16 h-1 bg-blue-500 mx-auto"></div>
+          </div>
+
+          <div class="bg-gray-50 rounded-xl shadow-lg overflow-hidden">
+            <div class="flex flex-col lg:flex-row">
+              <!-- Left side: Gutter Image and CTA -->
+              <div class="lg:w-2/3 p-6 lg:p-6">
+                <div class="bg-white rounded-lg shadow-sm p-4 mb-6">
+                  <h3 class="text-xl font-semibold text-gray-900 mb-3">Seamless Gutter Solutions</h3>
+
+                  <!-- Gutter Image -->
+                  <div class="aspect-video lg:aspect-[16/9] bg-gray-100 rounded-lg mb-4 overflow-hidden">
+                    <img src="/images/seamless-gutters-example.jpg" alt="Seamless Gutter Installation" class="w-full h-full object-cover" />
+                  </div>
+
+                  <div class="text-center">
+                    <p class="text-gray-600 text-sm italic mb-3">Custom-fit seamless gutters professionally installed to protect your home</p>
+                  </div>
+                </div>
+
+                <div class="text-center">
+                  <a
+                    href="#"
+                    onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;"
+                    class="inline-flex items-center px-5 py-2.5 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150"
+                  >
+                    Get Your Free Estimate
+                    <i class="fas fa-arrow-right ml-2"></i>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Right side: Benefits -->
+              <div class="lg:w-1/3 bg-blue-50 p-6 lg:p-6 flex flex-col justify-between">
+                <div>
+                  <h3 class="text-xl font-semibold text-gray-900 mb-4">Benefits of Seamless Gutters</h3>
+
+                  <div class="space-y-3 lg:space-y-3.5">
+                    <div class="flex items-start">
+                      <div class="flex-shrink-0 mt-1">
+                        <div class="h-8 w-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                          <i class="fas fa-house-flood-water-circle-arrow-right text-sm"></i>
+                        </div>
+                      </div>
+                      <div class="ml-4">
+                        <h4 class="text-md font-semibold text-gray-900">Foundation Protection</h4>
+                        <p class="text-sm text-gray-600">Prevents water pooling that can damage your home's foundation and structure.</p>
+                      </div>
+                    </div>
+
+                    <div class="flex items-start">
+                      <div class="flex-shrink-0 mt-1">
+                        <div class="h-8 w-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                          <i class="fas fa-droplet-slash text-sm"></i>
+                        </div>
+                      </div>
+                      <div class="ml-4">
+                        <h4 class="text-md font-semibold text-gray-900">Reduced Leaks</h4>
+                        <p class="text-sm text-gray-600">Seamless design eliminates joint leaks common with sectional gutters.</p>
+                      </div>
+                    </div>
+
+                    <div class="flex items-start">
+                      <div class="flex-shrink-0 mt-1">
+                        <div class="h-8 w-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                          <i class="fas fa-seedling text-sm"></i>
+                        </div>
+                      </div>
+                      <div class="ml-4">
+                        <h4 class="text-md font-semibold text-gray-900">Landscape Preservation</h4>
+                        <p class="text-sm text-gray-600">Protect gardens and landscaping from soil erosion and water damage.</p>
+                      </div>
+                    </div>
+
+                    <div class="flex items-start">
+                      <div class="flex-shrink-0 mt-1">
+                        <div class="h-8 w-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                          <i class="fas fa-paintbrush text-sm"></i>
+                        </div>
+                      </div>
+                      <div class="ml-4">
+                        <h4 class="text-md font-semibold text-gray-900">Enhanced Home Aesthetics</h4>
+                        <p class="text-sm text-gray-600">Custom-fit gutters that complement your home's architectural style.</p>
+                      </div>
+                    </div>
+
+                    <div class="flex items-start">
+                      <div class="flex-shrink-0 mt-1">
+                        <div class="h-8 w-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                          <i class="fas fa-broom text-sm"></i>
+                        </div>
+                      </div>
+                      <div class="ml-4">
+                        <h4 class="text-md font-semibold text-gray-900">Low Maintenance</h4>
+                        <p class="text-sm text-gray-600">Especially when paired with our gutter guard systems for reduced cleaning.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEO-Optimized Gutter Information Section -->
+      <section class="py-12 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex flex-col lg:flex-row gap-6">
+            <!-- Left side - SEO targeted content -->
+            <div class="lg:w-2/3 relative">
+              <!-- Subtle background pattern -->
+              <div
+                class="absolute inset-0 opacity-5 pointer-events-none"
+                style="
+                  background-image: url('data:image/svg+xml,%3Csvg width=\'20\' height=\'20\' viewBox=\'0 0 20 20\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'%23000000\' fill-opacity=\'1\' fill-rule=\'evenodd\'%3E%3Ccircle cx=\'3\' cy=\'3\' r=\'1\'/%3E%3C/g%3E%3C/svg%3E');
+                "
+              ></div>
+
+              <!-- Twin Cities Gutters section -->
+              <div class="mb-4 p-3 rounded-lg hover:bg-gray-50 transition-colors duration-300">
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mr-3">
+                    <div class="h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                      <i class="fas fa-map-marker-alt text-lg"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Twin Cities Premier Gutter Installation</h3>
+                    <p class="text-gray-600 text-sm">
+                      As a leading gutter contractor in the Twin Cities, we provide exceptional seamless gutter installation designed to handle Minnesota's heavy rainfall, snow melt, and ice. Our
+                      local expertise ensures your gutter system efficiently channels water away from your home, preventing costly structural and landscape damage.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent my-3"></div>
+
+              <!-- 5" and 6" Seamless Gutters section -->
+              <div class="mb-4 p-3 rounded-lg hover:bg-gray-50 transition-colors duration-300">
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mr-3">
+                    <div class="h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                      <i class="fas fa-ruler text-lg"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">5" and 6" Seamless Gutter Options</h3>
+                    <p class="text-gray-600 text-sm">
+                      We offer both 5" and 6" seamless gutters to accommodate different home sizes and rainfall volumes. Our 5" gutters are perfect for most residential applications, while 6" gutters
+                      provide additional capacity for larger homes or areas with heavier rainfall. Both options are custom-fabricated on site to ensure a perfect fit with no leaky seams or joints.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent my-3"></div>
+
+              <!-- K-Style Gutters section -->
+              <div class="mb-4 p-3 rounded-lg hover:bg-gray-50 transition-colors duration-300">
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mr-3">
+                    <div class="h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                      <i class="fas fa-home text-lg"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">K-Style Gutters - The Modern Standard</h3>
+                    <p class="text-gray-600 text-sm">
+                      Our K-style gutters feature a decorative front edge resembling crown molding, complementing modern architecture while providing superior water capacity. This popular style holds
+                      more water than rounded gutters of the same width and attaches securely to your fascia board. Available in both 5" and 6" widths, our K-style gutters blend functionality with
+                      aesthetic appeal.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent my-3"></div>
+
+              <!-- Gutter Guards section -->
+              <div class="mb-4 p-3 rounded-lg hover:bg-gray-50 transition-colors duration-300">
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mr-3">
+                    <div class="h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                      <i class="fas fa-shield-alt text-lg"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Gutter Guards - Eliminate Gutter Cleaning</h3>
+                    <p class="text-gray-600 text-sm">
+                      Our premium gutter guard systems prevent leaves, debris, and pests from clogging your gutters while allowing water to flow freely. Using our regular panel design, these guards
+                      install directly onto your gutters, eliminating the need for regular cleaning and maintenance. Especially valuable during Minnesota's fall season, our gutter guards will save you
+                      time, effort, and the risk associated with ladder use.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent my-3"></div>
+
+              <!-- Installation Process section -->
+              <div class="mb-4 p-3 rounded-lg hover:bg-gray-50 transition-colors duration-300">
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mr-3">
+                    <div class="h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                      <i class="fas fa-tools text-lg"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Professional Installation Process</h3>
+                    <p class="text-gray-600 text-sm">
+                      Our expert installers fabricate your gutters on-site using specialized equipment to ensure a perfect fit for your home. We properly pitch gutters to ensure optimal water flow,
+                      securely fasten them with high-quality hangers, and place downspouts strategically to channel water away from your foundation. Most installations are completed in just one day,
+                      with minimal disruption to your daily routine.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent my-3"></div>
+
+              <!-- Contact section -->
+              <div class="mb-4 p-3 rounded-lg hover:bg-gray-50 transition-colors duration-300">
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mr-3">
+                    <div class="h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                      <i class="fas fa-phone-alt text-lg"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Contact Our Gutter Specialists Today</h3>
+                    <p class="text-gray-600 text-sm mb-3">
+                      Ready to protect your home with a professionally installed gutter system? Our team is ready to provide a free consultation and estimate for your custom gutter project. We serve
+                      the entire Twin Cities metro area with premium seamless gutter and gutter guard installation.
+                    </p>
+
+                    <!-- Call to action button -->
+                    <div>
+                      <a
+                        href="#"
+                        onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;"
+                        class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150"
+                      >
+                        Get Your Free Estimate
+                        <i class="fas fa-arrow-right ml-2"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right side - Why Choose Our Gutter Services -->
+            <div class="lg:w-1/3">
+              <!-- Why Us Box -->
+              <div class="bg-white rounded-lg shadow-xl p-5 mb-4">
+                <h3 class="text-lg font-bold mb-4 text-gray-900 text-center">Why Choose Our Gutter Services</h3>
+
+                <div class="space-y-2.5">
+                  <div class="flex items-center">
+                    <div class="bg-green-100 rounded-full p-1 mr-2 flex-shrink-0 w-5 h-5 flex items-center justify-center">
+                      <i class="fas fa-check text-green-600 text-xs"></i>
+                    </div>
+                    <span class="font-medium text-gray-800 text-sm">On-Site Fabrication for Perfect Fit</span>
+                  </div>
+
+                  <div class="flex items-center">
+                    <div class="bg-green-100 rounded-full p-1 mr-2 flex-shrink-0 w-5 h-5 flex items-center justify-center">
+                      <i class="fas fa-check text-green-600 text-xs"></i>
+                    </div>
+                    <span class="font-medium text-gray-800 text-sm">Experienced Installation Crews</span>
+                  </div>
+
+                  <div class="flex items-center">
+                    <div class="bg-green-100 rounded-full p-1 mr-2 flex-shrink-0 w-5 h-5 flex items-center justify-center">
+                      <i class="fas fa-check text-green-600 text-xs"></i>
+                    </div>
+                    <span class="font-medium text-gray-800 text-sm">5" and 6" Gutter Options</span>
+                  </div>
+
+                  <div class="flex items-center">
+                    <div class="bg-green-100 rounded-full p-1 mr-2 flex-shrink-0 w-5 h-5 flex items-center justify-center">
+                      <i class="fas fa-check text-green-600 text-xs"></i>
+                    </div>
+                    <span class="font-medium text-gray-800 text-sm">Premium Gutter Guard Systems</span>
+                  </div>
+
+                  <div class="flex items-center">
+                    <div class="bg-green-100 rounded-full p-1 mr-2 flex-shrink-0 w-5 h-5 flex items-center justify-center">
+                      <i class="fas fa-check text-green-600 text-xs"></i>
+                    </div>
+                    <span class="font-medium text-gray-800 text-sm">Color Options to Match Your Home</span>
+                  </div>
+
+                  <div class="flex items-center">
+                    <div class="bg-green-100 rounded-full p-1 mr-2 flex-shrink-0 w-5 h-5 flex items-center justify-center">
+                      <i class="fas fa-check text-green-600 text-xs"></i>
+                    </div>
+                    <span class="font-medium text-gray-800 text-sm">Comprehensive Warranties</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Gutter System Components Box -->
+              <div class="bg-white rounded-lg shadow-xl p-5 mb-4">
+                <h3 class="text-lg font-bold mb-3 text-gray-900">Complete Gutter Systems</h3>
+
+                <div class="grid grid-cols-1 gap-4">
+                  <!-- Seamless Gutters -->
+                  <div class="p-3 border border-gray-100 rounded-lg hover:bg-blue-50 transition-colors duration-200">
+                    <h4 class="font-semibold text-gray-800 mb-1 flex items-center">
+                      <i class="fas fa-tint text-blue-600 mr-2"></i>
+                      5" & 6" Seamless Gutters
+                    </h4>
+                    <p class="text-gray-600 text-sm">
+                      Custom fabricated on-site for a perfect fit, our seamless gutters eliminate joints that can leak and are available in both 5" and 6" sizes to match your home's needs.
+                    </p>
+                  </div>
+
+                  <!-- Downspouts -->
+                  <div class="p-3 border border-gray-100 rounded-lg hover:bg-blue-50 transition-colors duration-200">
+                    <h4 class="font-semibold text-gray-800 mb-1 flex items-center">
+                      <i class="fas fa-sort-amount-down text-blue-600 mr-2"></i>
+                      Downspouts & Extensions
+                    </h4>
+                    <p class="text-gray-600 text-sm">
+                      Strategically placed downspouts ensure proper water flow, while extensions direct water away from your foundation to prevent basement flooding and soil erosion.
+                    </p>
+                  </div>
+
+                  <!-- Gutter Guards -->
+                  <div class="p-3 border border-gray-100 rounded-lg hover:bg-blue-50 transition-colors duration-200">
+                    <h4 class="font-semibold text-gray-800 mb-1 flex items-center">
+                      <i class="fas fa-shield-alt text-blue-600 mr-2"></i>
+                      Gutter Guard Protection
+                    </h4>
+                    <p class="text-gray-600 text-sm">
+                      Our regular panel gutter guards eliminate cleaning by preventing leaves and debris from entering while allowing rainwater to flow freely through your gutter system.
+                    </p>
+                  </div>
+
+                  <!-- Fascia & Soffit -->
+                  <div class="p-3 border border-gray-100 rounded-lg hover:bg-blue-50 transition-colors duration-200">
+                    <h4 class="font-semibold text-gray-800 mb-1 flex items-center">
+                      <i class="fas fa-home text-blue-600 mr-2"></i>
+                      Fascia & Soffit Repair
+                    </h4>
+                    <p class="text-gray-600 text-sm">
+                      We inspect and repair damaged fascia and soffit during gutter installation to ensure your new gutters attach securely and your home is properly protected.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Customer Testimonial Box -->
+              <div class="bg-white rounded-lg shadow-xl p-5">
+                <h3 class="text-lg font-bold mb-3 text-gray-900">What Our Customers Say</h3>
+                <div class="flex text-yellow-400 mb-3">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p class="text-gray-600 text-sm italic mb-3">
+                  "After years of dealing with overflowing gutters and water in our basement, we finally called Maverick Contracting. They installed seamless gutters with gutter guards in just one
+                  day. The crew was professional and cleaned up perfectly. We've had several heavy rains since, and the difference is amazing - no more water issues!"
+                </p>
+                <p class="font-semibold text-gray-800 text-sm">- Michael T., Edina</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Weather Protection Section -->
+      <section class="py-12 bg-blue-50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="p-6 md:p-8 flex flex-col md:flex-row items-center gap-6">
+              <div class="flex-shrink-0 bg-blue-100 p-4 rounded-full">
+                <i class="fas fa-cloud-rain text-blue-600 text-3xl"></i>
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-3">Protect Your Home from Minnesota's Weather</h3>
+                <p class="text-gray-700 mb-4">
+                  From spring downpours to winter ice dams, Minnesota weather can be tough on your home. Our professional gutter systems are designed to handle heavy rain, snow melt, and ice
+                  conditions, effectively channeling water away from your home's foundation, preventing costly water damage and extending your home's lifespan.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-3">
+                  <a
+                    href="#"
+                    onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;"
+                    class="inline-flex items-center justify-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded transition duration-300"
+                  >
+                    <i class="fas fa-ruler mr-2"></i> Schedule a Free Measurement
+                  </a>
+                  <a href="tel:+16124742294" class="inline-flex items-center justify-center px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-800 font-medium rounded transition duration-300">
+                    <i class="fas fa-phone mr-2"></i> Call Now: (612) 474-2294
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-12">
+            <span class="inline-block text-blue-600 font-semibold tracking-wider uppercase text-sm mb-1">FAQ</span>
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Common Questions About Gutters</h2>
+            <div class="w-16 h-1 bg-blue-500 mx-auto"></div>
+          </div>
+
+          <div class="space-y-4" id="faq-accordion">
+            <div class="bg-gray-50 rounded-lg shadow-sm overflow-hidden">
+              <button class="w-full px-6 py-4 text-left font-semibold text-gray-900 focus:outline-none flex justify-between items-center faq-toggle active">
+                <span>What's the difference between 5" and 6" gutters?</span>
+                <i class="fas fa-minus text-blue-500 transition-transform duration-300" style="transform: rotate(180deg)"></i>
+              </button>
+              <div class="faq-content overflow-hidden transition-all duration-300 ease-in-out" style="max-height: 500px">
+                <div class="px-6 pb-4 pt-2">
+                  <p class="text-gray-700">
+                    The main difference is water capacity. 5" gutters are standard for most homes and can handle normal rainfall volumes. 6" gutters have about 40% more capacity and are recommended
+                    for larger homes, homes with steep roofs, or areas that experience heavy rainfall. 6" gutters cost slightly more but provide additional protection against overflow. We can assess
+                    your home's needs during our free consultation to recommend the right size.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-gray-50 rounded-lg shadow-sm overflow-hidden">
+              <button class="w-full px-6 py-4 text-left font-semibold text-gray-900 focus:outline-none flex justify-between items-center faq-toggle">
+                <span>Are gutter guards worth the investment?</span>
+                <i class="fas fa-plus text-blue-500 transition-transform duration-300"></i>
+              </button>
+              <div class="faq-content overflow-hidden transition-all duration-300 ease-in-out" style="max-height: 0">
+                <div class="px-6 pb-4 pt-2">
+                  <p class="text-gray-700">
+                    Absolutely. Gutter guards prevent leaves, twigs, and debris from clogging your gutters while allowing water to flow freely. This eliminates the need for regular gutter cleaning,
+                    which is both time-consuming and potentially dangerous. In Minnesota, where fall brings substantial leaf drop and spring brings seeds and pollen, gutter guards can save you
+                    multiple cleanings per year. They also prevent ice dams in winter and extend the life of your gutter system.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-gray-50 rounded-lg shadow-sm overflow-hidden">
+              <button class="w-full px-6 py-4 text-left font-semibold text-gray-900 focus:outline-none flex justify-between items-center faq-toggle">
+                <span>How long does gutter installation take?</span>
+                <i class="fas fa-plus text-blue-500 transition-transform duration-300"></i>
+              </button>
+              <div class="faq-content overflow-hidden transition-all duration-300 ease-in-out" style="max-height: 0">
+                <div class="px-6 pb-4 pt-2">
+                  <p class="text-gray-700">
+                    Most residential gutter installations are completed in a single day. For larger homes or more complex installations, it might take 1-2 days. We fabricate your seamless gutters
+                    on-site using specialized equipment, ensuring a perfect fit for your home. Our experienced teams work efficiently to minimize disruption while ensuring quality installation.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-gray-50 rounded-lg shadow-sm overflow-hidden">
+              <button class="w-full px-6 py-4 text-left font-semibold text-gray-900 focus:outline-none flex justify-between items-center faq-toggle">
+                <span>What is a K-style gutter?</span>
+                <i class="fas fa-plus text-blue-500 transition-transform duration-300"></i>
+              </button>
+              <div class="faq-content overflow-hidden transition-all duration-300 ease-in-out" style="max-height: 0">
+                <div class="px-6 pb-4 pt-2">
+                  <p class="text-gray-700">
+                    K-style gutters feature a decorative front edge that resembles crown molding, giving them an attractive appearance that complements most home styles. They're called "K-style"
+                    because their profile resembles the letter K when viewed from the side. Compared to half-round gutters, K-style gutters hold more water and attach more securely to the fascia
+                    board. They're the most popular gutter style for modern homes due to their combination of functionality and aesthetic appeal.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
@@ -68,5 +548,59 @@
 
     <!-- JavaScript -->
     <script src="/js/main.js"></script>
+
+    <!-- FAQ Accordion Script -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const faqToggles = document.querySelectorAll(".faq-toggle");
+
+        // Initialize - ensure all accordions are closed except the first one
+        document.querySelectorAll(".faq-content").forEach((content, index) => {
+          if (index === 0) {
+            // First FAQ is already expanded in the HTML
+            content.style.maxHeight = content.scrollHeight + "px";
+          } else {
+            content.style.maxHeight = "0px";
+          }
+        });
+
+        faqToggles.forEach((toggle) => {
+          toggle.addEventListener("click", function () {
+            const content = this.nextElementSibling;
+            const icon = this.querySelector("i");
+
+            // Toggle active class on the button
+            this.classList.toggle("active");
+
+            // Close all other FAQs
+            document.querySelectorAll(".faq-toggle").forEach((otherToggle) => {
+              if (otherToggle !== this && otherToggle.classList.contains("active")) {
+                otherToggle.classList.remove("active");
+                const otherContent = otherToggle.nextElementSibling;
+                const otherIcon = otherToggle.querySelector("i");
+
+                otherContent.style.maxHeight = "0px";
+                otherIcon.classList.remove("fa-minus");
+                otherIcon.classList.add("fa-plus");
+                otherIcon.style.transform = "rotate(0deg)";
+              }
+            });
+
+            // Toggle current FAQ
+            if (this.classList.contains("active")) {
+              content.style.maxHeight = content.scrollHeight + "px";
+              icon.classList.remove("fa-plus");
+              icon.classList.add("fa-minus");
+              icon.style.transform = "rotate(180deg)";
+            } else {
+              content.style.maxHeight = "0px";
+              icon.classList.remove("fa-minus");
+              icon.classList.add("fa-plus");
+              icon.style.transform = "rotate(0deg)";
+            }
+          });
+        });
+      });
+    </script>
   </body>
 </html>

@@ -142,6 +142,70 @@
           </p>
         </div>
       </section>
+
+      <!-- FAQ Section -->
+      <section class="py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">Frequently Asked Questions</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-gray-50 rounded-lg shadow-sm overflow-hidden">
+              <button class="w-full px-6 py-4 text-left font-semibold text-gray-900 focus:outline-none flex justify-between items-center faq-toggle">
+                <span>What makes Owens Corning Duration shingles unique?</span>
+                <i class="fas fa-plus text-blue-500 transition-transform duration-300"></i>
+              </button>
+              <div class="faq-content overflow-hidden transition-all duration-300 ease-in-out" style="max-height: 0">
+                <div class="px-6 pb-4 pt-2">
+                  <p class="text-gray-700">
+                    Owens Corning Duration shingles stand out due to their patented SureNail® Technology, which provides a 130-MPH wind resistance warranty. The triple layer of reinforcement and unique fabric strip in the nailing zone creates a strong grip that ordinary shingles can't match. They also feature TruDefinition® color technology for vibrant, fade-resistant colors and StreakGuard™ algae protection. These premium architectural shingles combine exceptional durability with designer aesthetics, and they're backed by one of the best warranties in the industry when installed by a certified contractor like us.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-gray-50 rounded-lg shadow-sm overflow-hidden">
+              <button class="w-full px-6 py-4 text-left font-semibold text-gray-900 focus:outline-none flex justify-between items-center faq-toggle">
+                <span>How long does a roof replacement take?</span>
+                <i class="fas fa-plus text-blue-500 transition-transform duration-300"></i>
+              </button>
+              <div class="faq-content overflow-hidden transition-all duration-300 ease-in-out" style="max-height: 0">
+                <div class="px-6 pb-4 pt-2">
+                  <p class="text-gray-700">
+                    Most residential roof replacements are completed in 1-2 days, depending on the size and complexity of your roof. Larger homes or roofs with complex features like multiple dormers or steep slopes may take 3-4 days. Weather can also impact scheduling. Our crews work efficiently while maintaining attention to detail and thorough cleanup. We'll provide you with a specific timeline during your consultation and keep you informed throughout the process, minimizing disruption to your daily life.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-gray-50 rounded-lg shadow-sm overflow-hidden">
+              <button class="w-full px-6 py-4 text-left font-semibold text-gray-900 focus:outline-none flex justify-between items-center faq-toggle">
+                <span>Will my homeowner's insurance cover a new roof?</span>
+                <i class="fas fa-plus text-blue-500 transition-transform duration-300"></i>
+              </button>
+              <div class="faq-content overflow-hidden transition-all duration-300 ease-in-out" style="max-height: 0">
+                <div class="px-6 pb-4 pt-2">
+                  <p class="text-gray-700">
+                    If your roof was damaged by a covered peril such as hail, wind, or falling objects, your homeowner's insurance will typically cover the cost of repair or replacement, minus your deductible. Insurance generally doesn't cover damage due to age or poor maintenance. Our team includes insurance claim specialists who can assess storm damage, document findings, and work directly with your insurance company to maximize your coverage. We can help you navigate the entire claims process from inspection to completion, ensuring you receive the full benefits you're entitled to.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-gray-50 rounded-lg shadow-sm overflow-hidden">
+              <button class="w-full px-6 py-4 text-left font-semibold text-gray-900 focus:outline-none flex justify-between items-center faq-toggle">
+                <span>What warranty comes with a new roof?</span>
+                <i class="fas fa-plus text-blue-500 transition-transform duration-300"></i>
+              </button>
+              <div class="faq-content overflow-hidden transition-all duration-300 ease-in-out" style="max-height: 0">
+                <div class="px-6 pb-4 pt-2">
+                  <p class="text-gray-700">
+                    As an Owens Corning Preferred Contractor, we offer enhanced warranty options that go beyond standard coverage. Our roofing systems come with a lifetime limited warranty on shingles and a 50-year non-prorated protection period, plus 10-year coverage against algae growth and 15-year wind resistance up to 130 MPH. We also provide our own workmanship warranty to cover installation quality. During your consultation, we'll explain all warranty options and help you select the protection plan that gives you the most value and peace of mind for your investment.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- Footer -->
@@ -149,5 +213,70 @@
 
     <!-- JavaScript -->
     <script src="/js/main.js"></script>
+
+    <!-- FAQ Accordion Script -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const faqToggles = document.querySelectorAll(".faq-toggle");
+
+        // Initialize - ensure all accordions are closed except the first one
+        document.querySelectorAll(".faq-content").forEach((content, index) => {
+          if (index === 0) {
+            // First FAQ is already expanded in the HTML
+            content.style.maxHeight = content.scrollHeight + "px";
+          } else {
+            content.style.maxHeight = "0px";
+          }
+        });
+
+        faqToggles.forEach((toggle) => {
+          toggle.addEventListener("click", function () {
+            const content = this.nextElementSibling;
+            const icon = this.querySelector("i");
+
+            // Toggle active class on the button
+            this.classList.toggle("active");
+
+            // Close all other FAQs
+            document.querySelectorAll(".faq-toggle").forEach((otherToggle) => {
+              if (otherToggle !== this && otherToggle.classList.contains("active")) {
+                otherToggle.classList.remove("active");
+                const otherContent = otherToggle.nextElementSibling;
+                const otherIcon = otherToggle.querySelector("i");
+
+                otherContent.style.maxHeight = "0px";
+                otherIcon.classList.remove("fa-minus");
+                otherIcon.classList.add("fa-plus");
+                otherIcon.style.transform = "rotate(0deg)";
+              }
+            });
+
+            // Toggle current FAQ
+            if (this.classList.contains("active")) {
+              content.style.maxHeight = content.scrollHeight + "px";
+              icon.classList.remove("fa-plus");
+              icon.classList.add("fa-minus");
+              icon.style.transform = "rotate(180deg)";
+            } else {
+              content.style.maxHeight = "0px";
+              icon.classList.remove("fa-minus");
+              icon.classList.add("fa-plus");
+              icon.style.transform = "rotate(0deg)";
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
+
+              icon.classList.remove("fa-minus");
+              icon.classList.add("fa-plus");
+              icon.style.transform = "rotate(0deg)";
+            }
+          });
+        });
+      });
+    </script>
   </body>
 </html>

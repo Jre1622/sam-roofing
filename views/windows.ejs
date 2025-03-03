@@ -52,16 +52,487 @@
       <!-- Brand Ratings -->
       <%- include('partials/brand-ratings') %>
 
-      <!-- Content Section -->
-      <section class="py-12">
+      <!-- Window Benefits Section -->
+      <section class="py-12 md:py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p class="text-lg text-gray-700 mb-6">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh
-            porttitor.
-          </p>
-          <p class="text-lg text-gray-700 mb-6">
-            Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere.
-          </p>
+          <div class="text-center mb-8 md:mb-10">
+            <span class="inline-block text-blue-600 font-semibold tracking-wider uppercase text-sm mb-1">Home Improvement</span>
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">The Impact of Quality Windows</h2>
+            <div class="w-16 h-1 bg-blue-500 mx-auto"></div>
+          </div>
+
+          <div class="bg-gray-50 rounded-xl shadow-lg overflow-hidden">
+            <div class="flex flex-col lg:flex-row">
+              <!-- Left side: Window Image and CTA -->
+              <div class="lg:w-2/3 p-6 lg:p-6">
+                <div class="bg-white rounded-lg shadow-sm p-4 mb-6">
+                  <h3 class="text-xl font-semibold text-gray-900 mb-3">Transform Your Home with New Windows</h3>
+
+                  <!-- Window Image -->
+                  <div class="aspect-video lg:aspect-[16/9] bg-gray-100 rounded-lg mb-4 overflow-hidden">
+                    <img src="/images/window-example.jpg" alt="Premium Window Installation" class="w-full h-full object-cover" />
+                  </div>
+
+                  <div class="text-center">
+                    <p class="text-gray-600 text-sm italic mb-3">Energy-efficient windows professionally installed to enhance your home's comfort and appearance</p>
+                  </div>
+                </div>
+
+                <div class="text-center">
+                  <a
+                    href="#"
+                    onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;"
+                    class="inline-flex items-center px-5 py-2.5 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150"
+                  >
+                    Get Your Free Estimate
+                    <i class="fas fa-arrow-right ml-2"></i>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Right side: Benefits -->
+              <div class="lg:w-1/3 bg-blue-50 p-6 lg:p-6 flex flex-col justify-between">
+                <div>
+                  <h3 class="text-xl font-semibold text-gray-900 mb-4">Benefits of New Windows</h3>
+
+                  <div class="space-y-3 lg:space-y-3.5">
+                    <div class="flex items-start">
+                      <div class="flex-shrink-0 mt-1">
+                        <div class="h-8 w-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                          <i class="fas fa-bolt text-sm"></i>
+                        </div>
+                      </div>
+                      <div class="ml-4">
+                        <h4 class="text-md font-semibold text-gray-900">Energy Efficiency</h4>
+                        <p class="text-sm text-gray-600">Reduce heating and cooling costs by up to 30% with modern, insulated windows.</p>
+                      </div>
+                    </div>
+
+                    <div class="flex items-start">
+                      <div class="flex-shrink-0 mt-1">
+                        <div class="h-8 w-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                          <i class="fas fa-temperature-low text-sm"></i>
+                        </div>
+                      </div>
+                      <div class="ml-4">
+                        <h4 class="text-md font-semibold text-gray-900">Improved Comfort</h4>
+                        <p class="text-sm text-gray-600">Eliminate drafts and cold spots with properly sealed, insulated windows.</p>
+                      </div>
+                    </div>
+
+                    <div class="flex items-start">
+                      <div class="flex-shrink-0 mt-1">
+                        <div class="h-8 w-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                          <i class="fas fa-volume-mute text-sm"></i>
+                        </div>
+                      </div>
+                      <div class="ml-4">
+                        <h4 class="text-md font-semibold text-gray-900">Noise Reduction</h4>
+                        <p class="text-sm text-gray-600">Create a quieter home environment with sound-dampening window technology.</p>
+                      </div>
+                    </div>
+
+                    <div class="flex items-start">
+                      <div class="flex-shrink-0 mt-1">
+                        <div class="h-8 w-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                          <i class="fas fa-home text-sm"></i>
+                        </div>
+                      </div>
+                      <div class="ml-4">
+                        <h4 class="text-md font-semibold text-gray-900">Enhanced Curb Appeal</h4>
+                        <p class="text-sm text-gray-600">Update your home's look with stylish window designs that complement its architecture.</p>
+                      </div>
+                    </div>
+
+                    <div class="flex items-start">
+                      <div class="flex-shrink-0 mt-1">
+                        <div class="h-8 w-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                          <i class="fas fa-dollar-sign text-sm"></i>
+                        </div>
+                      </div>
+                      <div class="ml-4">
+                        <h4 class="text-md font-semibold text-gray-900">Increased Home Value</h4>
+                        <p class="text-sm text-gray-600">Typically returns 70-80% of investment while making your home more marketable.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEO-Optimized Window Information Section -->
+      <section class="py-12 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex flex-col lg:flex-row gap-6">
+            <!-- Left side - SEO targeted content -->
+            <div class="lg:w-2/3 relative">
+              <!-- Subtle background pattern -->
+              <div
+                class="absolute inset-0 opacity-5 pointer-events-none"
+                style="
+                  background-image: url('data:image/svg+xml,%3Csvg width=\'20\' height=\'20\' viewBox=\'0 0 20 20\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'%23000000\' fill-opacity=\'1\' fill-rule=\'evenodd\'%3E%3Ccircle cx=\'3\' cy=\'3\' r=\'1\'/%3E%3C/g%3E%3C/svg%3E');
+                "
+              ></div>
+
+              <!-- Twin Cities Windows section -->
+              <div class="mb-4 p-3 rounded-lg hover:bg-gray-50 transition-colors duration-300">
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mr-3">
+                    <div class="h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                      <i class="fas fa-map-marker-alt text-lg"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Twin Cities Window Replacement Experts</h3>
+                    <p class="text-gray-600 text-sm">
+                      As a leading window contractor in the Twin Cities, we specialize in energy-efficient window solutions designed specifically for Minnesota's climate extremes. Our local expertise
+                      ensures your new windows provide optimal insulation against bitter winters and hot, humid summers, while enhancing your home's appearance and value.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent my-3"></div>
+
+              <!-- Energy Star Windows section -->
+              <div class="mb-4 p-3 rounded-lg hover:bg-gray-50 transition-colors duration-300">
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mr-3">
+                    <div class="h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                      <i class="fas fa-star text-lg"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">ENERGY STAR® Rated Windows</h3>
+                    <p class="text-gray-600 text-sm">
+                      Our premium selection of ENERGY STAR® certified windows meets strict energy efficiency guidelines set by the EPA. These high-performance windows feature advanced technologies
+                      like low-E glass coatings, insulated frames, and multiple panes with argon gas fill to significantly reduce your energy consumption and utility bills throughout the year.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent my-3"></div>
+
+              <!-- Window Types section -->
+              <div class="mb-4 p-3 rounded-lg hover:bg-gray-50 transition-colors duration-300">
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mr-3">
+                    <div class="h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                      <i class="fas fa-th-large text-lg"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Versatile Window Styles for Every Home</h3>
+                    <p class="text-gray-600 text-sm">
+                      We offer a comprehensive range of window styles including double-hung, casement, awning, sliding, picture, and bay windows. Each style offers unique benefits in terms of
+                      ventilation, operation, and aesthetics. Our window experts will help you select the perfect combination of styles to complement your home's architecture while maximizing natural
+                      light and ventilation.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent my-3"></div>
+
+              <!-- Window Materials section -->
+              <div class="mb-4 p-3 rounded-lg hover:bg-gray-50 transition-colors duration-300">
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mr-3">
+                    <div class="h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                      <i class="fas fa-layer-group text-lg"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Premium Window Materials and Construction</h3>
+                    <p class="text-gray-600 text-sm">
+                      Choose from high-quality vinyl, fiberglass, wood, or composite window materials, each offering distinct advantages in durability, maintenance, and aesthetics. Our vinyl windows
+                      provide excellent insulation and require minimal maintenance, while our wood windows offer classic beauty and superior insulation. Fiberglass windows combine strength with
+                      thermal efficiency for the most demanding applications.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent my-3"></div>
+
+              <!-- Professional Installation section -->
+              <div class="mb-4 p-3 rounded-lg hover:bg-gray-50 transition-colors duration-300">
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mr-3">
+                    <div class="h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                      <i class="fas fa-tools text-lg"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Expert Window Installation Process</h3>
+                    <p class="text-gray-600 text-sm">
+                      Our factory-trained installation teams ensure your windows are properly installed for optimal performance and longevity. We use precise measuring techniques, proper flashing and
+                      sealing methods, and industry-best practices to eliminate air leaks and water infiltration. Most installations are completed quickly and efficiently, often in just one day, with
+                      minimal disruption to your home.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent my-3"></div>
+
+              <!-- Contact section -->
+              <div class="mb-4 p-3 rounded-lg hover:bg-gray-50 transition-colors duration-300">
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mr-3">
+                    <div class="h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                      <i class="fas fa-phone-alt text-lg"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Schedule Your Window Consultation Today</h3>
+                    <p class="text-gray-600 text-sm mb-3">
+                      Ready to enhance your home with beautiful, energy-efficient windows? Our team is ready to provide a free consultation and personalized estimate for your window replacement
+                      project. We serve the entire Twin Cities metro area with premium window products and expert installation services.
+                    </p>
+
+                    <!-- Call to action button -->
+                    <div>
+                      <a
+                        href="#"
+                        onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;"
+                        class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150"
+                      >
+                        Get Your Free Estimate
+                        <i class="fas fa-arrow-right ml-2"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right side - Why Choose Our Window Services -->
+            <div class="lg:w-1/3">
+              <!-- Why Us Box -->
+              <div class="bg-white rounded-lg shadow-xl p-5 mb-4">
+                <h3 class="text-lg font-bold mb-4 text-gray-900 text-center">Why Choose Our Window Services</h3>
+
+                <div class="space-y-2.5">
+                  <div class="flex items-center">
+                    <div class="bg-green-100 rounded-full p-1 mr-2 flex-shrink-0 w-5 h-5 flex items-center justify-center">
+                      <i class="fas fa-check text-green-600 text-xs"></i>
+                    </div>
+                    <span class="font-medium text-gray-800 text-sm">Premium Energy-Efficient Products</span>
+                  </div>
+
+                  <div class="flex items-center">
+                    <div class="bg-green-100 rounded-full p-1 mr-2 flex-shrink-0 w-5 h-5 flex items-center justify-center">
+                      <i class="fas fa-check text-green-600 text-xs"></i>
+                    </div>
+                    <span class="font-medium text-gray-800 text-sm">Factory-Trained Installation Teams</span>
+                  </div>
+
+                  <div class="flex items-center">
+                    <div class="bg-green-100 rounded-full p-1 mr-2 flex-shrink-0 w-5 h-5 flex items-center justify-center">
+                      <i class="fas fa-check text-green-600 text-xs"></i>
+                    </div>
+                    <span class="font-medium text-gray-800 text-sm">Minnesota-Specific Solutions</span>
+                  </div>
+
+                  <div class="flex items-center">
+                    <div class="bg-green-100 rounded-full p-1 mr-2 flex-shrink-0 w-5 h-5 flex items-center justify-center">
+                      <i class="fas fa-check text-green-600 text-xs"></i>
+                    </div>
+                    <span class="font-medium text-gray-800 text-sm">Manufacturer Warranties</span>
+                  </div>
+
+                  <div class="flex items-center">
+                    <div class="bg-green-100 rounded-full p-1 mr-2 flex-shrink-0 w-5 h-5 flex items-center justify-center">
+                      <i class="fas fa-check text-green-600 text-xs"></i>
+                    </div>
+                    <span class="font-medium text-gray-800 text-sm">Financing Options Available</span>
+                  </div>
+
+                  <div class="flex items-center">
+                    <div class="bg-green-100 rounded-full p-1 mr-2 flex-shrink-0 w-5 h-5 flex items-center justify-center">
+                      <i class="fas fa-check text-green-600 text-xs"></i>
+                    </div>
+                    <span class="font-medium text-gray-800 text-sm">Detailed, No-Pressure Consultations</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Window Options Box -->
+              <div class="bg-white rounded-lg shadow-xl p-5 mb-4">
+                <h3 class="text-lg font-bold mb-3 text-gray-900">Window Style Options</h3>
+
+                <div class="grid grid-cols-1 gap-4">
+                  <!-- Double Hung Windows -->
+                  <div class="p-3 border border-gray-100 rounded-lg hover:bg-blue-50 transition-colors duration-200">
+                    <h4 class="font-semibold text-gray-800 mb-1 flex items-center">
+                      <i class="fas fa-window-maximize text-blue-600 mr-2"></i>
+                      Double Hung Windows
+                    </h4>
+                    <p class="text-gray-600 text-sm">Traditional style with two operable sashes that move up and down. Perfect for classic homes and easy cleaning from inside.</p>
+                  </div>
+
+                  <!-- Casement Windows -->
+                  <div class="p-3 border border-gray-100 rounded-lg hover:bg-blue-50 transition-colors duration-200">
+                    <h4 class="font-semibold text-gray-800 mb-1 flex items-center">
+                      <i class="fas fa-wind text-blue-600 mr-2"></i>
+                      Casement Windows
+                    </h4>
+                    <p class="text-gray-600 text-sm">Hinged on one side and open outward with a crank, providing excellent ventilation and an unobstructed view.</p>
+                  </div>
+
+                  <!-- Picture Windows -->
+                  <div class="p-3 border border-gray-100 rounded-lg hover:bg-blue-50 transition-colors duration-200">
+                    <h4 class="font-semibold text-gray-800 mb-1 flex items-center">
+                      <i class="fas fa-image text-blue-600 mr-2"></i>
+                      Picture Windows
+                    </h4>
+                    <p class="text-gray-600 text-sm">Fixed windows that don't open but provide maximum natural light and uninterrupted views. Great for living rooms and scenic areas.</p>
+                  </div>
+
+                  <!-- Bay & Bow Windows -->
+                  <div class="p-3 border border-gray-100 rounded-lg hover:bg-blue-50 transition-colors duration-200">
+                    <h4 class="font-semibold text-gray-800 mb-1 flex items-center">
+                      <i class="fas fa-expand-alt text-blue-600 mr-2"></i>
+                      Bay & Bow Windows
+                    </h4>
+                    <p class="text-gray-600 text-sm">Elegant projecting windows that add space, light, and architectural interest to your home while creating a focal point.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Customer Testimonial Box -->
+              <div class="bg-white rounded-lg shadow-xl p-5">
+                <h3 class="text-lg font-bold mb-3 text-gray-900">What Our Customers Say</h3>
+                <div class="flex text-yellow-400 mb-3">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p class="text-gray-600 text-sm italic mb-3">
+                  "We replaced all the windows in our 1960s home and the difference is incredible. Our energy bills dropped immediately, and the house is so much quieter and more comfortable. The
+                  installation team was professional and courteous, and the windows look beautiful. Wish we had done this years ago!"
+                </p>
+                <p class="font-semibold text-gray-800 text-sm">- Sarah L., St. Paul</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Energy Savings Section -->
+      <section class="py-12 bg-blue-50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="p-6 md:p-8 flex flex-col md:flex-row items-center gap-6">
+              <div class="flex-shrink-0 bg-blue-100 p-4 rounded-full">
+                <i class="fas fa-leaf text-blue-600 text-3xl"></i>
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-3">Save Up to 30% on Energy Costs</h3>
+                <p class="text-gray-700 mb-4">
+                  Outdated windows can account for up to 30% of residential heating and cooling energy loss. Our energy-efficient windows with low-E glass, multiple panes, and insulated frames create
+                  a thermal barrier that helps maintain consistent indoor temperatures year-round, reducing strain on your HVAC system and lowering your monthly utility bills.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-3">
+                  <a
+                    href="#"
+                    onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;"
+                    class="inline-flex items-center justify-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded transition duration-300"
+                  >
+                    <i class="fas fa-calculator mr-2"></i> Get Your Free Window Assessment
+                  </a>
+                  <a href="tel:+16124742294" class="inline-flex items-center justify-center px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-800 font-medium rounded transition duration-300">
+                    <i class="fas fa-phone mr-2"></i> Call Now: (612) 474-2294
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-12">
+            <span class="inline-block text-blue-600 font-semibold tracking-wider uppercase text-sm mb-1">FAQ</span>
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Common Questions About Windows</h2>
+            <div class="w-16 h-1 bg-blue-500 mx-auto"></div>
+          </div>
+
+          <div class="space-y-4" id="faq-accordion">
+            <div class="bg-gray-50 rounded-lg shadow-sm overflow-hidden">
+              <button class="w-full px-6 py-4 text-left font-semibold text-gray-900 focus:outline-none flex justify-between items-center faq-toggle active">
+                <span>How do I know if I need new windows?</span>
+                <i class="fas fa-minus text-blue-500 transition-transform duration-300" style="transform: rotate(180deg)"></i>
+              </button>
+              <div class="faq-content overflow-hidden transition-all duration-300 ease-in-out" style="max-height: 500px">
+                <div class="px-6 pb-4 pt-2">
+                  <p class="text-gray-700">
+                    Common signs include drafts around windows, difficulty opening or closing, condensation between glass panes, visible damage to frames, increased energy bills, and excessive outside
+                    noise penetration. Windows that are over 15-20 years old may also be prime candidates for replacement, as newer models offer significantly improved energy efficiency and
+                    performance. During our free consultation, we can assess your windows and help you determine if replacement is necessary.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-gray-50 rounded-lg shadow-sm overflow-hidden">
+              <button class="w-full px-6 py-4 text-left font-semibold text-gray-900 focus:outline-none flex justify-between items-center faq-toggle">
+                <span>What is low-E glass and why is it important?</span>
+                <i class="fas fa-plus text-blue-500 transition-transform duration-300"></i>
+              </button>
+              <div class="faq-content overflow-hidden transition-all duration-300 ease-in-out" style="max-height: 0">
+                <div class="px-6 pb-4 pt-2">
+                  <p class="text-gray-700">
+                    Low-E (low emissivity) glass has a microscopically thin, transparent coating that reflects thermal radiation. This helps keep heat inside your home during winter and outside during
+                    summer, while still allowing visible light to pass through. It also blocks harmful UV rays that can fade furnishings and flooring. Low-E glass is a critical component of
+                    energy-efficient windows and can significantly reduce your heating and cooling costs while improving comfort.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-gray-50 rounded-lg shadow-sm overflow-hidden">
+              <button class="w-full px-6 py-4 text-left font-semibold text-gray-900 focus:outline-none flex justify-between items-center faq-toggle">
+                <span>How long does window replacement take?</span>
+                <i class="fas fa-plus text-blue-500 transition-transform duration-300"></i>
+              </button>
+              <div class="faq-content overflow-hidden transition-all duration-300 ease-in-out" style="max-height: 0">
+                <div class="px-6 pb-4 pt-2">
+                  <p class="text-gray-700">
+                    For most homes, window replacement can be completed in 1-2 days depending on the number of windows being replaced and any unexpected issues that might arise. Our expert installers
+                    typically replace 8-10 windows per day. We work efficiently to minimize disruption to your home, and most rooms are only exposed to the elements for about 30 minutes during the
+                    actual window exchange. We clean up thoroughly after installation, leaving your home better than we found it.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-gray-50 rounded-lg shadow-sm overflow-hidden">
+              <button class="w-full px-6 py-4 text-left font-semibold text-gray-900 focus:outline-none flex justify-between items-center faq-toggle">
+                <span>Which window material is best for Minnesota homes?</span>
+                <i class="fas fa-plus text-blue-500 transition-transform duration-300"></i>
+              </button>
+              <div class="faq-content overflow-hidden transition-all duration-300 ease-in-out" style="max-height: 0">
+                <div class="px-6 pb-4 pt-2">
+                  <p class="text-gray-700">
+                    For Minnesota's extreme climate, we generally recommend fiberglass or vinyl windows with insulated frames and multiple glass panes. Fiberglass offers superior strength and thermal
+                    performance, expanding and contracting at nearly the same rate as glass, which prevents seal failures during temperature fluctuations. Vinyl provides excellent insulation value and
+                    requires virtually no maintenance. Wood windows with exterior cladding are also a good option, offering natural insulation with weather protection. During your consultation, we'll
+                    help you choose the best material for your specific needs and budget.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
@@ -71,5 +542,59 @@
 
     <!-- JavaScript -->
     <script src="/js/main.js"></script>
+
+    <!-- FAQ Accordion Script -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const faqToggles = document.querySelectorAll(".faq-toggle");
+
+        // Initialize - ensure all accordions are closed except the first one
+        document.querySelectorAll(".faq-content").forEach((content, index) => {
+          if (index === 0) {
+            // First FAQ is already expanded in the HTML
+            content.style.maxHeight = content.scrollHeight + "px";
+          } else {
+            content.style.maxHeight = "0px";
+          }
+        });
+
+        faqToggles.forEach((toggle) => {
+          toggle.addEventListener("click", function () {
+            const content = this.nextElementSibling;
+            const icon = this.querySelector("i");
+
+            // Toggle active class on the button
+            this.classList.toggle("active");
+
+            // Close all other FAQs
+            document.querySelectorAll(".faq-toggle").forEach((otherToggle) => {
+              if (otherToggle !== this && otherToggle.classList.contains("active")) {
+                otherToggle.classList.remove("active");
+                const otherContent = otherToggle.nextElementSibling;
+                const otherIcon = otherToggle.querySelector("i");
+
+                otherContent.style.maxHeight = "0px";
+                otherIcon.classList.remove("fa-minus");
+                otherIcon.classList.add("fa-plus");
+                otherIcon.style.transform = "rotate(0deg)";
+              }
+            });
+
+            // Toggle current FAQ
+            if (this.classList.contains("active")) {
+              content.style.maxHeight = content.scrollHeight + "px";
+              icon.classList.remove("fa-plus");
+              icon.classList.add("fa-minus");
+              icon.style.transform = "rotate(180deg)";
+            } else {
+              content.style.maxHeight = "0px";
+              icon.classList.remove("fa-minus");
+              icon.classList.add("fa-plus");
+              icon.style.transform = "rotate(0deg)";
+            }
+          });
+        });
+      });
+    </script>
   </body>
 </html>
