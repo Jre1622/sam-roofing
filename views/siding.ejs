@@ -59,40 +59,120 @@
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="text-center mb-12">
-            <span class="inline-block text-blue-600 font-semibold tracking-wider uppercase text-sm mb-1">Why Choose New Siding</span>
-            <h2 class="text-3xl font-bold text-gray-900 mb-4">Benefits of Quality Siding Installation</h2>
+            <span class="inline-block text-blue-600 font-semibold tracking-wider uppercase text-sm mb-1">Real Transformations</span>
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">See the Difference Our Siding Makes</h2>
             <div class="w-16 h-1 bg-blue-500 mx-auto"></div>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300">
-              <div class="text-blue-600 mb-4">
-                <i class="fas fa-shield-alt text-3xl"></i>
-              </div>
-              <h3 class="text-xl font-semibold mb-3">Superior Protection</h3>
-              <p class="text-gray-700">
-                Quality siding creates a protective barrier against Minnesota's extreme weather, preventing moisture damage, rot, and structural issues that can lead to costly repairs.
-              </p>
-            </div>
+          <div class="bg-gray-50 rounded-xl shadow-lg overflow-hidden">
+            <div class="flex flex-col lg:flex-row">
+              <!-- Left side: Before/After Slider -->
+              <div class="lg:w-2/3 p-6 lg:p-8">
+                <div class="bg-white rounded-lg shadow-sm p-4 mb-6">
+                  <h3 class="text-xl font-semibold text-gray-900 mb-4">Siding Transformation</h3>
 
-            <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300">
-              <div class="text-blue-600 mb-4">
-                <i class="fas fa-temperature-low text-3xl"></i>
-              </div>
-              <h3 class="text-xl font-semibold mb-3">Energy Efficiency</h3>
-              <p class="text-gray-700">
-                Modern siding with proper insulation can reduce energy costs by up to 20%, keeping your home warmer in winter and cooler in summer while lowering utility bills.
-              </p>
-            </div>
+                  <!-- Before/After Slider -->
+                  <div class="relative aspect-video bg-gray-100 rounded-lg mb-4 overflow-hidden" id="before-after-container">
+                    <!-- Before Image (Base Layer) -->
+                    <img id="before-image" src="/images/before-placeholder.jpg" alt="Before Siding Replacement" class="w-full h-full object-cover absolute inset-0 transition-opacity duration-1500" />
 
-            <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300">
-              <div class="text-blue-600 mb-4">
-                <i class="fas fa-home text-3xl"></i>
+                    <!-- After Image (Top Layer) -->
+                    <img
+                      id="after-image"
+                      src="/images/after-placeholder.jpg"
+                      alt="After Siding Replacement"
+                      class="w-full h-full object-cover absolute inset-0 transition-opacity duration-1500"
+                      style="opacity: 0"
+                    />
+
+                    <!-- Labels -->
+                    <div id="before-label" class="absolute top-4 left-4 bg-black/70 text-white px-3 py-1 rounded text-sm font-medium transition-opacity duration-1000">Before</div>
+                    <div id="after-label" class="absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 rounded text-sm font-medium transition-opacity duration-1000 opacity-0">After</div>
+                  </div>
+
+                  <div class="text-center">
+                    <p class="text-gray-600 text-sm italic mb-4">Watch the automatic transformation of this home with our quality siding</p>
+                  </div>
+                </div>
+
+                <div class="text-center">
+                  <a
+                    href="#"
+                    onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;"
+                    class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150"
+                  >
+                    Get a Free Consultation
+                    <i class="fas fa-arrow-right ml-2"></i>
+                  </a>
+                </div>
               </div>
-              <h3 class="text-xl font-semibold mb-3">Enhanced Curb Appeal</h3>
-              <p class="text-gray-700">
-                Transform your home's appearance with beautiful, modern siding that boosts property value. Most homeowners see up to 80% return on investment with quality siding replacement.
-              </p>
+
+              <!-- Right side: Benefits -->
+              <div class="lg:w-1/3 bg-blue-50 p-6 lg:p-8">
+                <h3 class="text-xl font-semibold text-gray-900 mb-4">Benefits of New Siding</h3>
+
+                <div class="space-y-4">
+                  <div class="flex items-start">
+                    <div class="flex-shrink-0 mt-1">
+                      <div class="h-8 w-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                        <i class="fas fa-shield-alt text-sm"></i>
+                      </div>
+                    </div>
+                    <div class="ml-4">
+                      <h4 class="text-md font-semibold text-gray-900">Superior Protection</h4>
+                      <p class="text-sm text-gray-600">Shields your home from Minnesota's extreme weather conditions.</p>
+                    </div>
+                  </div>
+
+                  <div class="flex items-start">
+                    <div class="flex-shrink-0 mt-1">
+                      <div class="h-8 w-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                        <i class="fas fa-temperature-low text-sm"></i>
+                      </div>
+                    </div>
+                    <div class="ml-4">
+                      <h4 class="text-md font-semibold text-gray-900">Energy Efficiency</h4>
+                      <p class="text-sm text-gray-600">Reduce energy costs by up to 20% with proper insulation.</p>
+                    </div>
+                  </div>
+
+                  <div class="flex items-start">
+                    <div class="flex-shrink-0 mt-1">
+                      <div class="h-8 w-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                        <i class="fas fa-home text-sm"></i>
+                      </div>
+                    </div>
+                    <div class="ml-4">
+                      <h4 class="text-md font-semibold text-gray-900">Enhanced Curb Appeal</h4>
+                      <p class="text-sm text-gray-600">Boost property value with up to 80% ROI on quality siding.</p>
+                    </div>
+                  </div>
+
+                  <div class="flex items-start">
+                    <div class="flex-shrink-0 mt-1">
+                      <div class="h-8 w-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                        <i class="fas fa-dollar-sign text-sm"></i>
+                      </div>
+                    </div>
+                    <div class="ml-4">
+                      <h4 class="text-md font-semibold text-gray-900">Increased Home Value</h4>
+                      <p class="text-sm text-gray-600">New siding typically returns 70-80% of its cost in added home value.</p>
+                    </div>
+                  </div>
+
+                  <div class="flex items-start">
+                    <div class="flex-shrink-0 mt-1">
+                      <div class="h-8 w-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                        <i class="fas fa-tools text-sm"></i>
+                      </div>
+                    </div>
+                    <div class="ml-4">
+                      <h4 class="text-md font-semibold text-gray-900">Low Maintenance</h4>
+                      <p class="text-sm text-gray-600">Modern siding requires minimal upkeep compared to traditional materials.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -141,10 +221,10 @@
                     </div>
                   </div>
                   <div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">Wolverine Prestige 004 Siding - Premium Quality for Minnesota Homes</h3>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Premium Siding Materials for Minnesota Homes</h3>
                     <p class="text-gray-600 text-sm">
-                      We proudly offer Wolverine Prestige 004 siding, known for its exceptional durability and weather resistance. This premium siding option features a realistic wood grain texture,
-                      vibrant fade-resistant colors, and superior insulation properties that stand up to Minnesota's extreme temperature fluctuations.
+                      We offer a variety of premium siding options including Wolverine Prestige 004, James Hardie fiber cement, and LP SmartSide engineered wood. Each product features exceptional
+                      durability, weather resistance, and aesthetic appeal. Our experts will help you select the perfect siding material to match your home's style and your specific needs.
                     </p>
                   </div>
                 </div>
@@ -251,42 +331,42 @@
 
                 <div class="space-y-2.5">
                   <div class="flex items-center">
-                    <div class="bg-green-100 rounded-full p-1 mr-2 flex-shrink-0">
+                    <div class="bg-green-100 rounded-full p-1 mr-2 flex-shrink-0 w-5 h-5 flex items-center justify-center">
                       <i class="fas fa-check text-green-600 text-xs"></i>
                     </div>
                     <span class="font-medium text-gray-800 text-sm">Premium Wolverine Siding Products</span>
                   </div>
 
                   <div class="flex items-center">
-                    <div class="bg-green-100 rounded-full p-1 mr-2 flex-shrink-0">
+                    <div class="bg-green-100 rounded-full p-1 mr-2 flex-shrink-0 w-5 h-5 flex items-center justify-center">
                       <i class="fas fa-check text-green-600 text-xs"></i>
                     </div>
                     <span class="font-medium text-gray-800 text-sm">Factory-Trained Installation Team</span>
                   </div>
 
                   <div class="flex items-center">
-                    <div class="bg-green-100 rounded-full p-1 mr-2 flex-shrink-0">
+                    <div class="bg-green-100 rounded-full p-1 mr-2 flex-shrink-0 w-5 h-5 flex items-center justify-center">
                       <i class="fas fa-check text-green-600 text-xs"></i>
                     </div>
                     <span class="font-medium text-gray-800 text-sm">Minnesota Weather-Specific Solutions</span>
                   </div>
 
                   <div class="flex items-center">
-                    <div class="bg-green-100 rounded-full p-1 mr-2 flex-shrink-0">
+                    <div class="bg-green-100 rounded-full p-1 mr-2 flex-shrink-0 w-5 h-5 flex items-center justify-center">
                       <i class="fas fa-check text-green-600 text-xs"></i>
                     </div>
                     <span class="font-medium text-gray-800 text-sm">Comprehensive Warranties</span>
                   </div>
 
                   <div class="flex items-center">
-                    <div class="bg-green-100 rounded-full p-1 mr-2 flex-shrink-0">
+                    <div class="bg-green-100 rounded-full p-1 mr-2 flex-shrink-0 w-5 h-5 flex items-center justify-center">
                       <i class="fas fa-check text-green-600 text-xs"></i>
                     </div>
                     <span class="font-medium text-gray-800 text-sm">Insurance Claim Assistance</span>
                   </div>
 
                   <div class="flex items-center">
-                    <div class="bg-green-100 rounded-full p-1 mr-2 flex-shrink-0">
+                    <div class="bg-green-100 rounded-full p-1 mr-2 flex-shrink-0 w-5 h-5 flex items-center justify-center">
                       <i class="fas fa-check text-green-600 text-xs"></i>
                     </div>
                     <span class="font-medium text-gray-800 text-sm">Financing Options Available</span>
@@ -296,57 +376,51 @@
 
               <!-- Featured Siding Products Box -->
               <div class="bg-white rounded-lg shadow-xl p-5 mb-4">
-                <h3 class="text-lg font-bold mb-3 text-gray-900">Featured Siding Products</h3>
+                <h3 class="text-lg font-bold mb-3 text-gray-900">Premium Siding Options</h3>
 
-                <!-- Prestige 004 -->
-                <div class="mb-4 pb-4 border-b border-gray-100">
-                  <h4 class="font-semibold text-gray-800 mb-2">Wolverine Prestige 004</h4>
-                  <div class="flex items-start">
-                    <div class="flex-shrink-0 mt-1">
-                      <div class="h-8 w-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
-                        <i class="fas fa-award text-sm"></i>
-                      </div>
-                    </div>
-                    <div class="ml-3">
-                      <p class="text-gray-600 text-sm mb-2">
-                        Premium horizontal siding with authentic wood grain texture and superior durability. Available in a wide range of fade-resistant colors to complement any home style.
-                      </p>
-                      <ul class="text-xs text-gray-600 space-y-1">
-                        <li class="flex items-start">
-                          <i class="fas fa-check-circle text-green-500 mt-0.5 mr-1 text-xs"></i>
-                          <span>Lifetime limited warranty</span>
-                        </li>
-                        <li class="flex items-start">
-                          <i class="fas fa-check-circle text-green-500 mt-0.5 mr-1 text-xs"></i>
-                          <span>Low maintenance requirements</span>
-                        </li>
-                      </ul>
-                    </div>
+                <div class="grid grid-cols-1 gap-4">
+                  <!-- Wolverine Prestige -->
+                  <div class="p-3 border border-gray-100 rounded-lg hover:bg-blue-50 transition-colors duration-200">
+                    <h4 class="font-semibold text-gray-800 mb-1 flex items-center">
+                      <i class="fas fa-award text-blue-600 mr-2"></i>
+                      Wolverine Prestige 004
+                    </h4>
+                    <p class="text-gray-600 text-sm">
+                      Premium horizontal siding with authentic wood grain texture and superior durability. Available in fade-resistant colors with lifetime limited warranty.
+                    </p>
                   </div>
-                </div>
 
-                <!-- Board & Batten -->
-                <div>
-                  <h4 class="font-semibold text-gray-800 mb-2">Wolverine Board & Batten</h4>
-                  <div class="flex items-start">
-                    <div class="flex-shrink-0 mt-1">
-                      <div class="h-8 w-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
-                        <i class="fas fa-th-large text-sm"></i>
-                      </div>
-                    </div>
-                    <div class="ml-3">
-                      <p class="text-gray-600 text-sm mb-2">Distinctive vertical siding that creates architectural interest and visual contrast. Perfect as an accent or for full-home application.</p>
-                      <ul class="text-xs text-gray-600 space-y-1">
-                        <li class="flex items-start">
-                          <i class="fas fa-check-circle text-green-500 mt-0.5 mr-1 text-xs"></i>
-                          <span>Combines beautifully with horizontal siding</span>
-                        </li>
-                        <li class="flex items-start">
-                          <i class="fas fa-check-circle text-green-500 mt-0.5 mr-1 text-xs"></i>
-                          <span>Creates unique architectural details</span>
-                        </li>
-                      </ul>
-                    </div>
+                  <!-- James Hardie -->
+                  <div class="p-3 border border-gray-100 rounded-lg hover:bg-blue-50 transition-colors duration-200">
+                    <h4 class="font-semibold text-gray-800 mb-1 flex items-center">
+                      <i class="fas fa-shield-alt text-blue-600 mr-2"></i>
+                      James Hardie Fiber Cement
+                    </h4>
+                    <p class="text-gray-600 text-sm">
+                      Industry-leading fiber cement siding with exceptional durability and fire resistance. Engineered to withstand Minnesota's extreme weather conditions.
+                    </p>
+                  </div>
+
+                  <!-- LP SmartSide -->
+                  <div class="p-3 border border-gray-100 rounded-lg hover:bg-blue-50 transition-colors duration-200">
+                    <h4 class="font-semibold text-gray-800 mb-1 flex items-center">
+                      <i class="fas fa-leaf text-blue-600 mr-2"></i>
+                      LP SmartSide
+                    </h4>
+                    <p class="text-gray-600 text-sm">
+                      Engineered wood siding that combines beautiful aesthetics with advanced durability. Treated to resist termites and fungal decay with a 50-year limited warranty.
+                    </p>
+                  </div>
+
+                  <!-- Board & Batten -->
+                  <div class="p-3 border border-gray-100 rounded-lg hover:bg-blue-50 transition-colors duration-200">
+                    <h4 class="font-semibold text-gray-800 mb-1 flex items-center">
+                      <i class="fas fa-th-large text-blue-600 mr-2"></i>
+                      Vertical & Board and Batten
+                    </h4>
+                    <p class="text-gray-600 text-sm">
+                      Distinctive vertical siding options available in all our premium materials. Perfect for creating architectural interest and visual contrast on your home.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -415,16 +489,16 @@
 
           <div class="space-y-4" id="faq-accordion">
             <div class="bg-gray-50 rounded-lg shadow-sm overflow-hidden">
-              <button class="w-full px-6 py-4 text-left font-semibold text-gray-900 focus:outline-none flex justify-between items-center faq-toggle">
+              <button class="w-full px-6 py-4 text-left font-semibold text-gray-900 focus:outline-none flex justify-between items-center faq-toggle active">
                 <span>What is the most durable type of siding?</span>
-                <i class="fas fa-plus text-blue-500 transition-transform duration-300"></i>
+                <i class="fas fa-minus text-blue-500 transition-transform duration-300" style="transform: rotate(180deg)"></i>
               </button>
-              <div class="faq-content overflow-hidden transition-all duration-300 ease-in-out" style="max-height: 0">
+              <div class="faq-content overflow-hidden transition-all duration-300 ease-in-out" style="max-height: 500px">
                 <div class="px-6 pb-4 pt-2">
                   <p class="text-gray-700">
                     Fiber cement siding, like James Hardie products, is known for its exceptional durability and resistance to the elements. It withstands harsh weather conditions, resists fire, and
-                    is not susceptible to rot, pests, or warping. While it has a higher upfront cost than vinyl, its longevity and low maintenance requirements make it a cost-effective choice in the
-                    long run.
+                    is not susceptible to rot, pests, or warping. LP SmartSide offers excellent durability as well, with engineered wood that resists impact damage. Vinyl options like Wolverine
+                    Prestige provide good durability at a more affordable price point. Each material has its advantages, and we can help you choose the best option for your specific needs and budget.
                   </p>
                 </div>
               </div>
@@ -492,9 +566,14 @@
       document.addEventListener("DOMContentLoaded", function () {
         const faqToggles = document.querySelectorAll(".faq-toggle");
 
-        // Initialize - ensure all accordions are closed
-        document.querySelectorAll(".faq-content").forEach((content) => {
-          content.style.maxHeight = "0px";
+        // Initialize - ensure all accordions are closed except the first one
+        document.querySelectorAll(".faq-content").forEach((content, index) => {
+          if (index === 0) {
+            // First FAQ is already expanded in the HTML
+            content.style.maxHeight = content.scrollHeight + "px";
+          } else {
+            content.style.maxHeight = "0px";
+          }
         });
 
         faqToggles.forEach((toggle) => {
@@ -533,6 +612,57 @@
             }
           });
         });
+      });
+    </script>
+
+    <!-- Replace the old slider JavaScript with this new auto-transition code -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const beforeImage = document.getElementById("before-image");
+        const afterImage = document.getElementById("after-image");
+        const beforeLabel = document.getElementById("before-label");
+        const afterLabel = document.getElementById("after-label");
+
+        let showingBefore = true;
+        const transitionDuration = 3000; // How long each image shows (3 seconds)
+        const fadeTime = 1500; // How long the fade transition takes (1.5 seconds)
+
+        // Function to toggle between before and after images
+        function toggleBeforeAfter() {
+          if (showingBefore) {
+            // Transition to After
+            afterImage.style.opacity = "1";
+            beforeLabel.style.opacity = "0";
+            afterLabel.style.opacity = "1";
+          } else {
+            // Transition to Before
+            afterImage.style.opacity = "0";
+            beforeLabel.style.opacity = "1";
+            afterLabel.style.opacity = "0";
+          }
+
+          showingBefore = !showingBefore;
+        }
+
+        // Start the automatic transition loop
+        function startAutoTransition() {
+          // Initial state
+          afterImage.style.opacity = "0";
+          beforeLabel.style.opacity = "1";
+          afterLabel.style.opacity = "0";
+
+          // Set transition timing in CSS
+          beforeImage.style.transitionDuration = `${fadeTime}ms`;
+          afterImage.style.transitionDuration = `${fadeTime}ms`;
+          beforeLabel.style.transitionDuration = `${fadeTime}ms`;
+          afterLabel.style.transitionDuration = `${fadeTime}ms`;
+
+          // Start the loop
+          setInterval(toggleBeforeAfter, transitionDuration);
+        }
+
+        // Initialize the automatic transition
+        startAutoTransition();
       });
     </script>
   </body>
