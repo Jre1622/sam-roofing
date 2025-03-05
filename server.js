@@ -169,6 +169,15 @@ app.post("/submit-contact", async (req, res) => {
   }
 });
 
+// 404 Handler
+app.use((req, res, next) => {
+  res.status(404).render("404", {
+    title: "Page Not Found | Maverick Contracting INC - Minnesota",
+    description: "The page you're looking for could not be found. Maverick Contracting provides professional exterior remodeling services in Minnesota.",
+    active: "none",
+  });
+});
+
 // Start the server
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
