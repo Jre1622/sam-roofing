@@ -121,15 +121,6 @@ app.get("/gutters", (req, res) => {
   });
 });
 
-app.get("/projects", (req, res) => {
-  res.render("projects", {
-    title: "Our Minnesota Projects | Maverick Contracting Portfolio",
-    description:
-      "View our portfolio of completed exterior remodeling projects throughout Minneapolis, St. Paul, and surrounding Minnesota communities. See the quality craftsmanship that Maverick Contracting delivers.",
-    active: "projects",
-  });
-});
-
 app.get("/testimonials", (req, res) => {
   res.render("testimonials", {
     title: "Minnesota Customer Testimonials | Maverick Contracting",
