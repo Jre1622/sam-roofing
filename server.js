@@ -139,6 +139,14 @@ app.get("/contact", (req, res) => {
   });
 });
 
+app.get("/privacy", (req, res) => {
+  res.render("privacy", {
+    title: "Privacy Policy | Maverick Contracting INC - Minnesota",
+    description: "Read Maverick Contracting's privacy policy outlining how we collect, use, and protect your personal information. Serving Minnesota homeowners with transparency and integrity.",
+    active: "none",
+  });
+});
+
 // Contact form submission route
 app.post("/submit-contact", async (req, res) => {
   try {
