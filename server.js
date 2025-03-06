@@ -32,7 +32,7 @@ app.get("/", (req, res) => {
   res.render("index", {
     title: "Maverick Contracting INC | Full-Service Exterior Remodeler in Minnesota",
     description:
-      "Maverick Contracting provides professional roofing, siding, windows, and gutter services for residential and commercial properties in Minnesota. Serving Minneapolis, St. Paul, and surrounding areas.",
+      "Maverick Contracting provides professional roofing, siding, windows, and gutter services for residential properties in Minnesota. Serving Minneapolis, St. Paul, and surrounding areas.",
     active: "home",
   });
 });
