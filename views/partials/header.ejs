@@ -61,21 +61,21 @@
 </div>
 
 <!-- Navigation -->
-<nav class="bg-red-600 text-white shadow-lg">
+<nav class="bg-blue-600 text-white shadow-lg">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <!-- Desktop menu -->
     <div class="hidden md:flex md:justify-center md:h-16">
       <div class="md:flex md:flex-1 md:items-center md:justify-center">
         <div class="flex items-center space-x-0 lg:space-x-1">
           <a
-            class="<%= active === 'home' ? 'bg-red-700 text-white' : 'text-white hover:bg-red-700 hover:text-white' %> px-2 md:px-3 lg:px-5 py-4 rounded-md text-xs md:text-sm lg:text-base font-bold transition duration-150"
+            class="<%= active === 'home' ? 'bg-blue-700 text-white' : 'text-white hover:bg-blue-700 hover:text-white' %> px-2 md:px-3 lg:px-5 py-4 rounded-md text-xs md:text-sm lg:text-base font-bold transition duration-150"
             href="/"
             >Home</a
           >
           <!-- Storm Damage Dropdown -->
           <div class="relative group">
             <button
-              class="<%= active && active.startsWith('storm-damage') ? 'bg-red-700 text-white' : 'text-white hover:bg-red-700 hover:text-white' %> px-2 md:px-3 lg:px-5 py-4 rounded-md text-xs md:text-sm lg:text-base font-bold transition duration-150 flex items-center"
+              class="<%= active && active.startsWith('storm-damage') ? 'bg-blue-700 text-white' : 'text-white hover:bg-blue-700 hover:text-white' %> px-2 md:px-3 lg:px-5 py-4 rounded-md text-xs md:text-sm lg:text-base font-bold transition duration-150 flex items-center"
             >
               Storm Damage
               <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -86,41 +86,41 @@
               class="absolute left-0 mt-0 w-56 origin-top-left bg-white text-gray-800 shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-150 z-50"
             >
               <div class="py-1">
-                <a href="/storm-damage/residential" class="block px-4 py-2 text-sm hover:bg-red-600 hover:text-white">Residential Storm Damage</a>
-                <a href="/storm-damage/multi-family" class="block px-4 py-2 text-sm hover:bg-red-600 hover:text-white">Multi-Family Storm Damage</a>
-                <a href="/storm-damage/emergency-services" class="block px-4 py-2 text-sm hover:bg-red-600 hover:text-white">Emergency Services</a>
-                <a href="/storm-damage/insurance-claims" class="block px-4 py-2 text-sm hover:bg-red-600 hover:text-white">Insurance Claims</a>
-                <a href="/storm-damage/roof-tarping" class="block px-4 py-2 text-sm hover:bg-red-600 hover:text-white">Roof Tarping</a>
+                <a href="/storm-damage/residential" class="block px-4 py-2 text-sm hover:bg-blue-600 hover:text-white">Residential Storm Damage</a>
+                <a href="/storm-damage/multi-family" class="block px-4 py-2 text-sm hover:bg-blue-600 hover:text-white">Multi-Family Storm Damage</a>
+                <a href="/storm-damage/emergency-services" class="block px-4 py-2 text-sm hover:bg-blue-600 hover:text-white">Emergency Services</a>
+                <a href="/storm-damage/insurance-claims" class="block px-4 py-2 text-sm hover:bg-blue-600 hover:text-white">Insurance Claims</a>
+                <a href="/storm-damage/roof-tarping" class="block px-4 py-2 text-sm hover:bg-blue-600 hover:text-white">Roof Tarping</a>
               </div>
             </div>
           </div>
           <a
-            class="<%= active === 'siding' ? 'bg-red-700 text-white' : 'text-white hover:bg-red-700 hover:text-white' %> px-2 md:px-3 lg:px-5 py-4 rounded-md text-xs md:text-sm lg:text-base font-bold transition duration-150"
+            class="<%= active === 'siding' ? 'bg-blue-700 text-white' : 'text-white hover:bg-blue-700 hover:text-white' %> px-2 md:px-3 lg:px-5 py-4 rounded-md text-xs md:text-sm lg:text-base font-bold transition duration-150"
             href="/siding"
             >Siding</a
           >
           <a
-            class="<%= active === 'windows' ? 'bg-red-700 text-white' : 'text-white hover:bg-red-700 hover:text-white' %> px-2 md:px-3 lg:px-5 py-4 rounded-md text-xs md:text-sm lg:text-base font-bold transition duration-150"
+            class="<%= active === 'windows' ? 'bg-blue-700 text-white' : 'text-white hover:bg-blue-700 hover:text-white' %> px-2 md:px-3 lg:px-5 py-4 rounded-md text-xs md:text-sm lg:text-base font-bold transition duration-150"
             href="/windows"
             >Windows</a
           >
           <a
-            class="<%= active === 'roofing' ? 'bg-red-700 text-white' : 'text-white hover:bg-red-700 hover:text-white' %> px-2 md:px-3 lg:px-5 py-4 rounded-md text-xs md:text-sm lg:text-base font-bold transition duration-150"
+            class="<%= active === 'roofing' ? 'bg-blue-700 text-white' : 'text-white hover:bg-blue-700 hover:text-white' %> px-2 md:px-3 lg:px-5 py-4 rounded-md text-xs md:text-sm lg:text-base font-bold transition duration-150"
             href="/roofing"
             >Roofing</a
           >
           <a
-            class="<%= active === 'gutters' ? 'bg-red-700 text-white' : 'text-white hover:bg-red-700 hover:text-white' %> px-2 md:px-3 lg:px-5 py-4 rounded-md text-xs md:text-sm lg:text-base font-bold transition duration-150"
+            class="<%= active === 'gutters' ? 'bg-blue-700 text-white' : 'text-white hover:bg-blue-700 hover:text-white' %> px-2 md:px-3 lg:px-5 py-4 rounded-md text-xs md:text-sm lg:text-base font-bold transition duration-150"
             href="/gutters"
             >Gutters</a
           >
           <a
-            class="<%= active === 'testimonials' ? 'bg-red-700 text-white' : 'text-white hover:bg-red-700 hover:text-white' %> px-2 md:px-3 lg:px-5 py-4 rounded-md text-xs md:text-sm lg:text-base font-bold transition duration-150"
+            class="<%= active === 'testimonials' ? 'bg-blue-700 text-white' : 'text-white hover:bg-blue-700 hover:text-white' %> px-2 md:px-3 lg:px-5 py-4 rounded-md text-xs md:text-sm lg:text-base font-bold transition duration-150"
             href="/testimonials"
             >Testimonials</a
           >
           <a
-            class="<%= active === 'contact' ? 'bg-red-700 text-white' : 'text-white hover:bg-red-700 hover:text-white' %> px-2 md:px-3 lg:px-5 py-4 rounded-md text-xs md:text-sm lg:text-base font-bold transition duration-150"
+            class="<%= active === 'contact' ? 'bg-blue-700 text-white' : 'text-white hover:bg-blue-700 hover:text-white' %> px-2 md:px-3 lg:px-5 py-4 rounded-md text-xs md:text-sm lg:text-base font-bold transition duration-150"
             href="/contact"
             >Contact</a
           >
@@ -128,7 +128,7 @@
       </div>
     </div>
 
-    <!-- Mobile contact info in red navbar -->
+    <!-- Mobile contact info in blue navbar -->
     <div class="md:hidden flex justify-between items-center h-16">
       <div class="flex items-center">
         <a href="tel:612-472-2294" class="text-white font-extrabold text-lg sm:text-2xl flex items-center">
@@ -139,7 +139,7 @@
       <div>
         <a
           href="/contact"
-          class="inline-block px-4 sm:px-6 max-[333px]:px-3 py-2 sm:py-3 max-[333px]:py-1.5 bg-white text-red-600 text-base sm:text-lg max-[333px]:text-xs font-extrabold rounded-full hover:bg-gray-100 transition duration-150"
+          class="inline-block px-4 sm:px-6 max-[333px]:px-3 py-2 sm:py-3 max-[333px]:py-1.5 bg-white text-blue-600 text-base sm:text-lg max-[333px]:text-xs font-extrabold rounded-full hover:bg-gray-100 transition duration-150"
         >
           FREE Estimate
         </a>
@@ -150,12 +150,12 @@
   <!-- Mobile menu, show/hide based on menu state -->
   <div class="md:hidden hidden" id="mobile-menu">
     <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col items-center">
-      <a class="<%= active === 'home' ? 'bg-red-700 text-white' : 'text-white hover:bg-red-700 hover:text-white' %> block px-4 py-3 rounded-md text-lg font-bold w-full text-center" href="/">Home</a>
+      <a class="<%= active === 'home' ? 'bg-blue-700 text-white' : 'text-white hover:bg-blue-700 hover:text-white' %> block px-4 py-3 rounded-md text-lg font-bold w-full text-center" href="/">Home</a>
 
       <!-- Mobile Storm Damage Dropdown -->
       <div class="w-full">
         <button
-          class="<%= active && active.startsWith('storm-damage') ? 'bg-red-700 text-white' : 'text-white hover:bg-red-700 hover:text-white' %> mobile-dropdown-toggle flex items-center justify-center px-4 py-3 rounded-md text-lg font-bold w-full"
+          class="<%= active && active.startsWith('storm-damage') ? 'bg-blue-700 text-white' : 'text-white hover:bg-blue-700 hover:text-white' %> mobile-dropdown-toggle flex items-center justify-center px-4 py-3 rounded-md text-lg font-bold w-full"
           aria-expanded="false"
         >
           Storm Damage
@@ -163,33 +163,41 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
           </svg>
         </button>
-        <div class="mobile-dropdown-menu hidden bg-red-800 rounded-md mt-1 overflow-hidden">
-          <a href="/storm-damage/residential" class="block px-4 py-3 text-white hover:bg-red-900 text-base font-medium w-full text-center">Residential Storm Damage</a>
-          <a href="/storm-damage/multi-family" class="block px-4 py-3 text-white hover:bg-red-900 text-base font-medium w-full text-center">Multi-Family Storm Damage</a>
-          <a href="/storm-damage/emergency-services" class="block px-4 py-3 text-white hover:bg-red-900 text-base font-medium w-full text-center">Emergency Services</a>
-          <a href="/storm-damage/insurance-claims" class="block px-4 py-3 text-white hover:bg-red-900 text-base font-medium w-full text-center">Insurance Claims</a>
-          <a href="/storm-damage/roof-tarping" class="block px-4 py-3 text-white hover:bg-red-900 text-base font-medium w-full text-center">Roof Tarping</a>
+        <div class="mobile-dropdown-menu hidden bg-blue-800 rounded-md mt-1 overflow-hidden">
+          <a href="/storm-damage/residential" class="block px-4 py-3 text-white hover:bg-blue-900 text-base font-medium w-full text-center">Residential Storm Damage</a>
+          <a href="/storm-damage/multi-family" class="block px-4 py-3 text-white hover:bg-blue-900 text-base font-medium w-full text-center">Multi-Family Storm Damage</a>
+          <a href="/storm-damage/emergency-services" class="block px-4 py-3 text-white hover:bg-blue-900 text-base font-medium w-full text-center">Emergency Services</a>
+          <a href="/storm-damage/insurance-claims" class="block px-4 py-3 text-white hover:bg-blue-900 text-base font-medium w-full text-center">Insurance Claims</a>
+          <a href="/storm-damage/roof-tarping" class="block px-4 py-3 text-white hover:bg-blue-900 text-base font-medium w-full text-center">Roof Tarping</a>
         </div>
       </div>
 
-      <a class="<%= active === 'siding' ? 'bg-red-700 text-white' : 'text-white hover:bg-red-700 hover:text-white' %> block px-4 py-3 rounded-md text-lg font-bold w-full text-center" href="/siding"
+      <a class="<%= active === 'siding' ? 'bg-blue-700 text-white' : 'text-white hover:bg-blue-700 hover:text-white' %> block px-4 py-3 rounded-md text-lg font-bold w-full text-center" href="/siding"
         >Siding</a
       >
-      <a class="<%= active === 'windows' ? 'bg-red-700 text-white' : 'text-white hover:bg-red-700 hover:text-white' %> block px-4 py-3 rounded-md text-lg font-bold w-full text-center" href="/windows"
+      <a
+        class="<%= active === 'windows' ? 'bg-blue-700 text-white' : 'text-white hover:bg-blue-700 hover:text-white' %> block px-4 py-3 rounded-md text-lg font-bold w-full text-center"
+        href="/windows"
         >Windows</a
       >
-      <a class="<%= active === 'roofing' ? 'bg-red-700 text-white' : 'text-white hover:bg-red-700 hover:text-white' %> block px-4 py-3 rounded-md text-lg font-bold w-full text-center" href="/roofing"
+      <a
+        class="<%= active === 'roofing' ? 'bg-blue-700 text-white' : 'text-white hover:bg-blue-700 hover:text-white' %> block px-4 py-3 rounded-md text-lg font-bold w-full text-center"
+        href="/roofing"
         >Roofing</a
       >
-      <a class="<%= active === 'gutters' ? 'bg-red-700 text-white' : 'text-white hover:bg-red-700 hover:text-white' %> block px-4 py-3 rounded-md text-lg font-bold w-full text-center" href="/gutters"
+      <a
+        class="<%= active === 'gutters' ? 'bg-blue-700 text-white' : 'text-white hover:bg-blue-700 hover:text-white' %> block px-4 py-3 rounded-md text-lg font-bold w-full text-center"
+        href="/gutters"
         >Gutters</a
       >
       <a
-        class="<%= active === 'testimonials' ? 'bg-red-700 text-white' : 'text-white hover:bg-red-700 hover:text-white' %> block px-4 py-3 rounded-md text-lg font-bold w-full text-center"
+        class="<%= active === 'testimonials' ? 'bg-blue-700 text-white' : 'text-white hover:bg-blue-700 hover:text-white' %> block px-4 py-3 rounded-md text-lg font-bold w-full text-center"
         href="/testimonials"
         >Testimonials</a
       >
-      <a class="<%= active === 'contact' ? 'bg-red-700 text-white' : 'text-white hover:bg-red-700 hover:text-white' %> block px-4 py-3 rounded-md text-lg font-bold w-full text-center" href="/contact"
+      <a
+        class="<%= active === 'contact' ? 'bg-blue-700 text-white' : 'text-white hover:bg-blue-700 hover:text-white' %> block px-4 py-3 rounded-md text-lg font-bold w-full text-center"
+        href="/contact"
         >Contact</a
       >
     </div>
