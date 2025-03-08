@@ -1,0 +1,55 @@
+<!-- Structured Data for Local Business -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Maverick Contracting INC",
+    "image": "https://www.hiremaverick.com/images/logo.svg",
+    "url": "<%= canonical %>",
+    "telephone": "612-472-2294",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "3200 Main St NW Ste 245",
+      "addressLocality": "Coon Rapids",
+      "addressRegion": "MN",
+      "postalCode": "55448",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 44.9778,
+      "longitude": -93.265
+    },
+    "priceRange": "$$",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "17:00"
+      }
+    ],
+    "sameAs": ["https://www.facebook.com/profile.php?id=61557287717052", "https://www.instagram.com/maverickcontractingmn/?igsh=dWw3ZzVudmplY2o1"],
+    "serviceArea": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": 44.9778,
+        "longitude": -93.265
+      },
+      "geoRadius": "50000"
+    }
+  }
+</script>
+
+<!-- Structured Data for Service Provider -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    "name": "Maverick Contracting INC",
+    "description": "<%= description %>",
+    "url": "<%= canonical %>",
+    "knowsAbout": ["Roofing", "Siding", "Windows", "Gutters", "Storm Damage Repair"]
+  }
+</script>

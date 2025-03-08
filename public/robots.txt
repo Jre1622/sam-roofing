@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://www.maverickcontracting.com/sitemap.xml
+Sitemap: https://www.hiremaverick.com/sitemap.xml
