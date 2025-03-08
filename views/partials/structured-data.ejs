@@ -1,9 +1,10 @@
-<!-- Structured Data for Local Business -->
+<!-- Structured Data for Maverick Contracting -->
 <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
     "name": "Maverick Contracting INC",
+    "description": "<%= description %>",
     "image": "https://www.hiremaverick.com/images/logo.svg",
     "url": "<%= canonical %>",
     "telephone": "612-472-2294",
@@ -38,18 +39,49 @@
         "longitude": -93.265
       },
       "geoRadius": "50000"
-    }
-  }
-</script>
-
-<!-- Structured Data for Service Provider -->
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "HomeAndConstructionBusiness",
-    "name": "Maverick Contracting INC",
-    "description": "<%= description %>",
-    "url": "<%= canonical %>",
-    "knowsAbout": ["Roofing", "Siding", "Windows", "Gutters", "Storm Damage Repair"]
+    },
+    "knowsAbout": ["Roofing", "Siding", "Windows", "Gutters", "Storm Damage Repair"],
+    "makesOffer": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Roofing Services",
+          "description": "Professional roof installation, repair, and replacement"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Siding Installation",
+          "description": "Premium siding solutions and installation"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Window Replacement",
+          "description": "Energy-efficient window installation"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Gutter Installation",
+          "description": "Seamless gutter installation and repair"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Storm Damage Repair",
+          "description": "Comprehensive storm damage assessment and repair"
+        }
+      }
+    ]
   }
 </script>
