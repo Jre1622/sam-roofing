@@ -190,6 +190,46 @@ app.post("/submit-contact", async (req, res) => {
   }
 });
 
+// Roofle webhook route
+app.post("/webhooks/roofle", async (req, res) => {
+  try {
+    // Log the webhook data
+    console.log("Roofle webhook received:", JSON.stringify(req.body, null, 2));
+
+    // Extract only the basic information
+    const { firstName, lastName, email, phone } = req.body;
+
+    // Format customer name
+    const name = `${firstName || ""} ${lastName || ""}`.trim() || "Not provided";
+
+    // Format the data for Telegram using the same structure as contact form
+    const formData = {
+      name,
+      email: email || "Not provided",
+      phone: phone || "Not provided",
+      service: "Roofle Roof Quote",
+      message: "Submitted through Roofle widget",
+    };
+
+    // Send to Telegram using existing function
+    await sendContactFormMessage(formData);
+
+    // Respond with success
+    res.status(200).json({
+      success: true,
+      message: "Webhook received and processed successfully",
+    });
+  } catch (error) {
+    console.error("Error processing Roofle webhook:", error);
+
+    // Still return a 200 status code to prevent Roofle from retrying
+    res.status(200).json({
+      success: false,
+      message: "Error processing webhook, but request received",
+    });
+  }
+});
+
 // 404 Handler
 app.use((req, res, next) => {
   res.status(404).render("404", {
