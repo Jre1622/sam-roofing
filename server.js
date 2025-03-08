@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require("path");
 const rateLimit = require("express-rate-limit");
+const { sendContactFormMessage } = require("./lib/telegram");
 require("dotenv").config();
 
 // Base URL for canonical links
@@ -169,8 +170,11 @@ app.post("/submit-contact", async (req, res) => {
   try {
     const { name, email, phone, message, service } = req.body;
 
-    // Log the form submission (instead of sending to Telegram)
+    // Log the form submission
     console.log("Form submission received:", { name, email, phone, message, service });
+
+    // Send to Telegram
+    await sendContactFormMessage({ name, email, phone, message, service });
 
     // Render thank you page
     res.render("thank-you", {
