@@ -192,7 +192,6 @@ app.use((req, res, next) => {
     title: "Page Not Found | Maverick Contracting INC - Minnesota",
     description: "The page you're looking for could not be found. Maverick Contracting provides professional exterior remodeling services in Minnesota.",
     active: "none",
-    canonical: `${baseUrl}/404`, // Note: This is debatable as 404 pages typically shouldn't have canonical tags
   });
 });
 
