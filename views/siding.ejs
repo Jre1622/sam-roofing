@@ -83,7 +83,13 @@
                   <!-- Before/After Slider - Adjusted aspect ratio for larger screens -->
                   <div class="relative aspect-video lg:aspect-[16/9] bg-gray-100 rounded-lg mb-4 overflow-hidden" id="before-after-container">
                     <!-- Before Image (Base Layer) -->
-                    <img id="before-image" src="/images/before-siding.webp" alt="Before Siding Replacement" class="w-full h-full object-cover absolute inset-0 transition-opacity duration-1500" />
+                    <img
+                      id="before-image"
+                      src="/images/before-siding.webp"
+                      alt="Before Siding Replacement"
+                      class="w-full h-full object-cover absolute inset-0 transition-opacity duration-1500"
+                      loading="lazy"
+                    />
 
                     <!-- After Image (Top Layer) -->
                     <img
@@ -92,6 +98,7 @@
                       alt="After Siding Replacement"
                       class="w-full h-full object-cover absolute inset-0 transition-opacity duration-1500"
                       style="opacity: 0"
+                      loading="lazy"
                     />
 
                     <!-- Labels -->
