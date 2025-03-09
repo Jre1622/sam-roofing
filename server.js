@@ -171,7 +171,7 @@ app.post("/submit-contact", async (req, res) => {
     const { name, email, phone, message, service } = req.body;
 
     // Log the form submission
-    console.log("Form submission received:", { name, email, phone, message, service });
+    console.log(`📝 Form submission received from ${name} (${email}) - Service: ${service}`);
 
     // Send to Telegram
     await sendContactFormMessage({ name, email, phone, message, service });
@@ -185,7 +185,7 @@ app.post("/submit-contact", async (req, res) => {
       canonical: `${baseUrl}/thank-you`,
     });
   } catch (error) {
-    console.error("Error processing form submission:", error);
+    console.error("❌ Error processing form submission:", error);
     res.status(500).send("Something went wrong. Please try again later.");
   }
 });
@@ -194,7 +194,7 @@ app.post("/submit-contact", async (req, res) => {
 app.post("/webhooks/roofle", async (req, res) => {
   try {
     // Log the webhook data
-    console.log("Roofle webhook received:", JSON.stringify(req.body, null, 2));
+    console.log("🏠 Roofle webhook received");
 
     // Extract only the basic information
     const { firstName, lastName, email, phone } = req.body;
@@ -220,7 +220,7 @@ app.post("/webhooks/roofle", async (req, res) => {
       message: "Webhook received and processed successfully",
     });
   } catch (error) {
-    console.error("Error processing Roofle webhook:", error);
+    console.error("❌ Error processing Roofle webhook:", error);
 
     // Still return a 200 status code to prevent Roofle from retrying
     res.status(200).json({
@@ -241,5 +241,5 @@ app.use((req, res, next) => {
 
 // Start the server
 app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
+  console.log(`🚀 Server running at http://localhost:${port}`);
 });
