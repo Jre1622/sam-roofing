@@ -285,6 +285,25 @@ app.post("/webhooks/roofle", async (req, res) => {
   }
 });
 
+// Only accessible in development mode
+if (process.env.NODE_ENV !== "production") {
+  // Test endpoint for heartbeat (development only)
+  app.get("/dev/test-heartbeat", (req, res) => {
+    // Trigger a heartbeat
+    safeHeartbeat();
+    res.send("Heartbeat test triggered. Check Telegram for the message.");
+  });
+
+  // Test endpoint for error notification (development only)
+  app.get("/dev/test-error", (req, res) => {
+    requestStats.errors++;
+    sendServerMessage("🔴 *Test Error Alert*\nThis is a test error notification").catch(console.error);
+    res.send("Error test triggered. Check Telegram for the message.");
+  });
+
+  console.log("🔧 Development testing endpoints enabled");
+}
+
 // 404 handler - must be the last route
 app.use((req, res) => {
   res.status(404).render("404", {
@@ -360,12 +379,24 @@ process.on("uncaughtException", async (error) => {
   setTimeout(() => process.exit(1), 1000);
 });
 
+// PM2 specific restart events
+if (process.env.PM2_HOME || process.env.PM2_JSON_PROCESSING || process.env.PM2_CLI) {
+  // We're running under PM2
+  console.log("📋 Running under PM2 process manager");
+
+  // Send a startup notification for PM2 restarts
+  // This runs on both initial startup and PM2 restarts
+  sendServerMessage(`🔁 *Server Restarted via PM2*\nServer running at http://localhost:${port}`).catch((err) => console.error("Failed to send PM2 restart notification:", err));
+}
+
 // Start the server
 app.listen(port, () => {
   console.log(`🚀 Server running at http://localhost:${port}`);
 
-  // Send startup notification
-  sendServerMessage(`🟢 *Server Started*\nServer running at http://localhost:${port}`).catch((err) => console.error("Failed to send startup notification:", err));
+  // Only send the startup message if this is a fresh start (not PM2 managed)
+  if (!process.env.PM2_HOME && !process.env.PM2_JSON_PROCESSING && !process.env.PM2_CLI) {
+    sendServerMessage(`🟢 *Server Started*\nServer running at http://localhost:${port}`).catch((err) => console.error("Failed to send startup notification:", err));
+  }
 
   // Schedule regular heartbeats
   setInterval(safeHeartbeat, HEARTBEAT_INTERVAL);
