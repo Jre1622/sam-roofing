@@ -8,7 +8,7 @@ require("dotenv").config();
 const baseUrl = "https://www.hiremaverick.com";
 
 // Monitoring constants - simplified
-const HEARTBEAT_INTERVAL = 12 * 60 * 60 * 1000; // 12 hours in milliseconds
+const HEARTBEAT_INTERVAL = 10 * 60 * 1000; // 10 minutes in milliseconds
 const SLOW_REQUEST_THRESHOLD = 1000; // 1 second (in milliseconds)
 const PERFORMANCE_ALERT_COOLDOWN = 30 * 60 * 1000; // 30 minutes in milliseconds
 
