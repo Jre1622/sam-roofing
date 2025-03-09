@@ -1,11 +1,16 @@
 const express = require("express");
 const path = require("path");
 const rateLimit = require("express-rate-limit");
-const { sendContactFormMessage } = require("./lib/telegram");
+const { sendContactFormMessage, sendServerMessage } = require("./lib/telegram");
 require("dotenv").config();
 
 // Base URL for canonical links
 const baseUrl = "https://www.hiremaverick.com";
+
+// Monitoring constants
+const HEARTBEAT_INTERVAL = 12 * 60 * 60 * 1000; // 12 hours in milliseconds
+const SLOW_REQUEST_THRESHOLD = 1000; // 1 second (in milliseconds)
+const PERFORMANCE_ALERT_COOLDOWN = 30 * 60 * 1000; // 30 minutes in milliseconds
 
 // Initialize Express app
 const app = express();
@@ -29,7 +34,57 @@ const limiter = rateLimit({
   standardHeaders: true,
   legacyHeaders: false,
 });
+
+// Apply rate limiter to all requests
 app.use(limiter);
+
+// Monitoring stats
+let lastPerformanceAlert = 0;
+let requestStats = {
+  totalRequests: 0,
+  slowRequests: 0,
+  errors: 0,
+  startTime: Date.now(),
+};
+
+// Performance monitoring middleware
+app.use((req, res, next) => {
+  const start = Date.now();
+  requestStats.totalRequests++;
+
+  // Once the response is finished
+  res.on("finish", () => {
+    const duration = Date.now() - start;
+
+    // Only log slow requests to the console
+    if (duration > SLOW_REQUEST_THRESHOLD) {
+      requestStats.slowRequests++;
+      console.log(`⚠️ Slow request: ${req.method} ${req.originalUrl} ${res.statusCode} ${duration}ms`);
+
+      // Alert on slow requests, but use cooldown to prevent spam
+      const now = Date.now();
+      if (now - lastPerformanceAlert > PERFORMANCE_ALERT_COOLDOWN) {
+        lastPerformanceAlert = now;
+        sendServerMessage(`⚠️ *Performance Alert*\n` + `Slow request detected: \`${req.method} ${req.originalUrl}\`\n` + `Response time: *${duration}ms*\n` + `Status code: *${res.statusCode}*`).catch(
+          (err) => console.error("Failed to send performance alert:", err)
+        );
+      }
+    }
+
+    // Track server errors
+    if (res.statusCode >= 500) {
+      requestStats.errors++;
+      console.log(`🔴 Server error: ${req.method} ${req.originalUrl} ${res.statusCode}`);
+
+      // Always alert on server errors
+      sendServerMessage(`🔴 *Server Error*\n` + `Error on: \`${req.method} ${req.originalUrl}\`\n` + `Status code: *${res.statusCode}*`).catch((err) =>
+        console.error("Failed to send error alert:", err)
+      );
+    }
+  });
+
+  next();
+});
 
 // Basic routes
 app.get("/", (req, res) => {
@@ -230,8 +285,8 @@ app.post("/webhooks/roofle", async (req, res) => {
   }
 });
 
-// 404 Handler
-app.use((req, res, next) => {
+// 404 handler - must be the last route
+app.use((req, res) => {
   res.status(404).render("404", {
     title: "Page Not Found | Maverick Contracting INC - Minnesota",
     description: "The page you're looking for could not be found. Maverick Contracting provides professional exterior remodeling services in Minnesota.",
@@ -239,7 +294,79 @@ app.use((req, res, next) => {
   });
 });
 
+// Helper function to format uptime
+function formatUptime(milliseconds) {
+  const seconds = milliseconds / 1000;
+  const days = Math.floor(seconds / (3600 * 24));
+  const hours = Math.floor((seconds % (3600 * 24)) / 3600);
+  const minutes = Math.floor((seconds % 3600) / 60);
+
+  return `${days}d ${hours}h ${minutes}m`;
+}
+
+// Function to send heartbeat with stats
+async function sendHeartbeatMessage() {
+  try {
+    const now = Date.now();
+    const uptime = now - requestStats.startTime;
+    const memoryUsage = process.memoryUsage();
+
+    // Calculate request stats
+    const uptimeHours = uptime / 3600000;
+    const requestsPerHour = uptimeHours > 0 ? (requestStats.totalRequests / uptimeHours).toFixed(1) : "0.0";
+
+    const message =
+      `💓 *Server Health Report*\n` +
+      `⏱️ Uptime: ${formatUptime(uptime)}\n` +
+      `📊 Stats (since ${new Date(requestStats.startTime).toLocaleString()}):\n` +
+      `   • Total Requests: ${requestStats.totalRequests}\n` +
+      `   • Requests/Hour: ${requestsPerHour}\n` +
+      `   • Slow Requests: ${requestStats.slowRequests}\n` +
+      `   • Server Errors: ${requestStats.errors}\n` +
+      `🧠 Memory: ${(memoryUsage.rss / 1024 / 1024).toFixed(2)} MB`;
+
+    await sendServerMessage(message);
+    console.log("💓 Health report sent to Telegram");
+  } catch (error) {
+    console.error("❌ Failed to send heartbeat:", error);
+  }
+}
+
+// Safe heartbeat function with error handling
+function safeHeartbeat() {
+  try {
+    sendHeartbeatMessage();
+  } catch (error) {
+    console.error("Failed to generate or send heartbeat:", error);
+
+    // Reset stats if we encounter issues processing them
+    requestStats = {
+      totalRequests: 0,
+      slowRequests: 0,
+      errors: 0,
+      startTime: Date.now(),
+    };
+
+    // Try to send a simplified heartbeat instead
+    sendServerMessage("💓 *Server is still running*\nEncountered an error generating detailed stats.").catch(console.error);
+  }
+}
+
+// Handle uncaught exceptions
+process.on("uncaughtException", async (error) => {
+  console.error("🔥 Uncaught Exception:", error);
+  await sendServerMessage(`🔥 *CRITICAL ERROR: Uncaught exception*\n\`\`\`\n${error.stack}\n\`\`\``).catch(console.error);
+  // Wait a moment for the message to send before exiting
+  setTimeout(() => process.exit(1), 1000);
+});
+
 // Start the server
 app.listen(port, () => {
   console.log(`🚀 Server running at http://localhost:${port}`);
+
+  // Send startup notification
+  sendServerMessage(`🟢 *Server Started*\nServer running at http://localhost:${port}`).catch((err) => console.error("Failed to send startup notification:", err));
+
+  // Schedule regular heartbeats
+  setInterval(safeHeartbeat, HEARTBEAT_INTERVAL);
 });
