@@ -7,7 +7,7 @@ require("dotenv").config();
 // Base URL for canonical links
 const baseUrl = "https://www.hiremaverick.com";
 
-// Monitoring constants
+// Monitoring constants - simplified
 const HEARTBEAT_INTERVAL = 12 * 60 * 60 * 1000; // 12 hours in milliseconds
 const SLOW_REQUEST_THRESHOLD = 1000; // 1 second (in milliseconds)
 const PERFORMANCE_ALERT_COOLDOWN = 30 * 60 * 1000; // 30 minutes in milliseconds
@@ -38,7 +38,7 @@ const limiter = rateLimit({
 // Apply rate limiter to all requests
 app.use(limiter);
 
-// Monitoring stats
+// Monitoring stats - simplified
 let lastPerformanceAlert = 0;
 let requestStats = {
   totalRequests: 0,
@@ -47,7 +47,7 @@ let requestStats = {
   startTime: Date.now(),
 };
 
-// Performance monitoring middleware
+// Performance monitoring middleware - clean and minimal
 app.use((req, res, next) => {
   const start = Date.now();
   requestStats.totalRequests++;
@@ -56,18 +56,16 @@ app.use((req, res, next) => {
   res.on("finish", () => {
     const duration = Date.now() - start;
 
-    // Only log slow requests to the console
+    // Only track slow requests
     if (duration > SLOW_REQUEST_THRESHOLD) {
       requestStats.slowRequests++;
       console.log(`⚠️ Slow request: ${req.method} ${req.originalUrl} ${res.statusCode} ${duration}ms`);
 
-      // Alert on slow requests, but use cooldown to prevent spam
+      // Alert on slow requests, with cooldown
       const now = Date.now();
       if (now - lastPerformanceAlert > PERFORMANCE_ALERT_COOLDOWN) {
         lastPerformanceAlert = now;
-        sendServerMessage(`⚠️ *Performance Alert*\n` + `Slow request detected: \`${req.method} ${req.originalUrl}\`\n` + `Response time: *${duration}ms*\n` + `Status code: *${res.statusCode}*`).catch(
-          (err) => console.error("Failed to send performance alert:", err)
-        );
+        sendServerMessage(`⚠️ *Slow Page Load Detected*\nPage: \`${req.originalUrl}\`\nTime: ${duration}ms`).catch((err) => console.error("Failed to send alert:", err));
       }
     }
 
@@ -77,9 +75,7 @@ app.use((req, res, next) => {
       console.log(`🔴 Server error: ${req.method} ${req.originalUrl} ${res.statusCode}`);
 
       // Always alert on server errors
-      sendServerMessage(`🔴 *Server Error*\n` + `Error on: \`${req.method} ${req.originalUrl}\`\n` + `Status code: *${res.statusCode}*`).catch((err) =>
-        console.error("Failed to send error alert:", err)
-      );
+      sendServerMessage(`🔴 *Server Error*\nPage: \`${req.originalUrl}\`\nStatus: ${res.statusCode}`).catch((err) => console.error("Failed to send alert:", err));
     }
   });
 
@@ -285,25 +281,6 @@ app.post("/webhooks/roofle", async (req, res) => {
   }
 });
 
-// Only accessible in development mode
-if (process.env.NODE_ENV !== "production") {
-  // Test endpoint for heartbeat (development only)
-  app.get("/dev/test-heartbeat", (req, res) => {
-    // Trigger a heartbeat
-    safeHeartbeat();
-    res.send("Heartbeat test triggered. Check Telegram for the message.");
-  });
-
-  // Test endpoint for error notification (development only)
-  app.get("/dev/test-error", (req, res) => {
-    requestStats.errors++;
-    sendServerMessage("🔴 *Test Error Alert*\nThis is a test error notification").catch(console.error);
-    res.send("Error test triggered. Check Telegram for the message.");
-  });
-
-  console.log("🔧 Development testing endpoints enabled");
-}
-
 // 404 handler - must be the last route
 app.use((req, res) => {
   res.status(404).render("404", {
@@ -313,7 +290,7 @@ app.use((req, res) => {
   });
 });
 
-// Helper function to format uptime
+// Helper function to format uptime - simplified
 function formatUptime(milliseconds) {
   const seconds = milliseconds / 1000;
   const days = Math.floor(seconds / (3600 * 24));
@@ -323,7 +300,7 @@ function formatUptime(milliseconds) {
   return `${days}d ${hours}h ${minutes}m`;
 }
 
-// Function to send heartbeat with stats
+// Function to send heartbeat with stats - simplified
 async function sendHeartbeatMessage() {
   try {
     const now = Date.now();
@@ -335,69 +312,32 @@ async function sendHeartbeatMessage() {
     const requestsPerHour = uptimeHours > 0 ? (requestStats.totalRequests / uptimeHours).toFixed(1) : "0.0";
 
     const message =
-      `💓 *Server Health Report*\n` +
+      `📊 *Website Statistics*\n` +
       `⏱️ Uptime: ${formatUptime(uptime)}\n` +
-      `📊 Stats (since ${new Date(requestStats.startTime).toLocaleString()}):\n` +
-      `   • Total Requests: ${requestStats.totalRequests}\n` +
-      `   • Requests/Hour: ${requestsPerHour}\n` +
-      `   • Slow Requests: ${requestStats.slowRequests}\n` +
-      `   • Server Errors: ${requestStats.errors}\n` +
+      `📈 Requests: ${requestStats.totalRequests} (${requestsPerHour}/hr)\n` +
+      `⚠️ Slow Loads: ${requestStats.slowRequests}\n` +
+      `🔴 Errors: ${requestStats.errors}\n` +
       `🧠 Memory: ${(memoryUsage.rss / 1024 / 1024).toFixed(2)} MB`;
 
     await sendServerMessage(message);
-    console.log("💓 Health report sent to Telegram");
+    console.log("📊 Statistics report sent to Telegram");
   } catch (error) {
-    console.error("❌ Failed to send heartbeat:", error);
+    console.error("❌ Failed to send statistics:", error);
   }
 }
 
-// Safe heartbeat function with error handling
-function safeHeartbeat() {
-  try {
-    sendHeartbeatMessage();
-  } catch (error) {
-    console.error("Failed to generate or send heartbeat:", error);
-
-    // Reset stats if we encounter issues processing them
-    requestStats = {
-      totalRequests: 0,
-      slowRequests: 0,
-      errors: 0,
-      startTime: Date.now(),
-    };
-
-    // Try to send a simplified heartbeat instead
-    sendServerMessage("💓 *Server is still running*\nEncountered an error generating detailed stats.").catch(console.error);
-  }
-}
-
-// Handle uncaught exceptions
+// Handle uncaught exceptions - keep this for critical errors
 process.on("uncaughtException", async (error) => {
   console.error("🔥 Uncaught Exception:", error);
-  await sendServerMessage(`🔥 *CRITICAL ERROR: Uncaught exception*\n\`\`\`\n${error.stack}\n\`\`\``).catch(console.error);
+  await sendServerMessage(`🔥 *CRITICAL ERROR*\n${error.message}`).catch(console.error);
   // Wait a moment for the message to send before exiting
   setTimeout(() => process.exit(1), 1000);
 });
 
-// PM2 specific restart events
-if (process.env.PM2_HOME || process.env.PM2_JSON_PROCESSING || process.env.PM2_CLI) {
-  // We're running under PM2
-  console.log("📋 Running under PM2 process manager");
-
-  // Send a startup notification for PM2 restarts
-  // This runs on both initial startup and PM2 restarts
-  sendServerMessage(`🔁 *Server Restarted via PM2*\nServer running at http://localhost:${port}`).catch((err) => console.error("Failed to send PM2 restart notification:", err));
-}
-
-// Start the server
+// Start the server - simplified
 app.listen(port, () => {
   console.log(`🚀 Server running at http://localhost:${port}`);
 
-  // Only send the startup message if this is a fresh start (not PM2 managed)
-  if (!process.env.PM2_HOME && !process.env.PM2_JSON_PROCESSING && !process.env.PM2_CLI) {
-    sendServerMessage(`🟢 *Server Started*\nServer running at http://localhost:${port}`).catch((err) => console.error("Failed to send startup notification:", err));
-  }
-
-  // Schedule regular heartbeats
-  setInterval(safeHeartbeat, HEARTBEAT_INTERVAL);
+  // Schedule regular statistics reports
+  setInterval(sendHeartbeatMessage, HEARTBEAT_INTERVAL);
 });
