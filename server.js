@@ -317,7 +317,8 @@ async function sendHeartbeatMessage() {
       `📈 Requests: ${requestStats.totalRequests} (${requestsPerHour}/hr)\n` +
       `⚠️ Slow Loads: ${requestStats.slowRequests}\n` +
       `🔴 Errors: ${requestStats.errors}\n` +
-      `🧠 Memory: ${(memoryUsage.rss / 1024 / 1024).toFixed(2)} MB`;
+      `🧠 Memory: ${(memoryUsage.rss / 1024 / 1024).toFixed(2)} MB\n` +
+      `📊 [View Analytics Dashboard](https://dashboard.simpleanalytics.com/hiremaverick.com)`;
 
     await sendServerMessage(message);
     console.log("📊 Statistics report sent to Telegram");
