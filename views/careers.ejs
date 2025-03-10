@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <meta name="description" content="<%= description %>" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="<%= canonical %>" />
+
+    <!-- Social Media Meta Tags -->
+    <%- include('partials/social-meta') %>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/output.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+    <!-- Structured Data -->
+    <%- include('partials/structured-data') %>
+  </head>
+  <body class="flex flex-col min-h-screen bg-gray-50">
+    <!-- Header -->
+    <header><%- include('partials/header') %></header>
+
+    <!-- Main Content -->
+    <main class="flex-grow">
+      <!-- Current Openings Section -->
+      <section class="py-12 md:py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-8 md:mb-10">
+            <span class="inline-block text-blue-600 font-semibold tracking-wider uppercase text-sm mb-1">Career Opportunities</span>
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Current Job Openings</h2>
+            <div class="w-16 h-1 bg-blue-500 mx-auto"></div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+            <!-- Job Card 1 -->
+            <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div class="p-6">
+                <div class="flex items-center mb-4">
+                  <div class="h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mr-3">
+                    <i class="fas fa-hard-hat"></i>
+                  </div>
+                  <h3 class="text-xl font-bold text-gray-900">Roofing Installation Technician</h3>
+                </div>
+                <div class="space-y-3">
+                  <p class="text-gray-600">We're seeking experienced roofing technicians to join our installation team. Help us deliver quality roofing solutions to our customers.</p>
+                  <div class="flex items-center text-sm text-gray-500">
+                    <i class="fas fa-map-marker-alt mr-1"></i>
+                    <span>Twin Cities Area</span>
+                  </div>
+                  <div class="flex items-center text-sm text-gray-500">
+                    <i class="fas fa-clock mr-1"></i>
+                    <span>Full-Time</span>
+                  </div>
+                  <div class="pt-3">
+                    <a
+                      href="tel:6124722294"
+                      class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150"
+                    >
+                      Call To Apply: (612) 472-2294
+                      <i class="fas fa-phone ml-2"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Job Card 2 -->
+            <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div class="p-6">
+                <div class="flex items-center mb-4">
+                  <div class="h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mr-3">
+                    <i class="fas fa-tools"></i>
+                  </div>
+                  <h3 class="text-xl font-bold text-gray-900">Siding Installer</h3>
+                </div>
+                <div class="space-y-3">
+                  <p class="text-gray-600">Experienced siding installers needed for residential and multi-family projects. Join our growing team of skilled professionals.</p>
+                  <div class="flex items-center text-sm text-gray-500">
+                    <i class="fas fa-map-marker-alt mr-1"></i>
+                    <span>Twin Cities Area</span>
+                  </div>
+                  <div class="flex items-center text-sm text-gray-500">
+                    <i class="fas fa-clock mr-1"></i>
+                    <span>Full-Time</span>
+                  </div>
+                  <div class="pt-3">
+                    <a
+                      href="tel:6124722294"
+                      class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150"
+                    >
+                      Call To Apply: (612) 472-2294
+                      <i class="fas fa-phone ml-2"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Job Card 3 -->
+            <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div class="p-6">
+                <div class="flex items-center mb-4">
+                  <div class="h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mr-3">
+                    <i class="fas fa-user-tie"></i>
+                  </div>
+                  <h3 class="text-xl font-bold text-gray-900">Project Manager</h3>
+                </div>
+                <div class="space-y-3">
+                  <p class="text-gray-600">Seeking organized, customer-focused project managers to oversee our exterior remodeling projects from start to finish.</p>
+                  <div class="flex items-center text-sm text-gray-500">
+                    <i class="fas fa-map-marker-alt mr-1"></i>
+                    <span>Twin Cities Area</span>
+                  </div>
+                  <div class="flex items-center text-sm text-gray-500">
+                    <i class="fas fa-clock mr-1"></i>
+                    <span>Full-Time</span>
+                  </div>
+                  <div class="pt-3">
+                    <a
+                      href="tel:6124722294"
+                      class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150"
+                    >
+                      Call To Apply: (612) 472-2294
+                      <i class="fas fa-phone ml-2"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Work With Us Section -->
+      <section class="py-12 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-8">
+            <span class="inline-block text-blue-600 font-semibold tracking-wider uppercase text-sm mb-1">Our Company</span>
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Why Work With Maverick Contracting</h2>
+            <div class="w-16 h-1 bg-blue-500 mx-auto mb-6"></div>
+            <p class="max-w-3xl mx-auto text-gray-600">
+              Join a team committed to quality craftsmanship, professional growth, and exceptional customer service. We value our employees and provide opportunities for advancement.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <!-- Benefit 1 -->
+            <div class="bg-white rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow duration-300">
+              <div class="flex items-center mb-4">
+                <div class="h-12 w-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mr-4">
+                  <i class="fas fa-dollar-sign text-xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900">Competitive Compensation</h3>
+              </div>
+              <p class="text-gray-600">We offer competitive wages, performance bonuses, and opportunities for advancement as you develop your skills and contribute to our team's success.</p>
+            </div>
+
+            <!-- Benefit 2 -->
+            <div class="bg-white rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow duration-300">
+              <div class="flex items-center mb-4">
+                <div class="h-12 w-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mr-4">
+                  <i class="fas fa-graduation-cap text-xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900">Training & Development</h3>
+              </div>
+              <p class="text-gray-600">Ongoing training and professional development opportunities to enhance your skills and keep you current with industry advancements and best practices.</p>
+            </div>
+
+            <!-- Benefit 3 -->
+            <div class="bg-white rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow duration-300">
+              <div class="flex items-center mb-4">
+                <div class="h-12 w-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mr-4">
+                  <i class="fas fa-users text-xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900">Positive Work Environment</h3>
+              </div>
+              <p class="text-gray-600">Work with a supportive team in a positive, collaborative atmosphere where your contributions are valued and your voice is heard.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="py-12 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-8">
+            <span class="inline-block text-blue-600 font-semibold tracking-wider uppercase text-sm mb-1">FAQ</span>
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+            <div class="w-16 h-1 bg-blue-500 mx-auto"></div>
+          </div>
+
+          <div class="space-y-4" id="faq-accordion">
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+              <button class="w-full px-6 py-4 text-left font-semibold text-gray-900 focus:outline-none flex justify-between items-center faq-toggle active">
+                <span>What qualifications do I need to apply?</span>
+                <i class="fas fa-minus text-blue-500 transition-transform duration-300" style="transform: rotate(180deg)"></i>
+              </button>
+              <div class="faq-content overflow-hidden transition-all duration-300 ease-in-out" style="max-height: 500px">
+                <div class="px-6 pb-4 pt-2">
+                  <p class="text-gray-700">
+                    Qualifications vary by position. For installation roles, we typically look for prior experience in roofing, siding, or general construction. Project management positions usually
+                    require experience in construction management and strong customer service skills. For all positions, we value reliability, attention to detail, and a willingness to learn.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+              <button class="w-full px-6 py-4 text-left font-semibold text-gray-900 focus:outline-none flex justify-between items-center faq-toggle">
+                <span>What is the application process like?</span>
+                <i class="fas fa-plus text-blue-500 transition-transform duration-300"></i>
+              </button>
+              <div class="faq-content overflow-hidden transition-all duration-300 ease-in-out" style="max-height: 0">
+                <div class="px-6 pb-4 pt-2">
+                  <p class="text-gray-700">
+                    After submitting your application, our hiring team will review your qualifications. If there's a potential match, we'll reach out to schedule an initial phone interview, followed
+                    by an in-person interview for promising candidates. Depending on the position, we may also conduct skills assessments or reference checks before making a final hiring decision.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+              <button class="w-full px-6 py-4 text-left font-semibold text-gray-900 focus:outline-none flex justify-between items-center faq-toggle">
+                <span>Do you provide training for new employees?</span>
+                <i class="fas fa-plus text-blue-500 transition-transform duration-300"></i>
+              </button>
+              <div class="faq-content overflow-hidden transition-all duration-300 ease-in-out" style="max-height: 0">
+                <div class="px-6 pb-4 pt-2">
+                  <p class="text-gray-700">
+                    Yes! We provide comprehensive on-the-job training for new team members. Even experienced professionals will go through our training program to learn our specific processes, quality
+                    standards, and safety protocols. We also offer ongoing training opportunities to help you develop new skills and advance your career with us.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+              <button class="w-full px-6 py-4 text-left font-semibold text-gray-900 focus:outline-none flex justify-between items-center faq-toggle">
+                <span>What benefits do you offer?</span>
+                <i class="fas fa-plus text-blue-500 transition-transform duration-300"></i>
+              </button>
+              <div class="faq-content overflow-hidden transition-all duration-300 ease-in-out" style="max-height: 0">
+                <div class="px-6 pb-4 pt-2">
+                  <p class="text-gray-700">
+                    We offer competitive compensation packages including performance-based incentives. Full-time employees may qualify for additional benefits. Details about specific benefits will be
+                    discussed during the interview process, as they can vary by position and experience level.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-10"><%- include('partials/footer') %></footer>
+
+    <!-- JavaScript -->
+    <script src="/js/main.js"></script>
+    <!-- 100% privacy-first analytics -->
+    <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+
+    <!-- FAQ Accordion Script -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const faqToggles = document.querySelectorAll(".faq-toggle");
+
+        // Initialize - ensure all accordions are closed except the first one
+        document.querySelectorAll(".faq-content").forEach((content, index) => {
+          if (index === 0) {
+            // First FAQ is already expanded in the HTML
+            content.style.maxHeight = content.scrollHeight + "px";
+          } else {
+            content.style.maxHeight = "0px";
+          }
+        });
+
+        faqToggles.forEach((toggle) => {
+          toggle.addEventListener("click", function () {
+            const content = this.nextElementSibling;
+            const icon = this.querySelector("i");
+
+            // Toggle active class on the button
+            this.classList.toggle("active");
+
+            // Close all other FAQs
+            document.querySelectorAll(".faq-toggle").forEach((otherToggle) => {
+              if (otherToggle !== this && otherToggle.classList.contains("active")) {
+                otherToggle.classList.remove("active");
+                const otherContent = otherToggle.nextElementSibling;
+                const otherIcon = otherToggle.querySelector("i");
+
+                otherContent.style.maxHeight = "0px";
+                otherIcon.classList.remove("fa-minus");
+                otherIcon.classList.add("fa-plus");
+                otherIcon.style.transform = "rotate(0deg)";
+              }
+            });
+
+            // Toggle current FAQ
+            if (this.classList.contains("active")) {
+              content.style.maxHeight = content.scrollHeight + "px";
+              icon.classList.remove("fa-plus");
+              icon.classList.add("fa-minus");
+              icon.style.transform = "rotate(180deg)";
+            } else {
+              content.style.maxHeight = "0px";
+              icon.classList.remove("fa-minus");
+              icon.classList.add("fa-plus");
+              icon.style.transform = "rotate(0deg)";
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

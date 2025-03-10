@@ -209,10 +209,20 @@ app.get("/contact", (req, res) => {
 
 app.get("/privacy", (req, res) => {
   res.render("privacy", {
-    title: "Privacy Policy | Maverick Contracting INC - Minnesota",
-    description: "Read Maverick Contracting's privacy policy outlining how we collect, use, and protect your personal information. Serving Minnesota homeowners with transparency and integrity.",
-    active: "none",
+    title: "Privacy Policy | Maverick Contracting",
+    description: "Our commitment to protecting your privacy and personal information at Maverick Contracting Inc.",
+    active: "privacy",
     canonical: `${baseUrl}/privacy`,
+  });
+});
+
+// Jobs/Careers route
+app.get("/careers", (req, res) => {
+  res.render("careers", {
+    title: "Career Opportunities | Join Our Team | Maverick Contracting",
+    description: "Join the Maverick Contracting team! Browse current job openings for roofing, siding, and exterior remodeling professionals in the Minneapolis/St. Paul area.",
+    active: "careers",
+    canonical: `${baseUrl}/careers`,
   });
 });
 
