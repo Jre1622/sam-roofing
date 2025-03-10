@@ -378,14 +378,30 @@ app.listen(port, () => {
   console.log(`🚀 Server running at http://localhost:${port}`);
 
   // Schedule daily 8am Minnesota time heartbeat
-  schedule.scheduleJob("0 0 8 * * *", { timezone: "America/Chicago" }, () => {
-    console.log("📊 Sending 8am scheduled heartbeat");
-    sendHeartbeatMessage();
-  });
+  schedule.scheduleJob(
+    {
+      hour: 8,
+      minute: 0,
+      second: 0,
+      tz: "America/Chicago",
+    },
+    () => {
+      console.log("📊 Sending 8am scheduled heartbeat");
+      sendHeartbeatMessage();
+    }
+  );
 
   // Schedule daily 8pm Minnesota time heartbeat
-  schedule.scheduleJob("0 0 20 * * *", { timezone: "America/Chicago" }, () => {
-    console.log("📊 Sending 8pm scheduled heartbeat");
-    sendHeartbeatMessage();
-  });
+  schedule.scheduleJob(
+    {
+      hour: 20, // 8pm in 24h format
+      minute: 0,
+      second: 0,
+      tz: "America/Chicago",
+    },
+    () => {
+      console.log("📊 Sending 8pm scheduled heartbeat");
+      sendHeartbeatMessage();
+    }
+  );
 });
