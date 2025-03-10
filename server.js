@@ -16,6 +16,9 @@ const PERFORMANCE_ALERT_COOLDOWN = 30 * 60 * 1000; // 30 minutes in milliseconds
 const app = express();
 const port = process.env.PORT || 3000;
 
+// Trust Cloudflare/NGINX proxy
+app.set("trust proxy", 1); // Trust the first proxy in the chain
+
 // Set up EJS as the view engine
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
