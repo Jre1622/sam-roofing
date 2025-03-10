@@ -1,7 +1,7 @@
 const express = require("express");
 const path = require("path");
 const rateLimit = require("express-rate-limit");
-const { sendContactFormMessage, sendServerMessage } = require("./lib/telegram");
+const { sendContactFormMessage, sendServerMessage, sendCareerApplicationMessage } = require("./lib/telegram");
 require("dotenv").config();
 
 // Base URL for canonical links
@@ -93,6 +93,16 @@ app.get("/", (req, res) => {
       "Maverick Contracting provides professional roofing, siding, windows, and gutter services for residential properties in Minnesota. Serving Minneapolis, St. Paul, and surrounding areas.",
     active: "home",
     canonical: `${baseUrl}/`,
+  });
+});
+
+// Careers page route
+app.get("/careers", (req, res) => {
+  res.render("careers", {
+    title: "Career Opportunities | Maverick Contracting",
+    description: "Join the Maverick Contracting team. Explore career opportunities in roofing, siding, and exterior remodeling with one of Minnesota's premier contracting companies.",
+    active: "careers",
+    canonical: `${baseUrl}/careers`,
   });
 });
 
@@ -219,16 +229,6 @@ app.get("/privacy", (req, res) => {
   });
 });
 
-// Jobs/Careers route
-app.get("/careers", (req, res) => {
-  res.render("careers", {
-    title: "Career Opportunities | Join Our Team | Maverick Contracting",
-    description: "Join the Maverick Contracting team! Browse current job openings for roofing, siding, and exterior remodeling professionals in the Minneapolis/St. Paul area.",
-    active: "careers",
-    canonical: `${baseUrl}/careers`,
-  });
-});
-
 // Contact form submission route
 app.post("/submit-contact", async (req, res) => {
   try {
@@ -250,6 +250,31 @@ app.post("/submit-contact", async (req, res) => {
     });
   } catch (error) {
     console.error("❌ Error processing form submission:", error);
+    res.status(500).send("Something went wrong. Please try again later.");
+  }
+});
+
+// Career application form submission route
+app.post("/submit-application", async (req, res) => {
+  try {
+    // Make sure field names match what's in the HTML form
+    const { fullname, email, phone, position, experience, message } = req.body;
+
+    // Log the application submission
+    console.log(`📝 Career application received from ${fullname} (${email}) - Position: ${position}`);
+
+    // Send to Telegram
+    await sendCareerApplicationMessage({ fullname, email, phone, position, experience, message });
+
+    // Render the dedicated thank-you page for job applications
+    res.render("thank-you-application", {
+      title: "Application Received | Maverick Contracting INC - Minnesota",
+      description: "Thank you for applying to Maverick Contracting. We've received your application and our team will review it shortly.",
+      active: "careers",
+      canonical: `${baseUrl}/thank-you-application`,
+    });
+  } catch (error) {
+    console.error("❌ Error processing career application:", error);
     res.status(500).send("Something went wrong. Please try again later.");
   }
 });

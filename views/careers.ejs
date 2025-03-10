@@ -33,107 +33,145 @@
 
     <!-- Main Content -->
     <main class="flex-grow">
-      <!-- Current Openings Section -->
-      <section class="py-12 md:py-16 bg-white">
+      <!-- Hero Section - Redesigned without blue background -->
+      <section class="py-16 bg-white border-b border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="text-center mb-8 md:mb-10">
-            <span class="inline-block text-blue-600 font-semibold tracking-wider uppercase text-sm mb-1">Career Opportunities</span>
+          <div class="max-w-3xl mx-auto text-center">
+            <span class="inline-block text-blue-600 font-semibold tracking-wider uppercase text-sm mb-2">Career Opportunities</span>
+            <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl mb-4 text-gray-900">Join Our Team</h1>
+            <div class="w-24 h-1 bg-blue-500 mx-auto mb-6"></div>
+            <p class="text-xl text-gray-600">
+              At Maverick Contracting, we're building a team of talented professionals dedicated to delivering exceptional service. Explore our current openings and find your perfect fit.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Current Openings Section - Moved to top -->
+      <section class="py-12 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-10">
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Current Job Openings</h2>
-            <div class="w-16 h-1 bg-blue-500 mx-auto"></div>
+            <p class="max-w-3xl mx-auto text-gray-600">Explore our current opportunities and find the role that matches your skills and career goals. Click on any position to learn more.</p>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-            <!-- Job Card 1 -->
-            <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-              <div class="p-6">
-                <div class="flex items-center mb-4">
-                  <div class="h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mr-3">
-                    <i class="fas fa-hard-hat"></i>
+          <div class="space-y-6 mb-8">
+            <!-- Job Card 1 - Expandable -->
+            <div class="job-card rounded-xl overflow-hidden bg-white shadow-md hover:shadow-lg transition-shadow duration-300">
+              <div class="job-header p-6 cursor-pointer flex justify-between items-center" data-position="Appointment Setter">
+                <div class="flex items-center">
+                  <div class="h-12 w-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mr-4">
+                    <i class="fas fa-calendar-check text-xl"></i>
                   </div>
-                  <h3 class="text-xl font-bold text-gray-900">Roofing Installation Technician</h3>
+                  <div>
+                    <h3 class="text-xl font-bold text-gray-900">Appointment Setter</h3>
+                    <p class="text-sm text-gray-500">Entry-Level Position | Twin Cities Area</p>
+                  </div>
                 </div>
-                <div class="space-y-3">
-                  <p class="text-gray-600">We're seeking experienced roofing technicians to join our installation team. Help us deliver quality roofing solutions to our customers.</p>
-                  <div class="flex items-center text-sm text-gray-500">
-                    <i class="fas fa-map-marker-alt mr-1"></i>
-                    <span>Twin Cities Area</span>
-                  </div>
-                  <div class="flex items-center text-sm text-gray-500">
-                    <i class="fas fa-clock mr-1"></i>
-                    <span>Full-Time</span>
-                  </div>
-                  <div class="pt-3">
-                    <a
-                      href="tel:6124722294"
-                      class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150"
-                    >
-                      Call To Apply: (612) 472-2294
-                      <i class="fas fa-phone ml-2"></i>
-                    </a>
+                <div class="text-blue-500">
+                  <i class="fas fa-chevron-down job-toggle-icon transition-transform duration-300"></i>
+                </div>
+              </div>
+
+              <div class="job-content overflow-hidden transition-all duration-300 ease-in-out" style="max-height: 0">
+                <div class="p-6 border-t border-gray-100">
+                  <div class="grid md:grid-cols-5 gap-6">
+                    <div class="md:col-span-3 space-y-4">
+                      <h4 class="text-lg font-semibold text-gray-900">Role Overview</h4>
+                      <p class="text-gray-600">
+                        As an Appointment Setter, you'll be the crucial first contact between our company and potential customers. This entry-level position is perfect for individuals with strong
+                        communication skills who enjoy interacting with people.
+                      </p>
+
+                      <h4 class="text-lg font-semibold text-gray-900">Key Responsibilities</h4>
+                      <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                        <li>Contact leads through phone calls and online inquiries</li>
+                        <li>Qualify prospects by asking appropriate questions about their needs</li>
+                        <li>Schedule appointments for our sales team (closers) to visit qualified prospects</li>
+                        <li>Maintain detailed records of all customer interactions</li>
+                        <li>Work with our CRM system to manage leads effectively</li>
+                      </ul>
+
+                      <h4 class="text-lg font-semibold text-gray-900">Qualifications</h4>
+                      <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                        <li>Excellent verbal communication skills</li>
+                        <li>Basic computer proficiency</li>
+                        <li>Customer service orientation</li>
+                        <li>No specific prior experience required</li>
+                      </ul>
+                    </div>
+
+                    <div class="md:col-span-2 bg-gray-50 p-5 rounded-lg">
+                      <h4 class="text-lg font-semibold text-gray-900 mb-4">Apply for this Position</h4>
+                      <button
+                        class="w-full inline-flex justify-center items-center px-4 py-3 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-150 apply-button"
+                        data-position="Appointment Setter"
+                      >
+                        Apply Now
+                        <i class="fas fa-arrow-right ml-2"></i>
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <!-- Job Card 2 -->
-            <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-              <div class="p-6">
-                <div class="flex items-center mb-4">
-                  <div class="h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mr-3">
-                    <i class="fas fa-tools"></i>
+            <!-- Job Card 2 - Expandable -->
+            <div class="job-card rounded-xl overflow-hidden bg-white shadow-md hover:shadow-lg transition-shadow duration-300">
+              <div class="job-header p-6 cursor-pointer flex justify-between items-center" data-position="Sales Closer">
+                <div class="flex items-center">
+                  <div class="h-12 w-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mr-4">
+                    <i class="fas fa-handshake text-xl"></i>
                   </div>
-                  <h3 class="text-xl font-bold text-gray-900">Siding Installer</h3>
+                  <div>
+                    <h3 class="text-xl font-bold text-gray-900">Sales Closer</h3>
+                    <p class="text-sm text-gray-500">1-2 Years Experience | Twin Cities Area</p>
+                  </div>
                 </div>
-                <div class="space-y-3">
-                  <p class="text-gray-600">Experienced siding installers needed for residential and multi-family projects. Join our growing team of skilled professionals.</p>
-                  <div class="flex items-center text-sm text-gray-500">
-                    <i class="fas fa-map-marker-alt mr-1"></i>
-                    <span>Twin Cities Area</span>
-                  </div>
-                  <div class="flex items-center text-sm text-gray-500">
-                    <i class="fas fa-clock mr-1"></i>
-                    <span>Full-Time</span>
-                  </div>
-                  <div class="pt-3">
-                    <a
-                      href="tel:6124722294"
-                      class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150"
-                    >
-                      Call To Apply: (612) 472-2294
-                      <i class="fas fa-phone ml-2"></i>
-                    </a>
-                  </div>
+                <div class="text-blue-500">
+                  <i class="fas fa-chevron-down job-toggle-icon transition-transform duration-300"></i>
                 </div>
               </div>
-            </div>
 
-            <!-- Job Card 3 -->
-            <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-              <div class="p-6">
-                <div class="flex items-center mb-4">
-                  <div class="h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mr-3">
-                    <i class="fas fa-user-tie"></i>
-                  </div>
-                  <h3 class="text-xl font-bold text-gray-900">Project Manager</h3>
-                </div>
-                <div class="space-y-3">
-                  <p class="text-gray-600">Seeking organized, customer-focused project managers to oversee our exterior remodeling projects from start to finish.</p>
-                  <div class="flex items-center text-sm text-gray-500">
-                    <i class="fas fa-map-marker-alt mr-1"></i>
-                    <span>Twin Cities Area</span>
-                  </div>
-                  <div class="flex items-center text-sm text-gray-500">
-                    <i class="fas fa-clock mr-1"></i>
-                    <span>Full-Time</span>
-                  </div>
-                  <div class="pt-3">
-                    <a
-                      href="tel:6124722294"
-                      class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150"
-                    >
-                      Call To Apply: (612) 472-2294
-                      <i class="fas fa-phone ml-2"></i>
-                    </a>
+              <div class="job-content overflow-hidden transition-all duration-300 ease-in-out" style="max-height: 0">
+                <div class="p-6 border-t border-gray-100">
+                  <div class="grid md:grid-cols-5 gap-6">
+                    <div class="md:col-span-3 space-y-4">
+                      <h4 class="text-lg font-semibold text-gray-900">Role Overview</h4>
+                      <p class="text-gray-600">
+                        As a Sales Closer, you'll meet with pre-qualified leads, present our solutions, address objections, and finalize sales agreements for our roofing and siding services. This role
+                        requires previous sales experience and strong negotiation skills.
+                      </p>
+
+                      <h4 class="text-lg font-semibold text-gray-900">Key Responsibilities</h4>
+                      <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                        <li>Meeting with pre-qualified prospects at their homes or businesses</li>
+                        <li>Conducting thorough assessments of their roofing or siding needs</li>
+                        <li>Presenting customized solutions and providing detailed quotes</li>
+                        <li>Addressing questions and objections confidently</li>
+                        <li>Finalizing sales by getting contracts signed</li>
+                        <li>Coordinating with project managers for successful handoff</li>
+                      </ul>
+
+                      <h4 class="text-lg font-semibold text-gray-900">Qualifications</h4>
+                      <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                        <li>1-2 years of sales experience</li>
+                        <li>Strong negotiation and communication skills</li>
+                        <li>Ability to build trust quickly with potential customers</li>
+                        <li>Knowledge of construction or home improvement (valuable but not required)</li>
+                      </ul>
+                    </div>
+
+                    <div class="md:col-span-2 bg-gray-50 p-5 rounded-lg">
+                      <h4 class="text-lg font-semibold text-gray-900 mb-4">Apply for this Position</h4>
+                      <button
+                        class="w-full inline-flex justify-center items-center px-4 py-3 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-150 apply-button"
+                        data-position="Sales Closer"
+                      >
+                        Apply Now
+                        <i class="fas fa-arrow-right ml-2"></i>
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -142,50 +180,48 @@
         </div>
       </section>
 
-      <!-- Why Work With Us Section -->
-      <section class="py-12 bg-gray-50">
+      <!-- Benefits Section -->
+      <section class="py-12 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="text-center mb-8">
-            <span class="inline-block text-blue-600 font-semibold tracking-wider uppercase text-sm mb-1">Our Company</span>
-            <h2 class="text-3xl font-bold text-gray-900 mb-4">Why Work With Maverick Contracting</h2>
+          <div class="text-center mb-10">
+            <span class="inline-block text-blue-600 font-semibold tracking-wider uppercase text-sm mb-1">Why Work With Us</span>
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Benefits of Joining Maverick Contracting</h2>
             <div class="w-16 h-1 bg-blue-500 mx-auto mb-6"></div>
             <p class="max-w-3xl mx-auto text-gray-600">
               Join a team committed to quality craftsmanship, professional growth, and exceptional customer service. We value our employees and provide opportunities for advancement.
             </p>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <!-- Benefit 1 -->
-            <div class="bg-white rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow duration-300">
-              <div class="flex items-center mb-4">
-                <div class="h-12 w-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mr-4">
-                  <i class="fas fa-dollar-sign text-xl"></i>
-                </div>
-                <h3 class="text-xl font-bold text-gray-900">Competitive Compensation</h3>
+            <div class="bg-gray-50 rounded-xl shadow-sm p-6 hover:shadow-md transition-shadow duration-300">
+              <div class="h-14 w-14 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mb-4 mx-auto">
+                <i class="fas fa-dollar-sign text-2xl"></i>
               </div>
-              <p class="text-gray-600">We offer competitive wages, performance bonuses, and opportunities for advancement as you develop your skills and contribute to our team's success.</p>
+              <h3 class="text-xl font-bold text-gray-900 mb-3 text-center">Competitive Compensation</h3>
+              <p class="text-gray-600 text-center">
+                We offer competitive wages, performance bonuses, and opportunities for advancement as you develop your skills and contribute to our team's success.
+              </p>
             </div>
 
             <!-- Benefit 2 -->
-            <div class="bg-white rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow duration-300">
-              <div class="flex items-center mb-4">
-                <div class="h-12 w-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mr-4">
-                  <i class="fas fa-graduation-cap text-xl"></i>
-                </div>
-                <h3 class="text-xl font-bold text-gray-900">Training & Development</h3>
+            <div class="bg-gray-50 rounded-xl shadow-sm p-6 hover:shadow-md transition-shadow duration-300">
+              <div class="h-14 w-14 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mb-4 mx-auto">
+                <i class="fas fa-graduation-cap text-2xl"></i>
               </div>
-              <p class="text-gray-600">Ongoing training and professional development opportunities to enhance your skills and keep you current with industry advancements and best practices.</p>
+              <h3 class="text-xl font-bold text-gray-900 mb-3 text-center">Training & Development</h3>
+              <p class="text-gray-600 text-center">
+                Ongoing training and professional development opportunities to enhance your skills and keep you current with industry advancements and best practices.
+              </p>
             </div>
 
             <!-- Benefit 3 -->
-            <div class="bg-white rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow duration-300">
-              <div class="flex items-center mb-4">
-                <div class="h-12 w-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mr-4">
-                  <i class="fas fa-users text-xl"></i>
-                </div>
-                <h3 class="text-xl font-bold text-gray-900">Positive Work Environment</h3>
+            <div class="bg-gray-50 rounded-xl shadow-sm p-6 hover:shadow-md transition-shadow duration-300">
+              <div class="h-14 w-14 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mb-4 mx-auto">
+                <i class="fas fa-users text-2xl"></i>
               </div>
-              <p class="text-gray-600">Work with a supportive team in a positive, collaborative atmosphere where your contributions are valued and your voice is heard.</p>
+              <h3 class="text-xl font-bold text-gray-900 mb-3 text-center">Positive Work Environment</h3>
+              <p class="text-gray-600 text-center">Work with a supportive team in a positive, collaborative atmosphere where your contributions are valued and your voice is heard.</p>
             </div>
           </div>
         </div>
@@ -203,14 +239,14 @@
           <div class="space-y-4" id="faq-accordion">
             <div class="bg-white rounded-lg shadow-sm overflow-hidden">
               <button class="w-full px-6 py-4 text-left font-semibold text-gray-900 focus:outline-none flex justify-between items-center faq-toggle active">
-                <span>What qualifications do I need to apply?</span>
+                <span>How does the compensation structure work for these positions?</span>
                 <i class="fas fa-minus text-blue-500 transition-transform duration-300" style="transform: rotate(180deg)"></i>
               </button>
               <div class="faq-content overflow-hidden transition-all duration-300 ease-in-out" style="max-height: 500px">
                 <div class="px-6 pb-4 pt-2">
                   <p class="text-gray-700">
-                    Qualifications vary by position. For installation roles, we typically look for prior experience in roofing, siding, or general construction. Project management positions usually
-                    require experience in construction management and strong customer service skills. For all positions, we value reliability, attention to detail, and a willingness to learn.
+                    We offer competitive base salaries plus performance incentives. Appointment Setters receive bonuses based on appointment quality and conversion rates. Sales Closers earn commission
+                    on completed sales in addition to their base pay. Our top performers consistently earn well above industry average as we believe in rewarding results and encouraging growth.
                   </p>
                 </div>
               </div>
@@ -218,14 +254,15 @@
 
             <div class="bg-white rounded-lg shadow-sm overflow-hidden">
               <button class="w-full px-6 py-4 text-left font-semibold text-gray-900 focus:outline-none flex justify-between items-center faq-toggle">
-                <span>What is the application process like?</span>
+                <span>What are the typical work hours for these positions?</span>
                 <i class="fas fa-plus text-blue-500 transition-transform duration-300"></i>
               </button>
               <div class="faq-content overflow-hidden transition-all duration-300 ease-in-out" style="max-height: 0">
                 <div class="px-6 pb-4 pt-2">
                   <p class="text-gray-700">
-                    After submitting your application, our hiring team will review your qualifications. If there's a potential match, we'll reach out to schedule an initial phone interview, followed
-                    by an in-person interview for promising candidates. Depending on the position, we may also conduct skills assessments or reference checks before making a final hiring decision.
+                    Appointment Setters typically work Monday through Friday from 9am to 6pm, with some flexibility. Sales Closers have a more variable schedule that includes some evenings and
+                    weekends to accommodate client availability. We work to create balanced schedules that maximize productivity while respecting personal time. Full-time positions include paid time
+                    off and holidays.
                   </p>
                 </div>
               </div>
@@ -233,14 +270,15 @@
 
             <div class="bg-white rounded-lg shadow-sm overflow-hidden">
               <button class="w-full px-6 py-4 text-left font-semibold text-gray-900 focus:outline-none flex justify-between items-center faq-toggle">
-                <span>Do you provide training for new employees?</span>
+                <span>Is there opportunity for advancement within the company?</span>
                 <i class="fas fa-plus text-blue-500 transition-transform duration-300"></i>
               </button>
               <div class="faq-content overflow-hidden transition-all duration-300 ease-in-out" style="max-height: 0">
                 <div class="px-6 pb-4 pt-2">
                   <p class="text-gray-700">
-                    Yes! We provide comprehensive on-the-job training for new team members. Even experienced professionals will go through our training program to learn our specific processes, quality
-                    standards, and safety protocols. We also offer ongoing training opportunities to help you develop new skills and advance your career with us.
+                    Absolutely! We strongly believe in promoting from within. Many of our top Sales Closers started as Appointment Setters, and we have numerous examples of team members who have grown
+                    into leadership positions. We provide clear career paths and the mentorship needed to advance. For those who demonstrate aptitude and commitment, we offer additional training,
+                    increased responsibilities, and opportunities to move into management roles.
                   </p>
                 </div>
               </div>
@@ -248,14 +286,15 @@
 
             <div class="bg-white rounded-lg shadow-sm overflow-hidden">
               <button class="w-full px-6 py-4 text-left font-semibold text-gray-900 focus:outline-none flex justify-between items-center faq-toggle">
-                <span>What benefits do you offer?</span>
+                <span>What makes Maverick Contracting different from other companies?</span>
                 <i class="fas fa-plus text-blue-500 transition-transform duration-300"></i>
               </button>
               <div class="faq-content overflow-hidden transition-all duration-300 ease-in-out" style="max-height: 0">
                 <div class="px-6 pb-4 pt-2">
                   <p class="text-gray-700">
-                    We offer competitive compensation packages including performance-based incentives. Full-time employees may qualify for additional benefits. Details about specific benefits will be
-                    discussed during the interview process, as they can vary by position and experience level.
+                    Maverick Contracting stands out in several ways. First, we're committed to quality in everything we do - from our products and installations to our customer service. Second, we've
+                    built a supportive culture where team members collaborate rather than compete. Third, we invest in our people through training, mentorship, and advancement opportunities. Finally,
+                    we maintain strong ethical standards in an industry where that's not always the case, focusing on providing real value to customers rather than high-pressure sales tactics.
                   </p>
                 </div>
               </div>
@@ -263,15 +302,219 @@
           </div>
         </div>
       </section>
+
+      <!-- CTA Section -->
+      <section class="py-12 bg-white border-t border-gray-200">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Ready to Join Our Team?</h2>
+          <p class="text-lg text-gray-600 mb-8 max-w-3xl mx-auto">We're always looking for talented individuals who are passionate about delivering exceptional service and quality craftsmanship.</p>
+          <button
+            class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-150 apply-button"
+            data-position="General Application"
+          >
+            Apply Today
+            <i class="fas fa-arrow-right ml-2"></i>
+          </button>
+        </div>
+      </section>
     </main>
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-8 mt-10"><%- include('partials/footer') %></footer>
 
+    <!-- Application Form Modal -->
+    <div id="application-modal" class="fixed inset-0 bg-gray-800 bg-opacity-75 hidden flex items-center justify-center z-50">
+      <div class="bg-white rounded-lg max-w-md w-full mx-4 max-h-90vh overflow-y-auto shadow-xl">
+        <div class="p-8">
+          <div class="flex justify-between items-center mb-6">
+            <h3 class="text-2xl font-bold text-gray-900">Apply for <span id="modal-position">Position</span></h3>
+            <button id="close-modal" class="text-gray-500 hover:text-gray-700 transition-colors">
+              <i class="fas fa-times text-lg"></i>
+            </button>
+          </div>
+
+          <form id="application-form" action="/submit-application" method="POST" class="space-y-6">
+            <input type="hidden" id="position-input" name="position" />
+
+            <div class="relative">
+              <label for="fullname" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+              <div class="mt-1 relative rounded-md shadow-sm">
+                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                  <i class="fas fa-user text-gray-400"></i>
+                </div>
+                <input
+                  type="text"
+                  id="fullname"
+                  name="fullname"
+                  required
+                  class="pl-10 block w-full border border-gray-300 rounded-md shadow-sm py-3 px-4 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-900"
+                  placeholder="John Doe"
+                />
+              </div>
+            </div>
+
+            <div class="relative">
+              <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+              <div class="mt-1 relative rounded-md shadow-sm">
+                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                  <i class="fas fa-envelope text-gray-400"></i>
+                </div>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  class="pl-10 block w-full border border-gray-300 rounded-md shadow-sm py-3 px-4 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-900"
+                  placeholder="your@email.com"
+                />
+              </div>
+            </div>
+
+            <div class="relative">
+              <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+              <div class="mt-1 relative rounded-md shadow-sm">
+                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                  <i class="fas fa-phone text-gray-400"></i>
+                </div>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  required
+                  class="pl-10 block w-full border border-gray-300 rounded-md shadow-sm py-3 px-4 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-900"
+                  placeholder="(555) 123-4567"
+                />
+              </div>
+            </div>
+
+            <div class="relative">
+              <label for="experience" class="block text-sm font-medium text-gray-700 mb-1">Years of Relevant Experience</label>
+              <div class="mt-1 relative rounded-md shadow-sm">
+                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                  <i class="fas fa-briefcase text-gray-400"></i>
+                </div>
+                <select
+                  id="experience"
+                  name="experience"
+                  class="pl-10 block w-full border border-gray-300 rounded-md shadow-sm py-3 px-4 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-900 appearance-none"
+                >
+                  <option value="0-1">0-1 years</option>
+                  <option value="1-2">1-2 years</option>
+                  <option value="3-5">3-5 years</option>
+                  <option value="5+">5+ years</option>
+                </select>
+                <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                  <i class="fas fa-chevron-down text-gray-400"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="relative">
+              <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Why are you interested in this position?</label>
+              <div class="mt-1 relative rounded-md shadow-sm">
+                <div class="absolute top-3 left-0 pl-3 flex items-start pointer-events-none">
+                  <i class="fas fa-comment text-gray-400"></i>
+                </div>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  class="pl-10 block w-full border border-gray-300 rounded-md shadow-sm py-3 px-4 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-900"
+                  placeholder="Tell us why you're interested in this role..."
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="pt-2">
+              <button
+                type="submit"
+                class="w-full inline-flex justify-center py-3 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-150"
+              >
+                <i class="fas fa-paper-plane mr-2"></i>
+                Submit Application
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
     <!-- JavaScript -->
     <script src="/js/main.js"></script>
     <!-- 100% privacy-first analytics -->
     <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+
+    <!-- Job Cards & Application Form Script -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Job card toggle functionality
+        const jobHeaders = document.querySelectorAll(".job-header");
+
+        jobHeaders.forEach((header) => {
+          header.addEventListener("click", function () {
+            const content = this.nextElementSibling;
+            const icon = this.querySelector(".job-toggle-icon");
+            const allJobContents = document.querySelectorAll(".job-content");
+            const allIcons = document.querySelectorAll(".job-toggle-icon");
+
+            // Close all other job cards
+            allJobContents.forEach((otherContent) => {
+              if (otherContent !== content && otherContent.style.maxHeight !== "0px") {
+                otherContent.style.maxHeight = "0px";
+              }
+            });
+
+            allIcons.forEach((otherIcon) => {
+              if (otherIcon !== icon) {
+                otherIcon.style.transform = "rotate(0deg)";
+              }
+            });
+
+            // Toggle current job card
+            if (content.style.maxHeight === "0px" || content.style.maxHeight === "") {
+              content.style.maxHeight = content.scrollHeight + "px";
+              icon.style.transform = "rotate(180deg)";
+            } else {
+              content.style.maxHeight = "0px";
+              icon.style.transform = "rotate(0deg)";
+            }
+          });
+        });
+
+        // Application form functionality (existing code)
+        const applyButtons = document.querySelectorAll(".apply-button");
+        const applicationModal = document.getElementById("application-modal");
+        const closeModalButton = document.getElementById("close-modal");
+        const modalPosition = document.getElementById("modal-position");
+        const positionInput = document.getElementById("position-input");
+        const applicationForm = document.getElementById("application-form");
+
+        // Open modal when apply button is clicked
+        applyButtons.forEach((button) => {
+          button.addEventListener("click", function () {
+            const position = this.getAttribute("data-position");
+            modalPosition.textContent = position;
+            positionInput.value = position;
+            applicationModal.classList.remove("hidden");
+            document.body.style.overflow = "hidden"; // Prevent scrolling
+          });
+        });
+
+        // Close modal when close button is clicked
+        closeModalButton.addEventListener("click", function () {
+          applicationModal.classList.add("hidden");
+          document.body.style.overflow = "auto"; // Enable scrolling
+        });
+
+        // Close modal when clicking outside of content
+        applicationModal.addEventListener("click", function (e) {
+          if (e.target === applicationModal) {
+            applicationModal.classList.add("hidden");
+            document.body.style.overflow = "auto"; // Enable scrolling
+          }
+        });
+      });
+    </script>
 
     <!-- FAQ Accordion Script -->
     <script>

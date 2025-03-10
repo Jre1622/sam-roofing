@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <meta name="description" content="<%= description %>" />
+    <meta name="robots" content="noindex, nofollow" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="<%= canonical %>" />
+
+    <!-- Social Media Meta Tags -->
+    <%- include('partials/social-meta') %>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/output.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+    <!-- Structured Data -->
+    <%- include('partials/structured-data') %>
+  </head>
+  <body class="flex flex-col min-h-screen bg-gray-50">
+    <!-- Header -->
+    <header><%- include('partials/header') %></header>
+
+    <!-- Main Content -->
+    <main class="flex-grow">
+      <!-- Thank You Section -->
+      <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="max-w-3xl mx-auto text-center">
+            <div class="mb-8">
+              <i class="fas fa-check-circle text-green-500 text-6xl"></i>
+            </div>
+            <h1 class="text-3xl font-bold text-gray-900 mb-4">Application Received!</h1>
+            <p class="text-xl text-gray-600 mb-8">Thank you for your interest in joining the Maverick Contracting team. We appreciate you taking the time to apply.</p>
+            <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+              <h2 class="text-2xl font-bold text-gray-900 mb-4">What Happens Next?</h2>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+                <div class="flex flex-col items-center">
+                  <div class="bg-blue-100 rounded-full p-4 mb-4">
+                    <i class="fas fa-search text-blue-600 text-xl"></i>
+                  </div>
+                  <h3 class="text-lg font-bold text-gray-900 mb-2">1. Message Received</h3>
+                  <p class="text-gray-600 text-center">Our team will find a time to reach back out to you as soon as possible.</p>
+                </div>
+                <div class="flex flex-col items-center">
+                  <div class="bg-blue-100 rounded-full p-4 mb-4">
+                    <i class="fas fa-phone text-blue-600 text-xl"></i>
+                  </div>
+                  <h3 class="text-lg font-bold text-gray-900 mb-2">2. Initial Phone Call</h3>
+                  <p class="text-gray-600 text-center">We'll reach out to schedule a brief phone call to get to know you better.</p>
+                </div>
+                <div class="flex flex-col items-center">
+                  <div class="bg-blue-100 rounded-full p-4 mb-4">
+                    <i class="fas fa-handshake text-blue-600 text-xl"></i>
+                  </div>
+                  <h3 class="text-lg font-bold text-gray-900 mb-2">3. Quick Assessment</h3>
+                  <p class="text-gray-600 text-center">We move fast! If we think you're a good fit, we'll let you know and start the onboarding process.</p>
+                </div>
+              </div>
+            </div>
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mb-8 text-left">
+              <div class="flex">
+                <div class="flex-shrink-0">
+                  <i class="fas fa-info-circle text-blue-600"></i>
+                </div>
+                <div class="ml-3">
+                  <p class="text-sm text-blue-700">
+                    Give us a couple of hours! We move quickly and reach out to promising candidates as soon as possible. We're anticipating a lot of interest, so don't be nervous! We're excited to
+                    review your application and learn more about you.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+              <a
+                href="/"
+                class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-600/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+              >
+                Return to Home
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-10"><%- include('partials/footer') %></footer>
+
+    <!-- JavaScript -->
+    <script src="/js/main.js"></script>
+    <!-- 100% privacy-first analytics -->
+    <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+  </body>
+</html>
