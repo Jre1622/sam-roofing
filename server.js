@@ -3,12 +3,12 @@ const path = require("path");
 const rateLimit = require("express-rate-limit");
 const { sendContactFormMessage, sendServerMessage, sendCareerApplicationMessage } = require("./lib/telegram");
 require("dotenv").config();
+const schedule = require("node-schedule");
 
 // Base URL for canonical links
 const baseUrl = "https://www.hiremaverick.com";
 
 // Monitoring constants - simplified
-const HEARTBEAT_INTERVAL = 12 * 60 * 60 * 1000; // 12 hours in milliseconds
 const SLOW_REQUEST_THRESHOLD = 1000; // 1 second (in milliseconds)
 const PERFORMANCE_ALERT_COOLDOWN = 30 * 60 * 1000; // 30 minutes in milliseconds
 
@@ -377,6 +377,16 @@ process.on("uncaughtException", async (error) => {
 app.listen(port, () => {
   console.log(`🚀 Server running at http://localhost:${port}`);
 
-  // Schedule regular statistics reports
-  setInterval(sendHeartbeatMessage, HEARTBEAT_INTERVAL);
+  // Replace the setInterval with scheduled jobs at fixed times
+  // Schedule daily 8am Minnesota time heartbeat
+  schedule.scheduleJob("0 8 * * *", { timezone: "America/Chicago" }, () => {
+    console.log("📊 Sending 8am scheduled heartbeat");
+    sendHeartbeatMessage();
+  });
+
+  // Schedule daily 8pm Minnesota time heartbeat
+  schedule.scheduleJob("0 20 * * *", { timezone: "America/Chicago" }, () => {
+    console.log("📊 Sending 8pm scheduled heartbeat");
+    sendHeartbeatMessage();
+  });
 });
