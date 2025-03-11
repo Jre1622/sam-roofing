@@ -103,6 +103,7 @@ app.get("/careers", (req, res) => {
     description: "Join the Maverick Contracting team. Explore career opportunities in roofing, siding, and exterior remodeling with one of Minnesota's premier contracting companies.",
     active: "careers",
     canonical: `${baseUrl}/careers`,
+    fbTrackPageView: true,
   });
 });
 
@@ -272,6 +273,8 @@ app.post("/submit-application", async (req, res) => {
       description: "Thank you for applying to Maverick Contracting. We've received your application and our team will review it shortly.",
       active: "careers",
       canonical: `${baseUrl}/thank-you-application`,
+      fbTrackLead: true,
+      position: position,
     });
   } catch (error) {
     console.error("❌ Error processing career application:", error);
