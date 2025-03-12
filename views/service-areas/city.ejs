@@ -182,23 +182,40 @@
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">Minnesota's extreme weather demands special attention when it comes to protecting your <%= city.name %> home.</p>
           </div>
 
-          <div class="bg-blue-50 p-6 rounded-lg shadow-sm">
-            <div class="prose max-w-none">
-              <p>
-                Living in <%= city.name %>, Minnesota, you know the importance of having reliable, energy-efficient exterior systems. With <%= city.name %>'s temperature swings from freezing winters
-                to humid summers, quality roofing, siding, windows, and gutters aren't just a luxury—they're essential for comfort, protection, and energy savings.
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Card 1: Minnesota Weather -->
+            <div class="bg-blue-50 rounded-lg shadow-sm p-6 hover:shadow-md transition duration-200">
+              <div class="text-blue-600 mb-4">
+                <i class="fas fa-snowflake text-4xl"></i>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3">Extreme Climate Protection</h3>
+              <p class="text-gray-700">
+                Living in <%= city.name %>, you face temperature swings from freezing winters to humid summers. Quality exterior systems aren't just a luxury—they're essential for comfort, protection,
+                and energy savings.
               </p>
+            </div>
 
-              <p>
-                At Maverick Contracting, we understand the unique challenges faced by <%= city.name %> homeowners. Our exterior solutions are specifically designed to withstand Minnesota's harsh
-                weather conditions, from heavy snow loads to summer storms. We use premium materials and proven installation techniques to ensure your home remains protected and beautiful for years to
-                come.
+            <!-- Card 2: Our Approach -->
+            <div class="bg-blue-50 rounded-lg shadow-sm p-6 hover:shadow-md transition duration-200">
+              <div class="text-blue-600 mb-4">
+                <i class="fas fa-shield-alt text-4xl"></i>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3">Weather-Resistant Solutions</h3>
+              <p class="text-gray-700">
+                We understand <%= city.name %>'s unique challenges. Our exterior solutions are specifically designed to withstand Minnesota's harsh weather, from heavy snow loads to summer storms,
+                with premium materials and proven techniques.
               </p>
+            </div>
 
-              <p>
-                Our team of <%= city.name %> exterior specialists will work with you to select the right products for your home, considering factors like energy efficiency, durability, maintenance
-                requirements, and aesthetic appeal. Whether you're replacing an aging roof, upgrading to energy-efficient windows, installing new siding, or enhancing your gutter system, we have the
-                expertise to deliver exceptional results.
+            <!-- Card 3: Customized Products -->
+            <div class="bg-blue-50 rounded-lg shadow-sm p-6 hover:shadow-md transition duration-200">
+              <div class="text-blue-600 mb-4">
+                <i class="fas fa-home text-4xl"></i>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3">Tailored to Your Home</h3>
+              <p class="text-gray-700">
+                Our <%= city.name %> specialists help you select the right products for your home, balancing energy efficiency, durability, maintenance requirements, and aesthetic appeal for any
+                exterior project.
               </p>
             </div>
           </div>
