@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <meta name="description" content="<%= description %>" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="<%= canonical %>" />
+
+    <!-- Social Media Meta Tags -->
+    <%- include('../partials/social-meta') %>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/output.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+    <!-- Structured Data -->
+    <%- include('../partials/structured-data') %>
+  </head>
+  <body class="flex flex-col min-h-screen bg-gray-50">
+    <!-- Header -->
+    <header><%- include('../partials/header') %></header>
+
+    <!-- Main Content -->
+    <main class="flex-grow">
+      <!-- Hero Section -->
+      <section class="relative py-12 md:py-16 text-white overflow-hidden">
+        <div class="absolute inset-0">
+          <img src="/images/service-areas.webp" alt="Exterior Contractor in <%= city.name %>" class="w-full h-full object-cover object-center" />
+          <div class="absolute inset-0 bg-black opacity-50"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-6 md:mb-0 md:pr-8 text-center md:text-left">
+              <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 leading-tight"><%= city.name %> Exterior Remodeling</h1>
+              <p class="text-lg md:text-xl text-blue-100 mb-5">
+                Trusted roofing, siding, window, and gutter services for <%= city.name %> homeowners. Quality materials and expert installation guaranteed.
+              </p>
+            </div>
+
+            <!-- Contact Form Panel -->
+            <div class="w-full md:w-1/2">
+              <div class="bg-white/95 backdrop-blur-sm rounded-lg p-3 md:p-4 text-gray-800 relative shadow-lg"><%- include('../partials/contact-form-compact') %></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Brand Ratings -->
+      <%- include('../partials/brand-ratings') %>
+
+      <!-- Services in City Section -->
+      <section class="py-12 md:py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-10">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Our Services in <%= city.name %></h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+              We provide comprehensive exterior remodeling solutions for <%= city.name %> homeowners, delivered with exceptional craftsmanship and attention to detail.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Roofing -->
+            <div class="bg-gray-50 rounded-lg shadow-sm overflow-hidden hover:shadow-md transition duration-200">
+              <img src="/images/roofing.webp" alt="<%= city.name %> Roofing Services" class="w-full h-48 object-cover" />
+              <div class="p-5">
+                <h3 class="text-xl font-bold text-gray-900 mb-2"><%= city.name %> Roofing</h3>
+                <p class="text-gray-600 mb-4">Quality roof installation, repair, and replacement services for <%= city.name %> homes. Protect your property with durable roofing solutions.</p>
+                <a href="/roofing" class="text-blue-600 font-semibold hover:text-blue-700">Learn More →</a>
+              </div>
+            </div>
+
+            <!-- Siding -->
+            <div class="bg-gray-50 rounded-lg shadow-sm overflow-hidden hover:shadow-md transition duration-200">
+              <img src="/images/siding.webp" alt="<%= city.name %> Siding Services" class="w-full h-48 object-cover" />
+              <div class="p-5">
+                <h3 class="text-xl font-bold text-gray-900 mb-2"><%= city.name %> Siding</h3>
+                <p class="text-gray-600 mb-4">Enhance your <%= city.name %> home's appearance and protection with our premium siding options. Expert installation and lasting results.</p>
+                <a href="/siding" class="text-blue-600 font-semibold hover:text-blue-700">Learn More →</a>
+              </div>
+            </div>
+
+            <!-- Windows -->
+            <div class="bg-gray-50 rounded-lg shadow-sm overflow-hidden hover:shadow-md transition duration-200">
+              <img src="/images/windows.webp" alt="<%= city.name %> Window Services" class="w-full h-48 object-cover" />
+              <div class="p-5">
+                <h3 class="text-xl font-bold text-gray-900 mb-2"><%= city.name %> Windows</h3>
+                <p class="text-gray-600 mb-4">Energy-efficient window solutions for <%= city.name %> homes. Improve comfort, reduce energy costs, and enhance your home's appearance.</p>
+                <a href="/windows" class="text-blue-600 font-semibold hover:text-blue-700">Learn More →</a>
+              </div>
+            </div>
+
+            <!-- Gutters -->
+            <div class="bg-gray-50 rounded-lg shadow-sm overflow-hidden hover:shadow-md transition duration-200">
+              <img src="/images/gutters.webp" alt="<%= city.name %> Gutter Services" class="w-full h-48 object-cover" />
+              <div class="p-5">
+                <h3 class="text-xl font-bold text-gray-900 mb-2"><%= city.name %> Gutters</h3>
+                <p class="text-gray-600 mb-4">Protect your <%= city.name %> home from water damage with our seamless gutter systems. Professional installation and quality materials.</p>
+                <a href="/gutters" class="text-blue-600 font-semibold hover:text-blue-700">Learn More →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Choose Us in City Section -->
+      <section class="py-12 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="p-6 md:p-8">
+              <h2 class="text-2xl font-bold text-gray-900 mb-4">Why <%= city.name %> Homeowners Choose Maverick Contracting</h2>
+
+              <div class="grid md:grid-cols-2 gap-6 mt-6">
+                <div class="flex">
+                  <div class="flex-shrink-0">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white">
+                      <i class="fas fa-check"></i>
+                    </div>
+                  </div>
+                  <div class="ml-4">
+                    <h3 class="text-lg font-medium text-gray-900">Local <%= city.name %> Expertise</h3>
+                    <p class="mt-2 text-gray-600">We understand <%= city.name %>'s unique weather challenges and building requirements, ensuring solutions that truly work for your home.</p>
+                  </div>
+                </div>
+
+                <div class="flex">
+                  <div class="flex-shrink-0">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white">
+                      <i class="fas fa-medal"></i>
+                    </div>
+                  </div>
+                  <div class="ml-4">
+                    <h3 class="text-lg font-medium text-gray-900">Quality Materials</h3>
+                    <p class="mt-2 text-gray-600">We use only premium, weather-resistant materials designed to withstand Minnesota's climate extremes for years to come.</p>
+                  </div>
+                </div>
+
+                <div class="flex">
+                  <div class="flex-shrink-0">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white">
+                      <i class="fas fa-tools"></i>
+                    </div>
+                  </div>
+                  <div class="ml-4">
+                    <h3 class="text-lg font-medium text-gray-900">Expert Installation</h3>
+                    <p class="mt-2 text-gray-600">Our skilled craftsmen have extensive experience serving <%= city.name %> homes, delivering flawless results on every project.</p>
+                  </div>
+                </div>
+
+                <div class="flex">
+                  <div class="flex-shrink-0">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white">
+                      <i class="fas fa-heart"></i>
+                    </div>
+                  </div>
+                  <div class="ml-4">
+                    <h3 class="text-lg font-medium text-gray-900"><%= city.name %> Customer Satisfaction</h3>
+                    <p class="mt-2 text-gray-600">Our reputation in <%= city.name %> is built on satisfied customers who recommend us to friends and family throughout the community.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Minnesota Climate Section -->
+      <section class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-10">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Exterior Solutions for <%= city.name %>'s Climate</h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">Minnesota's extreme weather demands special attention when it comes to protecting your <%= city.name %> home.</p>
+          </div>
+
+          <div class="bg-blue-50 p-6 rounded-lg shadow-sm">
+            <div class="prose max-w-none">
+              <p>
+                Living in <%= city.name %>, Minnesota, you know the importance of having reliable, energy-efficient exterior systems. With <%= city.name %>'s temperature swings from freezing winters
+                to humid summers, quality roofing, siding, windows, and gutters aren't just a luxury—they're essential for comfort, protection, and energy savings.
+              </p>
+
+              <p>
+                At Maverick Contracting, we understand the unique challenges faced by <%= city.name %> homeowners. Our exterior solutions are specifically designed to withstand Minnesota's harsh
+                weather conditions, from heavy snow loads to summer storms. We use premium materials and proven installation techniques to ensure your home remains protected and beautiful for years to
+                come.
+              </p>
+
+              <p>
+                Our team of <%= city.name %> exterior specialists will work with you to select the right products for your home, considering factors like energy efficiency, durability, maintenance
+                requirements, and aesthetic appeal. Whether you're replacing an aging roof, upgrading to energy-efficient windows, installing new siding, or enhancing your gutter system, we have the
+                expertise to deliver exceptional results.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to Action -->
+      <section class="py-12 bg-blue-600 text-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 class="text-2xl md:text-3xl font-bold mb-4">Ready to Transform Your <%= city.name %> Home?</h2>
+          <p class="text-xl text-blue-100 mb-6">Contact us today for a free, no-obligation estimate on your exterior remodeling project.</p>
+          <a href="/contact" class="inline-block px-6 py-3 bg-white text-blue-600 font-bold rounded-full hover:bg-gray-100 transition duration-200"> Get Your Free Estimate </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-10"><%- include('../partials/footer') %></footer>
+
+    <!-- JavaScript -->
+    <script src="/js/main.js"></script>
+    <!-- 100% privacy-first analytics -->
+    <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+  </body>
+</html>

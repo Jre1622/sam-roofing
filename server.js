@@ -5,6 +5,9 @@ const { sendContactFormMessage, sendServerMessage, sendCareerApplicationMessage 
 require("dotenv").config();
 const schedule = require("node-schedule");
 
+// Import routers
+const serviceAreasRouter = require("./routes/service-areas");
+
 // Base URL for canonical links
 const baseUrl = "https://www.hiremaverick.com";
 
@@ -84,6 +87,9 @@ app.use((req, res, next) => {
 
   next();
 });
+
+// Use routers
+app.use("/service-areas", serviceAreasRouter);
 
 // Basic routes
 app.get("/", (req, res) => {

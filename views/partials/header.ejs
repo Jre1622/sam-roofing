@@ -95,6 +95,11 @@
             </div>
           </div>
           <a
+            class="<%= active === 'service-areas' ? 'bg-blue-700 text-white' : 'text-white hover:bg-blue-700 hover:text-white' %> px-2 md:px-3 lg:px-5 py-4 rounded-md text-xs md:text-sm lg:text-base font-bold transition duration-150"
+            href="/service-areas"
+            >Service Areas</a
+          >
+          <a
             class="<%= active === 'siding' ? 'bg-blue-700 text-white' : 'text-white hover:bg-blue-700 hover:text-white' %> px-2 md:px-3 lg:px-5 py-4 rounded-md text-xs md:text-sm lg:text-base font-bold transition duration-150"
             href="/siding"
             >Siding</a
@@ -172,6 +177,11 @@
         </div>
       </div>
 
+      <a
+        class="<%= active === 'service-areas' ? 'bg-blue-700 text-white' : 'text-white hover:bg-blue-700 hover:text-white' %> block px-4 py-3 rounded-md text-lg font-bold w-full text-center"
+        href="/service-areas"
+        >Service Areas</a
+      >
       <a class="<%= active === 'siding' ? 'bg-blue-700 text-white' : 'text-white hover:bg-blue-700 hover:text-white' %> block px-4 py-3 rounded-md text-lg font-bold w-full text-center" href="/siding"
         >Siding</a
       >
