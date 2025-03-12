@@ -59,6 +59,71 @@
       <!-- Brand Ratings -->
       <%- include('../partials/brand-ratings') %>
 
+      <!-- City Statistics Section -->
+      <section class="py-8 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+            <div class="p-6">
+              <h2 class="text-2xl font-bold text-gray-900 mb-4"><%= city.name %> at a Glance</h2>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Population -->
+                <div class="flex items-center">
+                  <div class="flex-shrink-0">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-100 text-blue-600">
+                      <i class="fas fa-users"></i>
+                    </div>
+                  </div>
+                  <div class="ml-4">
+                    <h3 class="text-lg font-medium text-gray-900">Population</h3>
+                    <p class="text-xl font-bold text-blue-600"><%= city.population ? city.population.toLocaleString() : 'Data unavailable' %></p>
+                    <p class="text-sm text-gray-500">Residents</p>
+                  </div>
+                </div>
+
+                <!-- Median Home Value -->
+                <div class="flex items-center">
+                  <div class="flex-shrink-0">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-100 text-blue-600">
+                      <i class="fas fa-home"></i>
+                    </div>
+                  </div>
+                  <div class="ml-4">
+                    <h3 class="text-lg font-medium text-gray-900">Median Home Value</h3>
+                    <p class="text-xl font-bold text-blue-600"><%= city.median_home_value ? '$' + city.median_home_value.toLocaleString() : 'Data unavailable' %></p>
+                    <p class="text-sm text-gray-500">Property Value</p>
+                  </div>
+                </div>
+
+                <!-- Average Home Age -->
+                <div class="flex items-center">
+                  <div class="flex-shrink-0">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-100 text-blue-600">
+                      <i class="fas fa-calendar-alt"></i>
+                    </div>
+                  </div>
+                  <div class="ml-4">
+                    <h3 class="text-lg font-medium text-gray-900">Median Home Age</h3>
+                    <p class="text-xl font-bold text-blue-600"><%= city.median_home_age ? city.median_home_age + ' years' : 'Data unavailable' %></p>
+                    <p class="text-sm text-gray-500"><%= city.median_home_age ? 'Built around ' + (new Date().getFullYear() - city.median_home_age) : '' %></p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- City-Specific Exterior Needs -->
+              <div class="mt-6 pt-6 border-t border-gray-200">
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">Exterior Needs in <%= city.name %></h3>
+                <p class="text-gray-700">
+                  <% if (city.median_home_age) { %> With a median home age of <%= city.median_home_age %> years in <%= city.name %>, many properties are approaching or have reached the point where
+                  exterior renovations are essential. <% } else { %> Homes in <%= city.name %> require regular maintenance and updates to their exterior systems. <% } %> Homes in this area commonly
+                  need roof replacement every 20-30 years, while siding, windows, and gutters may require updates to maintain energy efficiency and protect against Minnesota's harsh weather
+                  conditions.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- Services in City Section -->
       <section class="py-12 md:py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -188,10 +253,10 @@
               <div class="text-blue-600 mb-4">
                 <i class="fas fa-snowflake text-4xl"></i>
               </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Extreme Climate Protection</h3>
+              <h3 class="text-xl font-bold text-gray-900 mb-3">Local Weather Challenges</h3>
               <p class="text-gray-700">
-                Living in <%= city.name %>, you face temperature swings from freezing winters to humid summers. Quality exterior systems aren't just a luxury—they're essential for comfort, protection,
-                and energy savings.
+                <%= city.name %> homes face Minnesota's extreme temperature swings from freezing winters to humid summers. These conditions can accelerate wear on exterior materials<% if
+                (city.median_home_age) { %>, especially on homes that are <%= city.median_home_age %> years old on average<% } %>.
               </p>
             </div>
 
@@ -212,11 +277,34 @@
               <div class="text-blue-600 mb-4">
                 <i class="fas fa-home text-4xl"></i>
               </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Tailored to Your Home</h3>
+              <h3 class="text-xl font-bold text-gray-900 mb-3"><%= city.name %> Home Protection</h3>
               <p class="text-gray-700">
-                Our <%= city.name %> specialists help you select the right products for your home, balancing energy efficiency, durability, maintenance requirements, and aesthetic appeal for any
-                exterior project.
+                <% if (city.median_home_value) { %> With a median home value of $<%= city.median_home_value.toLocaleString() %> in <%= city.name %>, protecting your investment is essential. <% } %>
+                Our <%= city.name %> specialists help you select the right products for your home's specific needs.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- City Housing Market Section -->
+      <section class="py-8 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="bg-blue-50 rounded-lg p-6 shadow-sm">
+            <div class="flex items-start">
+              <div class="flex-shrink-0 pt-1">
+                <i class="fas fa-chart-line text-2xl text-blue-600"></i>
+              </div>
+              <div class="ml-4">
+                <h3 class="text-xl font-bold text-gray-900 mb-2"><%= city.name %> Housing Insights</h3>
+                <p class="text-gray-700">
+                  <% if (city.population) { %> With <%= city.population.toLocaleString() %> residents <% if (city.median_home_value) { %> and <% } %> <% } %> <% if (city.median_home_value) { %> <% if
+                  (!city.population) { %>With <% } %> a median home value of $<%= city.median_home_value.toLocaleString() %> <% } %> <% if (city.population || city.median_home_value) { %>, <% } %> <%=
+                  city.name %> homeowners understand the importance of maintaining their property's exterior. <% if (city.median_home_age) { %> Homes with a median age of <%= city.median_home_age %>
+                  years often require specialized attention to roofing, siding, and other exterior elements to maintain value and curb appeal. <% } else { %> Regular maintenance of roofing, siding,
+                  and other exterior elements is essential to maintain value and curb appeal. <% } %>
+                </p>
+              </div>
             </div>
           </div>
         </div>
