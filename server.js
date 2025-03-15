@@ -7,6 +7,7 @@ const schedule = require("node-schedule");
 
 // Import routers
 const serviceAreasRouter = require("./routes/service-areas");
+const insurancePartnersRouter = require("./routes/insurance-partners");
 
 // Base URL for canonical links
 const baseUrl = "https://www.hiremaverick.com";
@@ -90,6 +91,7 @@ app.use((req, res, next) => {
 
 // Use routers
 app.use("/service-areas", serviceAreasRouter);
+app.use("/insurance-partners", insurancePartnersRouter);
 
 // Basic routes
 app.get("/", (req, res) => {
